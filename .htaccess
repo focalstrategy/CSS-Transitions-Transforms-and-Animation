@@ -1,0 +1,18 @@
+# Turn on Expires and set default to 0
+ExpiresActive On
+ExpiresDefault A0
+
+Header set X-Author "Richard Bradshaw"
+
+<Files .htaccess>
+order allow,deny
+deny from all
+</Files>
+
+<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">
+ExpiresDefault A29030400
+Header append Cache-Control "public"
+</FilesMatch>
+
+IndexIgnore *
+Options -Indexes
