@@ -18,7 +18,7 @@ section {
 	border-bottom:1px black solid;
 }
 
-img {
+.hover, img {
 	-webkit-user-select: none;
 	-webkit-touch-callout: none;	
 }

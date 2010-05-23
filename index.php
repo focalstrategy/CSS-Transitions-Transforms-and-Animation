@@ -36,6 +36,7 @@ $section = 	$_GET['section'];
 		<h1>Intro</h1>
 		<p>First things first - these demos are showing of CSS transitions, transforms (2D and 3D) and animations. Currently (May 2010), transitions and 2D transforms are available in all current browsers (at least in a dev build) apart from Internet Explorer, 3D transforms and animations are only in Safari. Most examples degrade nicely, so if you are using a legacy browser you can still use a site using these, you just won't get animation. 3D transforms generally don't degrade nicely, so be careful when using them.</p>
 		<p>None of the animation uses javascript, though I am using jQuery to add and remove classes to add interactivity. You can use the :target pseudo selector to do this in some cases, but I'm keeping it simple here.</p>
+		<p>If you are using iPhone OS, replace hover with touch and hold wherever appropriate. (Check the script in the head if you are wondering how to replicate that effect.)</p>
 		<p>For most transitions I've just used two images to keep the examples simple. Most should be easy to extend to different content (videos, text, etc) or more than two images.</p>
 		<p>Of particular note is that these animations are hardware accelerated on iPhone OS, so if you are building a mobile site you definitely should be using this.</p>
 		<p>To make it easier to view source and copy, I'm putting style and script tags in each section, just before the demo. This isn't recommended, but in this instance it will hopefully help.</p>
@@ -152,6 +153,7 @@ $section = 	$_GET['section'];
 		<p>&copy; Richard Bradshaw 2010</p>
 	</footer>	
 <a href="http://github.com/richbradshaw/CSS-Transitions-Transforms-and-Animation"><img style="position: absolute; top: 0; left: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Fork me on GitHub" /></a> 		
+<? if($_SERVER['SERVER_ADDR']!="127.0.0.1") {?>
 	<script type="text/javascript"> 
 	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
@@ -161,5 +163,6 @@ $section = 	$_GET['section'];
 	var pageTracker = _gat._getTracker("UA-16444273-1");
 	pageTracker._trackPageview();
 	} catch(err) {}</script>
+<? } ?>
 	</body>
 </html>
