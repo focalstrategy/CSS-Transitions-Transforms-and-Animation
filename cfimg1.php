@@ -21,7 +21,7 @@
 		transition: opacity 1s ease-in-out;
 	}
 	
-	#cf img.top:hover {
+	#cf img.top:hover, #cf img.hover_effect {
 		opacity:0;
 		-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 		filter: alpha(opacity=0);
@@ -30,7 +30,7 @@
 </style>
 <div id="cf" class="shadow">
 	<img class="bottom" src="/images/Stones.jpg" />
-	<img class="top" src="/images/Summit.jpg" />
+	<img class="top hover" src="/images/Summit.jpg" />
 </div>
 <h3>Code</h3>
 <p>First up, the HTML markup. Without CSS enabled, you just get two images. Remember to add alt text for production use.</p>

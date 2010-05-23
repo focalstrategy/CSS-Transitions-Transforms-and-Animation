@@ -32,7 +32,7 @@
 		-webkit-transform-style: preserve-3d;
 		-webkit-transition: all 1.0s linear;
 	}
-	#f1_container:hover #f1_card {
+	#f1_container:hover #f1_card, #f1_container.hover_effect #f1_card {
 		-webkit-transform: rotateY(180deg);
 		-webkit-box-shadow: -5px 5px 5px #aaa;				
 		-moz-box-shadow: -5px 5px 5px #aaa;
@@ -55,7 +55,7 @@
 	}
 	</style>
 	
-	<div id="f1_container">
+	<div id="f1_container" class="hover">
 		<div id="f1_card" class="shadow">
 			<div class="front face">
 				<img src="/images/Stones.jpg"/>
@@ -143,7 +143,7 @@
 		-webkit-transform-style: preserve-3d;
 		-webkit-transition: all 1.0s linear;
 	}
-	#f2_container:hover #f2_card {
+	#f2_container:hover #f2_card, #f2_container.hover_effect #f2_card {
 		-webkit-transform: rotateX(180deg);
 		-webkit-box-shadow: 5px -5px 5px #aaa;				
 		-moz-box-shadow: 5px -5px 5px #aaa;
@@ -151,7 +151,7 @@
 	}
 	</style>
 	
-	<div id="f2_container">
+	<div id="f2_container" class="hover">
 		<div id="f2_card" class="shadow">
 			<div class="front face">
 				<img src="/images/Cirques.jpg"/>
@@ -178,7 +178,7 @@
 		-webkit-transform-style: preserve-3d;
 		-webkit-transition: all 1.0s linear;
 	}
-	#f3_container:hover #f3_card {
+	#f3_container:hover #f3_card, #f3_container.hover_effect #f3_card {
 		-webkit-transform: rotateZ(180deg);
 		-webkit-box-shadow: -5px -5px 5px #aaa;				
 		-moz-box-shadow: -5px -5px 5px #aaa;
@@ -186,7 +186,7 @@
 	}
 	</style>
 	
-	<div id="f3_container">
+	<div id="f3_container" class="hover">
 		<div id="f3_card" class="shadow">
 			<div class="front face">
 				<img src="/images/Stones.jpg"/>

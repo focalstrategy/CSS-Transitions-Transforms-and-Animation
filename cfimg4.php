@@ -24,19 +24,19 @@
 
 	}
 	
-	#cf4:hover img.top {
+	#cf4:hover img.top, #cf4.hover_effect img.top {
 		opacity:1;
 		-webkit-transform:scale(1,1);
 		-webkit-transform-origin: top right;		
 	}
 	
-	#cf4:hover img.bottom {
+	#cf4:hover img.bottom, #cf4.hover_effect img.bottom {
 		-webkit-transform:scale(0,0);
 		-webkit-transform-origin: bottom left;
 	}
 	
 </style>
-<div id="cf4">
+<div id="cf4" class="hover">
 	<img class="bottom shadow" src="/images/Stones.jpg" />
 	<img class="top shadow" src="/images/Summit.jpg" />
 </div>
@@ -64,17 +64,17 @@
 
 	}
 	
-	#cf5:hover img.top {
+	#cf5:hover img.top, #cf5.hover_effect img.top {
 		opacity:1;
 		-webkit-transform:scale(1,1);
 	}
 	
-	#cf5:hover img.bottom {
+	#cf5:hover img.bottom, #cf5.hover_effect img.bottom {
 		-webkit-transform:rotate(360deg) scale(0,0);
 	}
 	
 </style>
-<div id="cf5">
+<div id="cf5" class="hover">
 	<img class="bottom shadow" src="/images/Stones.jpg" />
 	<img class="top shadow" src="/images/Summit.jpg" />
 </div>

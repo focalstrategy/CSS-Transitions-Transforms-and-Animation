@@ -9,6 +9,14 @@
 		<link rel="stylesheet" href="/styles/default.css" media="screen" />		
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
 		<script src="/js/modernizr-newest.min.js"></script>
+		<script>
+			$(document).ready(function() {
+		$('.hover').bind('touchstart touchend', function(e) {
+			e.preventDefault();
+			$(this).toggleClass('hover_effect');
+		});
+	});
+		</script>
 	</head>		
 	<body>		
 
