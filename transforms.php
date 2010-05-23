@@ -78,16 +78,17 @@
 	-moz-transition: all 2s ease-in-out;
 	-o-transition: all 2s ease-in-out;
 	transition: all 2s ease-in-out;
+
 }
 
-#transDemo2 div:hover {
+#transDemo2 div:hover, #transDemo2 div.hover_effect {
 	-webkit-transform:rotate(720deg) scale(2,2);
 	-moz-transform:rotate(720deg) scale(2,2);
 	-o-transform:rotate(720deg) scale(2,2);	
 }
 </style>
 <div id="transDemo2">
-	<div>Hover on me and I'll spin and scale!</div>
+	<div class="hover">Hover on me and I'll spin and scale!</div>
 </div>
 <h2>3D Examples</h2>
 <p class="note">3D transforms only work in Safari and Webkit Nightlies.</p>

@@ -34,14 +34,14 @@
 	background-color:rgba(255,0,0,0.7);
 }
 
-#animationDemo:hover #box {
+#animationDemo:hover #box, #animationDemo.hover_effect #box {
 	-webkit-animation-name: resize;
 	-webkit-animation-duration: 1s;
 	-webkit-animation-iteration-count: 4;
 	-webkit-animation-direction: alternate;	
 }
 </style>
-<div id="animationDemo">
+<div id="animationDemo" class="hover">
 	<div id="box" class="shadow"></div>
 	<p class="center">Hover over me</p>
 </div>
@@ -104,7 +104,7 @@
 		border-radius: 16px;
 		-webkit-box-shadow: 0 0 16px rgba(66, 140, 240, 0.5);
 	}
-#animationDemo2 button:hover  {
+#animationDemo2 button:hover, #animationDemo2 button.hover_effect  {
 	background-color:#cce;
 	-webkit-animation-name: glow;
 	-webkit-animation-duration: 1s;
@@ -114,7 +114,7 @@
 }	
 </style>
 <div id="animationDemo2">
-	<button class="transition">Hover to Pulsate</button>
+	<button class="transition hover">Hover to Pulsate</button>
 </div>
 <p>The key to using these animations is subtlety - nice delicate animations, rather than extreme over the top ones!</p>
 </section>

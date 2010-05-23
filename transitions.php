@@ -75,7 +75,7 @@
 		border:1px #f0f solid;
 	}
 	
-	#timings_demo:hover .test_box {
+	#timings_demo:hover .test_box, #timings_demo.hover_effect .test_box {
 		margin-left:440px;
 		-webkit-border-radius:25px;
 		-webkit-transform: rotate(360deg);
@@ -83,7 +83,7 @@
 	}
 </style>
 <h2>Demo</h2>
-<div id="timings_demo" class="shadow">
+<div id="timings_demo" class="shadow hover">
 	<div id="ease" class="test_box"><p class="center">Ease</p></div>
 	<div id="ease-in" class="test_box"><p class="center">Ease In</p></div>
 	<div id="ease-out" class="test_box"><p class="center">Ease Out</p></div>
