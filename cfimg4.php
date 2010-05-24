@@ -60,6 +60,8 @@
 	
 	#cf5 img.top {
 		-webkit-transform:scale(1,0);
+		-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+		filter: alpha(opacity=0);		
 		opacity:0;
 
 	}
@@ -70,6 +72,8 @@
 	}
 	
 	#cf5:hover img.bottom, #cf5.hover_effect img.bottom {
+		-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+		filter: alpha(opacity=0);		
 		-webkit-transform:rotate(360deg) scale(0,0);
 	}
 	
