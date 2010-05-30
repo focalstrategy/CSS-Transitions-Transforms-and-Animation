@@ -40,7 +40,9 @@ $section = 	$_GET['section'];
 		<p>For most transitions I've just used two images to keep the examples simple. Most should be easy to extend to different content (videos, text, etc) or more than two images.</p>
 		<p>Of particular note is that these animations are hardware accelerated on iPhone OS, so if you are building a mobile site you definitely should be using this.</p>
 		<p>To make it easier to view source and copy, I'm putting style and script tags in each section, just before the demo. This isn't recommended, but in this instance it will hopefully help.</p>
-		<p>Any suggestions/improvements/etc, contact me via my gmail account (rich.bradshaw), or on Twitter (richbradshaw).</p>
+		<p>Any suggestions/improvements/etc, contact me via my gmail account (rich.bradshaw), or on Twitter (<a href="http://twitter.com/richbradshaw">richbradshaw</a>).</p>
+		<p>For some more demos with less explanation, check out the <a href="/demos/">demos page</a>.</p>
+		
 		<h2>Will it work for me?</h2>
 
 		<p>Green means yes, red means no.</p>
@@ -148,21 +150,8 @@ $section = 	$_GET['section'];
 			</ul>
 		</section>
 <? } ?>		
-		
-	<footer>
-		<p>&copy; Richard Bradshaw 2010</p>
-	</footer>	
-<a href="http://github.com/richbradshaw/CSS-Transitions-Transforms-and-Animation"><img style="position: absolute; top: 0; left: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Fork me on GitHub" /></a> 		
-<? if($_SERVER['SERVER_ADDR']!="127.0.0.1") {?>
-	<script type="text/javascript"> 
-	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-	</script> 
-	<script type="text/javascript"> 
-	try {
-	var pageTracker = _gat._getTracker("UA-16444273-1");
-	pageTracker._trackPageview();
-	} catch(err) {}</script>
-<? } ?>
+<?		
+	include($_SERVER['DOCUMENT_ROOT']."/footer.php");		
+?>
 	</body>
 </html>

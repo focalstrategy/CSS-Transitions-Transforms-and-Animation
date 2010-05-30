@@ -1,5 +1,5 @@
 <h2 id="slide2">Demo 2 - Sliding by translating the images (transitions and transforms)</h2>
-<p class="note">Note: Animating by transitioning transforms is hardware accelerate on iPhone OS, making this preferable there.</p>
+<p class="note">Note: Animating by transitioning transforms is hardware accelerated on iPhone OS, making this a good option there.</p>
 <h3>Plan</h3>
 <ol>
 	<li>Create a container with overflow set to hidden.</li>
