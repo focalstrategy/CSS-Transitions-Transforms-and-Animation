@@ -26,6 +26,7 @@
 		
 		<ul>
 			<li><a href="/demos/imageslider.php">A fancy carousel/image slider</li>
+			<li><a href="/demos/cubecarousel.php">A 3D carousel</li>				
 		</ul>
 	</section>
 	<?		

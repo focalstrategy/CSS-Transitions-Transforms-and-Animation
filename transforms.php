@@ -232,5 +232,5 @@ $(document).ready(function() {
 	<input id="td3perspective" type="range" min="200" max="2000" default="800" />	
 </div>
 <div class="clear"></div>
-<p>Have a play with the controls - there's not transition here, just the sliders to control it. Note that I'm only using javascript to update the css values - all the maths needed is done by the browser automatically.</p>
+<p>Have a play with the controls - there's no transition here, just the sliders to control it. Note that I'm only using javascript to update the css values - all the maths needed is done by the browser automatically.</p>
 </section>
