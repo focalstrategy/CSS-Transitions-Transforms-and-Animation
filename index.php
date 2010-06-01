@@ -76,6 +76,7 @@ $section = 	$_GET['section'];
 					<li><a href="#slide2">Sliding by transitions + translations</a></li>				
 				</ol>
 			<li><a href="#flip">Flipping content</a></li>
+			<li><a href="#accordian">Accordions</a></li>
 			<li><a href="#support">Notes on browser support</a></li>
 			<li><a href="#legacy">How will it look in legacy browsers?</a></li>
 			<li><a href="#references">References</a></li>			
@@ -90,7 +91,9 @@ $section = 	$_GET['section'];
 
 		include($_SERVER['DOCUMENT_ROOT']."/sliding.php");
 		
-		include($_SERVER['DOCUMENT_ROOT']."/flip.php");		
+		include($_SERVER['DOCUMENT_ROOT']."/flip.php");
+		
+		include($_SERVER['DOCUMENT_ROOT']."/accordions.php");		
 		?>
 		
 		
