@@ -81,3 +81,4 @@ $(document).ready(function() {
 	});
 });			
 </pre>
+<p>Have a look at <a href="/demos/multiple_images.php">the multiple image demo</a> to see how to extend this idea to more than two images.</p>

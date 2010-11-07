@@ -17,6 +17,7 @@
 				});
 			});
 		</script>
+		<meta name="viewport" content="width=device-width,maximum-scale=1.0" />
 	</head>		
 	<body>		
 
@@ -34,7 +35,7 @@ $section = 	$_GET['section'];
 ?>		
 	<section>
 		<h1>Intro</h1>
-		<p>First things first - these demos are showing of CSS transitions, transforms (2D and 3D) and animations. Currently (May 2010), transitions and 2D transforms are available in all current browsers (at least in a dev build) apart from Internet Explorer, 3D transforms and animations are only in Safari. Most examples degrade nicely, so if you are using a legacy browser you can still use a site using these, you just won't get animation. 3D transforms generally don't degrade nicely, so be careful when using them.</p>
+		<p>First things first - these demos are showing of CSS transitions, transforms (2D and 3D) and animations. Currently (Nov 2010), 2D transforms are available in all current browsers including IE9, transitions are everywhere (at least in dev builds) except Internet Explorer while 3D transforms and animations are only in Safari and Chrome. Most examples degrade nicely, so if you are using a legacy browser you can still use a site using these, you just won't get animation. 3D transforms generally don't degrade nicely, so be careful when using them.</p>
 		<p>None of the animation uses javascript, though I am using jQuery to add and remove classes to add interactivity. You can use the :target pseudo selector to do this in some cases, but I'm keeping it simple here.</p>
 		<p>If you are using iPhone OS, replace hover with touch and hold wherever appropriate. (Check the script in the head if you are wondering how to replicate that effect.)</p>
 		<p>For most transitions I've just used two images to keep the examples simple. Most should be easy to extend to different content (videos, text, etc) or more than two images.</p>
@@ -58,6 +59,17 @@ $section = 	$_GET['section'];
 	</section>
 
 		<section>
+			<script type="text/javascript"><!--
+			google_ad_client = "pub-7181696033265659";
+			/* CSS3 Banner */
+			google_ad_slot = "0969051732";
+			google_ad_width = 728;
+			google_ad_height = 90;
+			//-->
+			</script>
+			<script type="text/javascript"
+			src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+			</script>						
 		<h1>Contents</h1>
 		<ol>
 			<li><a href="#how2transitions">How to use transitions</a></li>
@@ -81,6 +93,17 @@ $section = 	$_GET['section'];
 			<li><a href="#legacy">How will it look in legacy browsers?</a></li>
 			<li><a href="#references">References</a></li>			
 		</ol>
+		<script type="text/javascript"><!--
+		google_ad_client = "pub-7181696033265659";
+		/* CSS3 Banner */
+		google_ad_slot = "0969051732";
+		google_ad_width = 728;
+		google_ad_height = 90;
+		//-->
+		</script>
+		<script type="text/javascript"
+		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+		</script>				
 	</section>
 		<?
 		include($_SERVER['DOCUMENT_ROOT']."/transitions.php");
@@ -100,7 +123,7 @@ $section = 	$_GET['section'];
 		<section id="support">
 			<h1>Notes on browser support</h1>
 			<p>Everything here has been available in at least one browser since 2008. Firefox and Opera have only added support in 2010, hence the reason this technology is becoming more mainstream.</p>
-			<p>As of May 2010, Microsoft have announced no plans to support this in Internet Explorer, though the IE9 group have mentioned them briefly in their blog.</p>
+			<p>As of Nov 2010, Microsoft have announced no plans to support transitions in Internet Explorer, though the IE9 group have mentioned them briefly in their blog.</p><p>2D transforms are available in IE9.</p>
 			<div class="half left">
 				<h2>CSS Transitions</h2>
 				<p>First introduced</p>
@@ -116,7 +139,8 @@ $section = 	$_GET['section'];
 					<li>Safari 3.2: 13/11/2008</li>
 					<li>Firefox 3.5: 30/06/2009</li>
 					<li>Chrome 1.0: 02/09/2008</li>
-					<li>Opera 10.5: 02/03/2010</li>			
+					<li>Opera 10.5: 02/03/2010</li>
+					<li>Internet Explore 9: 09/2010</li>		
 				</ul>
 			</div>
 			<div class="half right">
@@ -130,6 +154,7 @@ $section = 	$_GET['section'];
 				<p>First introduced</p>
 				<ul>
 					<li>Safari 4.0: 11/06/2008</li>
+					<li>Chrome: 28/08/2010</li>
 				</ul>
 			</div>
 			<div class="clear"></div>	

@@ -1,18 +1,96 @@
-# Turn on Expires and set default to 0
-ExpiresActive On
-ExpiresDefault A0
+<IfModule mod_setenvif.c>
+	<IfModule mod_headers.c>
+	BrowserMatch MSIE ie
+	Header set X-UA-Compatible "IE=Edge,chrome=1" env=ie
+	</IfModule>
+</IfModule>
 
-Header set X-Author "Richard Bradshaw"
+<IfModule mod_expires.c>
+  Header set cache-control: public
+  ExpiresActive on
+
+# Perhaps better to whitelist expires rules? Perhaps.
+  ExpiresDefault                          "access plus 1 month"
+
+# cache.manifest needs re-reqeusts in FF 3.6 (thx Remy ~Introducing HTML5)
+  ExpiresByType text/cache-manifest       "access plus 0 seconds"
+
+# your document html 
+  ExpiresByType text/html                  "access"
+
+# rss feed
+  ExpiresByType application/rss+xml       "access plus 1 hour"
+
+# favicon (cannot be renamed)
+  ExpiresByType image/vnd.microsoft.icon  "access plus 1 week" 
+
+# media: images, video, audio
+  ExpiresByType image/gif                 "access plus 1 year"
+  ExpiresByType image/png                 "access plus 1 year"
+  ExpiresByType image/jpg                 "access plus 1 year"
+  ExpiresByType image/jpeg                "access plus 1 year"
+  ExpiresByType video/ogg                 "access plus 1 year"
+  ExpiresByType audio/ogg                 "access plus 1 year"
+  ExpiresByType video/mp4                 "access plus 1 year"
+
+# css3 PIE
+  ExpiresByType text/x-component          "access plus 1 year"  
+
+# webfonts
+  ExpiresByType font/ttf                  "access plus 1 year"
+  ExpiresByType font/woff                 "access plus 1 year"
+  ExpiresByType image/svg+xml             "access plus 1 year"
+  
+# css and javascript
+  ExpiresByType text/css                  "access plus 1 week"
+  ExpiresByType application/javascript    "access plus 1 week"
+  ExpiresByType text/javascript           "access plus 1 week"
+</IfModule>
+
+Header unset ETag
+FileETag None
+
+Header set X-Author "Focal Strategy"
 
 <Files .htaccess>
 order allow,deny
 deny from all
 </Files>
 
-<FilesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|css|swf)$">
-ExpiresDefault A29030400
-Header append Cache-Control "public"
-</FilesMatch>
-
 IndexIgnore *
 Options -Indexes
+
+Options -MultiViews
+
+ErrorDocument 404 /errorpages/notfound.php
+
+<IfModule mod_deflate.c>
+# html, xml, css, and js:
+  AddOutputFilterByType DEFLATE text/x-component text/html text/plain text/xml text/css application/x-javascript text/javascript application/javascript application/json
+
+# webfonts and svg:
+  <FilesMatch "\.(ttf|otf|eot|svg)$" >
+    SetOutputFilter DEFLATE
+  </FilesMatch>
+</IfModule>
+
+# video
+AddType video/ogg ogg ogv
+AddType video/mp4 mp4
+
+# Proper svg serving. Required for svg webfonts on iPad
+#   twitter.com/FontSquirrel/status/14855840545
+AddType image/svg+xml                 svg svgz 
+
+# webfonts
+AddType application/vnd.ms-fontobject eot
+AddType font/ttf                      ttf
+AddType font/otf                      otf
+AddType font/x-woff                   woff
+
+AddType text/x-component .htc
+
+# use utf-8 encoding for anything served text/plain or text/html
+AddDefaultCharset utf-8
+# force utf-8 for a number of file formats
+AddCharset utf-8 .html .css .js .xml .json .rss

@@ -14,30 +14,40 @@
 #transDemo1 #skew {
 	-webkit-transform:skew(35deg);
 	-moz-transform:skew(35deg);
-	-o-transform:skew(35deg);		
+	-o-transform:skew(35deg);
+	-ms-transform:skew(35deg);
+	transform:skew(35deg);
 }
 
 #transDemo1 #scale {
 	-webkit-transform:scale(1,0.5);
 	-moz-transform:scale(1,0.5);
 	-o-transform:scale(1,0.5);
+	-ms-transform:scale(1,0.5);
+	transform:scale(1,0.5);	
 }
 
 #transDemo1 #rotate {
 	-webkit-transform:rotate(45deg);
 	-moz-transform:rotate(45deg);
-	-o-transform:rotate(45deg);	
+	-o-transform:rotate(45deg);
+	-ms-transform:rotate(45deg);
+	transform:rotate(45deg);	
 }
 
 #transDemo1 #translate {
 	-webkit-transform:translate(10px, 20px);
 	-moz-transform:translate(10px, 20px);
 	-o-transform:translate(10px, 20px);
+	-ms-transform:translate(10px, 20px);
+	transform:translate(10px, 20px);	
 }
 #transDemo1 #rotate-skew-scale-translate {
 	-webkit-transform:skew(30deg) scale(1.1,1.1) rotate(40deg) translate(10px, 20px);
 	-moz-transform:skew(30deg) scale(1.1,1.1) rotate(40deg) translate(10px, 20px);	
-	-o-transform:skew(30deg) scale(1.1,1.1) rotate(40deg) translate(10px, 20px);			
+	-o-transform:skew(30deg) scale(1.1,1.1) rotate(40deg) translate(10px, 20px);
+	-ms-transform:skew(30deg) scale(1.1,1.1) rotate(40deg) translate(10px, 20px);
+	transform:skew(30deg) scale(1.1,1.1) rotate(40deg) translate(10px, 20px);
 }
 </style>
 <div id="transDemo1">
@@ -77,6 +87,7 @@
 	-webkit-transition: all 2s ease-in-out;
 	-moz-transition: all 2s ease-in-out;
 	-o-transition: all 2s ease-in-out;
+	-ms-transition: all 2s ease-in-out;	
 	transition: all 2s ease-in-out;
 
 }
@@ -84,14 +95,16 @@
 #transDemo2 div:hover, #transDemo2 div.hover_effect {
 	-webkit-transform:rotate(720deg) scale(2,2);
 	-moz-transform:rotate(720deg) scale(2,2);
-	-o-transform:rotate(720deg) scale(2,2);	
+	-o-transform:rotate(720deg) scale(2,2);
+	-ms-transform:rotate(720deg) scale(2,2);
+	transform:rotate(720deg) scale(2,2);		
 }
 </style>
 <div id="transDemo2">
 	<div class="hover">Hover on me and I'll spin and scale!</div>
 </div>
 <h2>3D Examples</h2>
-<p class="note">3D transforms only work in Safari and Webkit Nightlies.</p>
+<p class="note">3D transforms only work in Safari and Chrome.</p>
 <style>
 #transDemo3 {
 	-webkit-perspective: 800;

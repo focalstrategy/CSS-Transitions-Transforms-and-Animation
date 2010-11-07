@@ -78,7 +78,11 @@
 	#timings_demo:hover .test_box, #timings_demo.hover_effect .test_box {
 		margin-left:440px;
 		-webkit-border-radius:25px;
+		-moz-border-radius:25px;
+		-o-border-radius:25px;		
 		-webkit-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		transform: rotate(360deg);				
 		background-color:#fff;
 	}
 </style>

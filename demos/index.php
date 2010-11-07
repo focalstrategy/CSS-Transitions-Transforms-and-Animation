@@ -25,8 +25,12 @@
 		<p>If you are interested in a basic explanation of some of the properties used here, check <a href="/">the tutorial</a>.</p>
 		
 		<ul>
+			<li><a href="/demos/multiple_images.php">Click to fade between multiple images</li>
+			<li><a href="/demos/next_prev_slider.php">Forward and Backward buttons for a slider</li>				
 			<li><a href="/demos/imageslider.php">A fancy carousel/image slider</li>
 			<li><a href="/demos/cubecarousel.php">A 3D carousel</li>				
+			<li><a href="/demos/3d.php">A 3D anaglyphic cube (use red-cyan glasses)</li>
+			<li><a href="/demos/geo/">Card flipping to show more information with multitouch support.</li>				
 		</ul>
 	</section>
 	<?		

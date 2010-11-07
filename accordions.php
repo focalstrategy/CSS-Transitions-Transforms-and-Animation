@@ -167,4 +167,14 @@ $(document).ready(function() {
 }
 </pre>
 <p>Plus a bit of javascript to turn the classes on and off.</p>
+<pre class="js">
+$(document).ready(function() {
+	$("#accordion section h1").click(function(e) {
+		$(this).parents().siblings("section").addClass("ac_hidden");
+		$(this).parents("section").removeClass("ac_hidden");
+
+		e.preventDefault();
+	});
+});
+</pre>
 </section>

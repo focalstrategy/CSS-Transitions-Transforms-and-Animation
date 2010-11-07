@@ -55,8 +55,9 @@ a:hover {
 }
 
 pre, .code {
-	font-size:16px;
+	font-size:13px;
 	font-family:Inconsolata, Monaco, Consolas, "Lucida Console", "Courier New", monospace;
+	overflow:hidden;
 }
 
 pre {

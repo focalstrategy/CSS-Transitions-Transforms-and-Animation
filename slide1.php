@@ -1,4 +1,5 @@
 <h2 id="slide1">Demo 1 - Sliding by adding padding (transitions)</h2>
+<p>For more information on these, check this updated post: <a href="/blog/2010/08/howto/an-animated-image-slider-that-works-in-internet-explorer/">cross browser implementation</a>.
 <h3>Plan</h3>
 <ol>
 	<li>Create a container with overflow set to hidden.</li>
