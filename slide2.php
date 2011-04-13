@@ -30,6 +30,7 @@
 		-webkit-transition:all 1.0s ease-in-out;
 		-moz-transition:all 1.0s ease-in-out;
 		-o-transition:all 1.0s ease-in-out;
+		-ms-transition:all 1.0s ease-in-out;		
 		-transition:all 1.0s ease-in-out;
 	}
 	#slide2_images img {

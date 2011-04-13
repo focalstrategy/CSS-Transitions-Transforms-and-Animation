@@ -30,6 +30,7 @@
 			<li><a href="/demos/imageslider.php">A fancy carousel/image slider</li>
 			<li><a href="/demos/cubecarousel.php">A 3D carousel</li>				
 			<li><a href="/demos/3d.php">A 3D anaglyphic cube (use red-cyan glasses)</li>
+			<li><a href="/demos/cuboids.php">3D cuboids in the style of the Toshiba Tablet site</li>				
 			<li><a href="/demos/geo/">Card flipping to show more information with multitouch support.</li>				
 		</ul>
 	</section>

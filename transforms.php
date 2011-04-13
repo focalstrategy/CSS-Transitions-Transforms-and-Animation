@@ -109,6 +109,18 @@
 #transDemo3 {
 	-webkit-perspective: 800;
 	-webkit-perspective-origin: 50% 100px;
+	
+	-moz-perspective: 800;
+	-moz-perspective-origin: 50% 100px;
+	
+	-o-perspective: 800;
+	-o-perspective-origin: 50% 100px;
+	
+	-ms-perspective: 800;
+	-ms-perspective-origin: 50% 100px;	
+	
+	perspective: 800;
+	perspective-origin: 50% 100px;	
 	margin:50px auto;
 	width:400px;
 	float:left;	
@@ -121,10 +133,22 @@
 	width: 200px;
 	-webkit-transform-style: preserve-3d;
 	-webkit-transform-origin:(50% 100px 0);
+	-moz-transform-style: preserve-3d;
+	-moz-transform-origin:(50% 100px 0);
+	-o-transform-style: preserve-3d;
+	-o-transform-origin:(50% 100px 0);
+	-ms-transform-style: preserve-3d;
+	-ms-transform-origin:(50% 100px 0);
+	transform-style: preserve-3d;
+	transform-origin:(50% 100px 0);				
 }
 
 #transDemo3 #Ycube,#transDemo3 #Zcube {
 	-webkit-transform-style: preserve-3d;	
+	-moz-transform-style: preserve-3d;	
+	-o-transform-style: preserve-3d;	
+	-ms-transform-style: preserve-3d;	
+	transform-style: preserve-3d;					
 }
 
 #transDemo3 .face {
@@ -134,6 +158,10 @@
 	padding: 20px;
 	background-color: rgba(50, 50, 50, 0.3);
 	-webkit-backface-visibility: visible;	
+	-moz-backface-visibility: visible;	
+	-o-backface-visibility: visible;	
+	-ms-backface-visibility: visible;
+	backface-visibility: visible;					
 	border:1px #aaa solid;
 }
 
@@ -148,28 +176,52 @@
 
 #cube .one  {
 	-webkit-transform: rotateX(90deg) translateZ(100px);
+	-moz-transform: rotateX(90deg) translateZ(100px);
+	-o-transform: rotateX(90deg) translateZ(100px);
+	-ms-transform: rotateX(90deg) translateZ(100px);			
+	transform: rotateX(90deg) translateZ(100px);				
      background-color: rgba(255, 0, 0, 0.5);
 }
 
 #cube .two {
 	-webkit-transform: translateZ(100px);
+	-moz-transform: translateZ(100px);
+	-o-transform: translateZ(100px);
+	-ms-transform: translateZ(100px);
+	transform: translateZ(100px);				
 }
 
 #cube .three {
 	-webkit-transform: rotateY(90deg) translateZ(100px);
+	-moz-transform: rotateY(90deg) translateZ(100px);	
+	-o-transform: rotateY(90deg) translateZ(100px);
+	-ms-transform: rotateY(90deg) translateZ(100px);
+	transform: rotateY(90deg) translateZ(100px);		
 }
 
 #cube .four {
 	-webkit-transform: rotateY(180deg) translateZ(100px);
+	-moz-transform: rotateY(180deg) translateZ(100px);
+	-o-transform: rotateY(180deg) translateZ(100px);
+	-ms-transform: rotateY(180deg) translateZ(100px);
+	transform: rotateY(180deg) translateZ(100px);				
      background-color: rgba(0, 255, 0, 0.5);	
 }
 
 #cube .five {
 	-webkit-transform: rotateY(-90deg) translateZ(100px);
+	-moz-transform: rotateY(-90deg) translateZ(100px);
+	-o-transform: rotateY(-90deg) translateZ(100px);
+	-ms-transform: rotateY(-90deg) translateZ(100px);
+	transform: rotateY(-90deg) translateZ(100px);				
 }
 
 #cube .six {
 	-webkit-transform: rotateX(-90deg) translateZ(100px) rotate(180deg);
+	-moz-transform: rotateX(-90deg) translateZ(100px) rotate(180deg);
+	-o-transform: rotateX(-90deg) translateZ(100px) rotate(180deg);
+	-ms-transform: rotateX(-90deg) translateZ(100px) rotate(180deg);
+	transform: rotateX(-90deg) translateZ(100px) rotate(180deg);				
      background-color: rgba(0, 0, 255, 0.5);		
 }
 
@@ -190,20 +242,31 @@
 </style>
 <script>
 $(document).ready(function() {
+	var vP = "";
+	if ($.browser.webkit) {
+		vP = "-webkit-";
+	} else if ($.browser.msie) {
+		vP = "-ms-";
+	} else if ($.browser.mozilla) {
+		vP = "-moz-";
+	} else if ($.browser.opera) {
+		vP = "-o-";
+	}
+	
 	$('#td3controls #td3xrot').change(function () {
-			$('#cube').css("-webkit-transform","rotateX("+$('#td3controls input#td3xrot').val()+"deg)");
+			$('#cube').css(vP+"transform","rotateX("+$('#td3controls input#td3xrot').val()+"deg)");
 			$('label[for="td3xrot"]').html("X rotation ("+$('#td3controls input#td3xrot').val()+" deg)")
 	});
 	$('#td3controls #td3yrot').change(function () {
-			$('#Ycube').css("-webkit-transform","rotateY("+$('#td3controls input#td3yrot').val()+"deg)");
+			$('#Ycube').css(vP+"transform","rotateY("+$('#td3controls input#td3yrot').val()+"deg)");
 			$('label[for="td3yrot"]').html("Y rotation ("+$('#td3controls input#td3yrot').val()+" deg)")			
 	});
 	$('#td3controls #td3zrot').change(function () {
-			$('#Zcube').css("-webkit-transform","rotateZ("+$('#td3controls input#td3zrot').val()+"deg)");
+			$('#Zcube').css(vP+"transform","rotateZ("+$('#td3controls input#td3zrot').val()+"deg)");
 			$('label[for="td3zrot"]').html("Z rotation ("+$('#td3controls input#td3zrot').val()+" deg)")			
 	});	
 	$('#td3controls #td3perspective').change(function () {
-			$('#transDemo3').css("-webkit-perspective",$('#td3controls input#td3perspective').val());
+			$('#transDemo3').css(vP+"perspective",$('#td3controls input#td3perspective').val());
 			$('label[for="td3perspective"]').html("Perspective ("+$('#td3controls input#td3perspective').val()+")")			
 	});		
 });

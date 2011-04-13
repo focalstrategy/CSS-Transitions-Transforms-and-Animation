@@ -31,9 +31,22 @@
 		height: 100%;
 		-webkit-transform-style: preserve-3d;
 		-webkit-transition: all 1.0s linear;
+		-moz-transform-style: preserve-3d;
+		-moz-transition: all 1.0s linear;
+		-o-transform-style: preserve-3d;
+		-o-transition: all 1.0s linear;
+		-ms-transform-style: preserve-3d;
+		-ms-transition: all 1.0s linear;						
+		transform-style: preserve-3d;
+		transition: all 1.0s linear;		
 	}
 	#f1_container:hover #f1_card, #f1_container.hover_effect #f1_card {
 		-webkit-transform: rotateY(180deg);
+		-moz-transform: rotateY(180deg);
+		-o-transform: rotateY(180deg);
+		-ms-transform: rotateY(180deg);
+		transform: rotateY(180deg);
+		
 		-webkit-box-shadow: -5px 5px 5px #aaa;				
 		-moz-box-shadow: -5px 5px 5px #aaa;
 		box-shadow: -5px 5px 5px #aaa;		
@@ -43,11 +56,23 @@
 		width: 100%;
 		height: 100%;
 		-webkit-backface-visibility: hidden;
+		-moz-backface-visibility: hidden;
+		-o-backface-visibility: hidden;
+		-ms-backface-visibility: hidden;
+		backface-visibility: hidden;								
 	}
 	.face.back {
 		display: block;
 		-webkit-transform: rotateY(180deg);
 		-webkit-box-sizing: border-box;
+		-moz-transform: rotateY(180deg);
+		-moz-box-sizing: border-box;
+		-o-transform: rotateY(180deg);
+		-o-box-sizing: border-box;		
+		-ms-transform: rotateY(180deg);
+		-ms-box-sizing: border-box;
+		transform: rotateY(180deg);
+		box-sizing: border-box;				
 		padding: 10px;
 		color: white;
 		text-align: center;
@@ -81,7 +106,7 @@
  		&lt;/div&gt;
 &lt;/div&gt;
 	</pre>
-	<p>Then the CSS</p>
+	<p>Then the CSS, stripped of the vendor prefixes to keep it clean.</p>
 	<pre class="css">
 #f1_container {
 	position: relative;
@@ -95,30 +120,28 @@
 }
 
 #f1_container {
-	-webkit-perspective: 1000;
+	perspective: 1000;				
 }
 #f1_card {
 	width: 100%;
-	height: 100%;
-	-webkit-transform-style: preserve-3d;
-	-webkit-transition: all 1.0s linear;
+	height: 100%;	
+	transform-style: preserve-3d;
+	transition: all 1.0s linear;	
 }
 #f1_container:hover #f1_card {
-	-webkit-transform: rotateY(180deg);
-	-webkit-box-shadow: -5px 5px 5px #aaa;				
-	-moz-box-shadow: -5px 5px 5px #aaa;
+	transform: rotateY(180deg);
 	box-shadow: -5px 5px 5px #aaa;
 }
 .face {
 	position: absolute;
 	width: 100%;
 	height: 100%;
-	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
 }
 .face.back {
 	display: block;
-	-webkit-transform: rotateY(180deg);
-	-webkit-box-sizing: border-box;
+	transform: rotateY(180deg);
+	box-sizing: border-box;
 	padding: 10px;
 	color: white;
 	text-align: center;
@@ -136,18 +159,35 @@
 	}
 	#f2_container {
 		-webkit-perspective: 1000;
+		-moz-perspective: 1000;
+		-o-perspective: 1000;
+		-ms-perspective: 1000;
+		perspective: 1000;
 	}
 	#f2_card {
 		width: 100%;
 		height: 100%;
 		-webkit-transform-style: preserve-3d;
 		-webkit-transition: all 1.0s linear;
+		-moz-transform-style: preserve-3d;
+		-moz-transition: all 1.0s linear;
+		-o-transform-style: preserve-3d;
+		-o-transition: all 1.0s linear;
+		-ms-transform-style: preserve-3d;
+		-ms-transition: all 1.0s linear;	
+		transform-style: preserve-3d;
+		transition: all 1.0s linear;
 	}
 	#f2_container:hover #f2_card, #f2_container.hover_effect #f2_card {
-		-webkit-transform: rotateX(180deg);
-		-webkit-box-shadow: 5px -5px 5px #aaa;				
-		-moz-box-shadow: 5px -5px 5px #aaa;
-		box-shadow: 5px -5px 5px #aaa;		
+		-webkit-transform: rotateY(180deg);
+		-moz-transform: rotateY(180deg);
+		-o-transform: rotateY(180deg);
+		-ms-transform: rotateY(180deg);
+		transform: rotateY(180deg);
+		
+		-webkit-box-shadow: -5px 5px 5px #aaa;				
+		-moz-box-shadow: -5px 5px 5px #aaa;
+		box-shadow: -5px 5px 5px #aaa;		
 	}
 	</style>
 	
@@ -171,12 +211,24 @@
 	}
 	#f3_container {
 		-webkit-perspective: 1000;
+		-moz-perspective: 1000;
+		-o-perspective: 1000;
+		-ms-perspective: 1000;
+		perspective: 1000;
 	}
 	#f3_card {
 		width: 100%;
 		height: 100%;
 		-webkit-transform-style: preserve-3d;
 		-webkit-transition: all 1.0s linear;
+		-moz-transform-style: preserve-3d;
+		-moz-transition: all 1.0s linear;
+		-o-transform-style: preserve-3d;
+		-o-transition: all 1.0s linear;
+		-ms-transform-style: preserve-3d;
+		-ms-transition: all 1.0s linear;	
+		transform-style: preserve-3d;
+		transition: all 1.0s linear;
 	}
 	#f3_container:hover #f3_card, #f3_container.hover_effect #f3_card {
 		-webkit-transform: rotateZ(180deg);

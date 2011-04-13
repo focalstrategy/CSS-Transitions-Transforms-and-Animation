@@ -1,5 +1,5 @@
 	<footer>
-		<p>&copy; Richard Bradshaw from <a href="http://focalstrategy.com">Focal Strategy</a> 2010</p>
+		<p>&copy; Richard Bradshaw from <a href="http://focalstrategy.com">Focal Strategy</a> 2010 - 2011</p>
 		<script type="text/javascript"><!--
 		google_ad_client = "pub-7181696033265659";
 		/* CSS3 Banner */

@@ -7,11 +7,11 @@
 	-webkit-transition: all 1s ease-in-out;
 	-moz-transition: all 1s ease-in-out;
 	-o-transition: all 1s ease-in-out;
-	-webkit-transition: all 1s ease-in-out;
+	-ms-transition: all 1s ease-in-out;
 	transition: all 1s ease-in-out;
 }
 </pre>
-<p>There is a lot of duplication due to vendor prefixes - until the specification if finalised, this is likely to stay the same. If this bothers you, there are various tools such as <a href="http://wiki.github.com/anthonyshort/csscaffold/">CSS Scaffold</a> that allow you to define mixins to avoid repetitive code.</p>
+<p>There is a lot of duplication due to vendor prefixes - until the specification if finalised, this is likely to stay the same. If this bothers you, there are various tools such as <a href="http://wiki.github.com/anthonyshort/csscaffold/">CSS Scaffold</a> or <a href="http://sass-lang.com/">SASS</a> that allow you to define mixins to avoid repetitive code.</p>
 <p>The syntax is pretty straightforward - the property you want to animate, all or border-radius or color or whatever, the time to run, then the transition timing function. The options for the timing function are shown below.</p>
 
 <style>
@@ -20,21 +20,21 @@
 		height:340px;
 		margin:0 auto;
 		border:1px #aaa solid;
-		padding:10px;		
+		padding:10px;
 	}
-	
+
 	.test_box {
 		width:50px;
 		height:50px;
 		margin-bottom:10px;
 		background-color:#ccc;
 	}
-	
+
 	#ease.test_box {
 		-webkit-transition: all 4s ease;
 		-moz-transition: all 4s ease;
 		-o-transition: all 4s ease;
-		-webkit-transition: all 4s ease;
+		-ms-transition: all 4s ease;
 		transition: all 4s ease;
 		border:1px #f00 solid;
 	}
@@ -43,7 +43,7 @@
 		-webkit-transition: all 4s ease-in;
 		-moz-transition: all 4s ease-in;
 		-o-transition: all 4s ease-in;
-		-webkit-transition: all 4s ease-in;
+		-ms-transition: all 4s ease-in;
 		transition: all 4s ease-in;
 		border:1px #0f0 solid;
 	}
@@ -52,7 +52,7 @@
 		-webkit-transition: all 4s ease-out;
 		-moz-transition: all 4s ease-out;
 		-o-transition: all 4s ease-out;
-		-webkit-transition: all 4s ease-out;
+		-ms-transition: all 4s ease-out;
 		transition: all 4s ease-out;
 		border:1px #00f solid;
 	}
@@ -61,7 +61,7 @@
 		-webkit-transition: all 4s ease-in-out;
 		-moz-transition: all 4s ease-in-out;
 		-o-transition: all 4s ease-in-out;
-		-webkit-transition: all 4s ease-in-out;
+		-ms-transition: all 4s ease-in-out;
 		transition: all 4s ease-in-out;
 		border:1px #ff0 solid;
 	}
@@ -70,19 +70,23 @@
 		-webkit-transition: all 4s linear;
 		-moz-transition: all 4s linear;
 		-o-transition: all 4s linear;
-		-webkit-transition: all 4s linear;
+		-ms-transition: all 4s linear;
 		transition: all 4s linear;
 		border:1px #f0f solid;
 	}
-	
+
 	#timings_demo:hover .test_box, #timings_demo.hover_effect .test_box {
 		margin-left:440px;
 		-webkit-border-radius:25px;
 		-moz-border-radius:25px;
-		-o-border-radius:25px;		
+		-o-border-radius:25px;
+		border-radius:25px;
+
 		-webkit-transform: rotate(360deg);
 		-moz-transform: rotate(360deg);
-		transform: rotate(360deg);				
+		-o-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		transform: rotate(360deg);
 		background-color:#fff;
 	}
 </style>

@@ -12,6 +12,7 @@
 	-webkit-transition: all 1.0s ease-in-out;
 	-moz-transition: all 1.0s ease-in-out;
 	-o-transition: all 1.0s ease-in-out;
+	-ms-transition: all 1.0s ease-in-out;
 	transition: all 1.0s ease-in-out;
 }
 #accordion {
@@ -59,6 +60,7 @@
 	-webkit-transform:rotate(90deg);
 	-moz-transform:rotate(90deg);
 	-o-transform:rotate(90deg);
+	-ms-transform:rotate(90deg);
 	transform:rotate(90deg);						
 	padding:0;
 }
@@ -115,6 +117,7 @@ $(document).ready(function() {
 	-webkit-transition: all 0.5s ease-in-out;
 	-moz-transition: all 0.5s ease-in-out;
 	-o-transition: all 0.5s ease-in-out;
+	-ms-transition: all 0.5s ease-in-out;	
 	transition: all 0.5s ease-in-out;
 }
 #accordion {
@@ -162,6 +165,7 @@ $(document).ready(function() {
 	-webkit-transform:rotate(90deg);
 	-moz-transform:rotate(90deg);
 	-o-transform:rotate(90deg);
+	-ms-transform:rotate(90deg);	
 	transform:rotate(90deg);						
 	padding:0;
 }

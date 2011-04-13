@@ -1,0 +1,120 @@
+html {
+	background-color:#ccc;
+	overflow-y: scroll;	
+}
+
+body {
+	font-size:14px;
+	font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;
+
+	background-color:#eee;
+	
+	width:960px;
+	margin:20px auto;
+	padding:20px;
+	border:1px solid black;
+	overflow:hidden;
+}
+
+$width:920px;
+$box_width:$width / 7;
+$box_height:500px;
+
+
+$hue: 240;
+
+#boxes {
+	margin:20px auto;
+	width:$width;
+	
+	.cuboid {
+		
+		@for $i from 1 through 7 {
+			
+			&:nth-child(#{$i}) {
+				z-index: #{(8 - $i) + 10};
+				div {
+					&:nth-child(1) {
+						background-image: -webkit-gradient(
+						    linear,
+						    left top,
+						    right top,
+						    color-stop(0, hsl($hue,100,20)),
+						    color-stop(0.05, hsl($hue,80,60)),
+						    color-stop(0.90, hsl($hue,80,60)),
+						    color-stop(0.95, hsl($hue,80,40)),
+						    color-stop(1, hsl($hue,80,90))
+						);
+
+					}
+					&:nth-child(2) {
+						background-image: -webkit-gradient(
+						    linear,
+						    left top,
+						    right top,
+						    color-stop(0, hsl($hue,100,20)),
+						    color-stop(0.05, hsl($hue,80,60)),
+						    color-stop(0.90, hsl($hue,80,60)),
+						    color-stop(0.95, hsl($hue,80,40)),
+						    color-stop(1, hsl($hue,80,90))
+						);
+					}
+				}
+			}
+			
+			$hue: $hue - 20;
+			
+		}
+								
+	}
+}
+
+.cuboid {
+	float:left;
+	height:$box_height;
+	width:$box_width;
+	position:relative;
+	
+	-webkit-perspective: 1000;
+	-webkit-perspective-origin: 50% 50%;
+
+	
+	&>div {
+		height:$box_height;
+		width:$box_width;
+		-webkit-transition:all 0.3s ease-in-out;
+		-webkit-transform-style: preserve-3d;
+		
+		-webkit-transform-origin: #{$box_width * 0.5} 50% #{$box_width * -0.5};
+		
+		&>div {
+			position:absolute;
+			height:$box_height;
+			width:$box_width;
+			top:0;
+			left:0;
+			&:nth-child(1) {
+				-webkit-transform: translateZ(0px);
+				p {
+					color:white;
+					text-align:center;
+					position:relative;
+					top:$box_height / 2;
+				}
+			}
+			&:nth-child(2) {
+				-webkit-transform:rotateY(-90deg) translate3d(-$box_width / 2, 0, $box_width / 2);
+			}
+		}
+
+	}
+
+	&:hover>div {
+		z-index:1;
+		-webkit-transform:rotateY(45deg);
+	}
+	&:hover + div {
+		z-index:100;
+	}
+	
+}
