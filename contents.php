@@ -16,8 +16,8 @@
 			<li><a href="/slide1/">Sliding by transitions</a></li>
 			<li><a href="/slide2/">Sliding by transitions + translations</a></li>				
 		</ol>
-	<li><a href="/flip/">Flipping content</a></li>
-	<li><a href="/accordions/">Accordions</a></li>
+	<li><a href="/flip/">3D Flipping content</a></li>
+	<li><a href="/accordions/">Animated Accordions</a></li>
 	<li><a href="/support/">Notes on browser support</a></li>
 	<li><a href="/legacy/">How will it look in legacy browsers?</a></li>
 	<li><a href="/references/">Further Reading</a></li>			

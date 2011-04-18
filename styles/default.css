@@ -27,7 +27,8 @@ a {
 	-webkit-transition:all 0.5s ease-in-out;
 	-moz-transition:all 0.5s ease-in-out;
 	-o-transition:all 0.5s ease-in-out;
-	-transition:all 0.5s ease-in-out;
+	-ms-transition:all 0.5s ease-in-out;	
+	transition:all 0.5s ease-in-out;
 }
 
 header {
@@ -68,10 +69,12 @@ pre {
 	-webkit-box-shadow: 5px 5px 5px #aaa;
 	-moz-box-shadow: 5px 5px 5px #aaa;
 	box-shadow: 5px 5px 5px #aaa;
+	
 	-webkit-transition:all 0.5s ease-in-out;
 	-moz-transition:all 0.5s ease-in-out;
 	-o-transition:all 0.5s ease-in-out;
-	-transition:all 0.5s ease-in-out;
+	-ms-transition:all 0.5s ease-in-out;
+	transition:all 0.5s ease-in-out;	
 }
 
 pre:hover, .note:hover {
@@ -108,7 +111,8 @@ pre.js:hover {
 	-webkit-transition:all 0.5s ease-in-out;
 	-moz-transition:all 0.5s ease-in-out;
 	-o-transition:all 0.5s ease-in-out;
-	-transition:all 0.5s ease-in-out;
+	-ms-transition:all 0.5s ease-in-out;	
+	transition:all 0.5s ease-in-out;
 	font-family:"Marker Felt", "Comic Sans", Arial, sans-serif;
 	background-color:rgba(255,255,0,0.2);
 	-webkit-border-radius:5px;
@@ -138,7 +142,8 @@ footer, .center {
 	-webkit-transition:all 1.0s ease-in-out;
 	-moz-transition:all 1.0s ease-in-out;
 	-o-transition:all 1.0s ease-in-out;
-	-transition:all 1.0s ease-in-out;	
+	-ms-transition:all 1.0s ease-in-out;	
+	transition:all 1.0s ease-in-out;	
 }
 
 .selected {

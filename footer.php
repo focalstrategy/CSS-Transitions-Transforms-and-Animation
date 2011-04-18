@@ -1,5 +1,8 @@
 	<footer>
-		<p>&copy; Richard Bradshaw from <a href="http://focalstrategy.com">Focal Strategy</a> 2010 - 2011</p>
+		<p>&copy; Rich Bradshaw of <a href="http://focalstrategy.com">Focal Strategy</a> 2010 - 2011</p>
+		<a href="http://stackexchange.com/users/2e2b88856f8e4c1ea377453a19fc416e">
+		<img src="http://stackexchange.com/users/flair/2e2b88856f8e4c1ea377453a19fc416e.png" width="208" height="58" alt="profile for Rich Bradshaw on Stack Exchange, a network of free, community-driven Q&A sites" title="profile for Rich Bradshaw on Stack Exchange, a network of free, community-driven Q&A sites">
+		</a>
 		<script type="text/javascript"><!--
 		google_ad_client = "pub-7181696033265659";
 		/* CSS3 Banner */

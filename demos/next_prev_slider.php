@@ -13,7 +13,8 @@
 				-webkit-transition:all 0.6s ease-in-out;
 				-moz-transition:all 0.6s ease-in-out;
 				-o-transition:all 0.6s ease-in-out;
-				-transition:all 0.6s ease-in-out;				
+				-ms-transition:all 0.6s ease-in-out;				
+				transition:all 0.6s ease-in-out;				
 			}
 			
 		
@@ -52,13 +53,14 @@
 				$("#images").css("-webkit-transform","translateX("+currentTranslateX+"px)");
 				$("#images").css("-moz-transform","translateX("+currentTranslateX+"px)");
 				$("#images").css("-o-transform","translateX("+currentTranslateX+"px)");
+				$("#images").css("-ms-transform","translateX("+currentTranslateX+"px)");				
 				$("#images").css("transform","translateX("+currentTranslateX+"px)");				
 				
 				$("#next").click(function() {
 					var width = $("#images img").width();
 					var maxWidth = width * $("#images img").length;
 					
-					var transformProperty = $("#images").css("-webkit-transform") || $("#images").css("-moz-transform") || $("#images").css("-o-transform") || $("#images").css("transform");
+					var transformProperty = $("#images").css("-webkit-transform") || $("#images").css("-moz-transform") || $("#images").css("-o-transform") || $("#images").css("-ms-transform") || $("#images").css("transform");
 					
 					var currentTranslateX =  parseInt(transformProperty.replace(/translateX\(/i, ""));
 				
@@ -67,6 +69,7 @@
 						$("#images").css("-webkit-transform","translateX("+currentTranslateX+"px)");
 						$("#images").css("-moz-transform","translateX("+currentTranslateX+"px)");
 						$("#images").css("-o-transform","translateX("+currentTranslateX+"px)");
+						$("#images").css("-ms-transform","translateX("+currentTranslateX+"px)");						
 						$("#images").css("transform","translateX("+currentTranslateX+"px)");						
 					}
 				});
@@ -75,7 +78,7 @@
 					var width = $("#images img").width();
 					var maxWidth = width * $("#images img").length;
 					
-					var transformProperty = $("#images").css("-webkit-transform") || $("#images").css("-moz-transform") || $("#images").css("-o-transform") || $("#images").css("transform");
+					var transformProperty = $("#images").css("-webkit-transform") || $("#images").css("-moz-transform") || $("#images").css("-o-transform") || $("#images").css("-ms-transform") || $("#images").css("transform");
 					
 					var currentTranslateX =  parseInt(transformProperty.replace(/translateX\(/i, ""));
 				
@@ -84,6 +87,7 @@
 						$("#images").css("-webkit-transform","translateX("+currentTranslateX+"px)");
 						$("#images").css("-moz-transform","translateX("+currentTranslateX+"px)");
 						$("#images").css("-o-transform","translateX("+currentTranslateX+"px)");
+						$("#images").css("-ms-transform","translateX("+currentTranslateX+"px)");						
 						$("#images").css("transform","translateX("+currentTranslateX+"px)");						
 					}
 				});				
@@ -109,7 +113,7 @@ parseInt(transformProperty.replace(/translateX\(/i, ""));
 </pre>
 <p>In english, get rid of the translateX( bit, then get an integer out of the remaining info.</p>
 
-<p>Due to use of transforms, this is hardware accelerated on iOS, but doesn't work in IE, even dev builds of IE9.</p>
+<p>Due to use of transforms, this is hardware accelerated on iOS.</p>
 
 			<p id="next_prev">
 				<span id="prev">&laquo; Prev</span>

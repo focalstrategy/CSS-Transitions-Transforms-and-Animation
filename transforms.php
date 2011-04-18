@@ -104,7 +104,96 @@
 	<div class="hover">Hover on me and I'll spin and scale!</div>
 </div>
 <h2>3D Examples</h2>
-<p class="note">3D transforms only work in Safari and Chrome.</p>
+<p class="note">3D transforms only work in Safari and Chrome. They should show up in IE10pp2 though...</p>
+
+<p>3D transforms are similar to 2D transforms. The basic properties are translate3d, scale3d, rotateX, rotateY and rotateZ. Translate3d and scale3d take three arguments for x,y and z, whereas the rotates just take an angle. Here are some examples:</p>
+<style>
+#transDemo4 {
+	width:400px;
+	height:190px;
+	margin:0 auto 10px;
+	border:1px #aaa solid;
+	padding:10px;
+}
+
+
+
+#transDemo4 div:not(.clear) {
+	-webkit-transition:all 2s ease-in-out;
+	-moz-transition:all 2s ease-in-out;
+	-o-transition:all 2s ease-in-out;
+	-ms-transition:all 2s ease-in-out;
+	transition:all 2s ease-in-out;				
+	
+	-webkit-perspective: 800;
+	-webkit-perspective-origin: 50% 100px;
+	
+	-moz-perspective: 800;
+	-moz-perspective-origin: 50% 100px;
+	
+	-o-perspective: 800;
+	-o-perspective-origin: 50% 100px;
+	
+	-ms-perspective: 800;
+	-ms-perspective-origin: 50% 100px;	
+	
+	perspective: 800;
+	perspective-origin: 50% 100px;	
+	
+	width:70px;
+	height:130px;
+	margin:10px 20px;
+	padding:10px;
+	border:1px blue solid;
+	float:left;
+}
+
+#transDemo4:hover #rotateX {
+	-webkit-transform:rotateX(180deg);
+	-moz-transform:rotateX(180deg);
+	-o-transform:rotateX(180deg);
+	-ms-transform:rotateX(180deg);
+	transform:rotateX(180deg);				
+}
+#transDemo4:hover #rotateY {
+	-webkit-transform:rotateY(180deg);
+	-moz-transform:rotateY(180deg);
+	-o-transform:rotateY(180deg);
+	-ms-transform:rotateY(180deg);
+	transform:rotateY(180deg);	
+}
+#transDemo4:hover #rotateZ {
+	-webkit-transform:rotateZ(180deg);
+	-moz-transform:rotateZ(180deg);
+	-o-transform:rotateZ(180deg);
+	-ms-transform:rotateZ(180deg);
+	transform:rotateZ(180deg);
+}
+</style>
+<div id="transDemo4" class="shadow hover">
+	<div id="rotateX">rotateX</div>
+	<div id="rotateY">rotateY</div>
+	<div id="rotateZ">rotateZ</div>		
+	<p class="center">Hover me</p>
+	<div class="clear"></div>
+</div>
+<p>The simplified code for those looks like this:</p>
+<pre class="css">
+#transDemo4 div {
+	transition:all 2s ease-in-out;		
+	perspective: 800;
+	perspective-origin: 50% 100px;	
+}
+#transDemo4:hover #rotateX {
+	transform:rotateX(180deg);
+}
+#transDemo4:hover #rotateY {
+	transform:rotateY(180deg);
+}
+#transDemo4:hover #rotateZ {
+	transform:rotateZ(180deg);
+}
+</pre>
 <style>
 #transDemo3 {
 	-webkit-perspective: 800;
@@ -271,6 +360,7 @@ $(document).ready(function() {
 	});		
 });
 </script>
+<h2>A cube made with 3d transforms</h2>
 <div id="transDemo3">
 	<div id="Zcube">
 	<div id="Ycube">
@@ -309,4 +399,5 @@ $(document).ready(function() {
 </div>
 <div class="clear"></div>
 <p>Have a play with the controls - there's no transition here, just the sliders to control it. Note that I'm only using javascript to update the css values - all the maths needed is done by the browser automatically.</p>
+<p>For more information read both the <a href="http://www.webkit.org/blog/386/3d-transforms/">Webkit blog entry from when this was first implemented</a>, and <a href="http://desandro.github.com/3dtransforms/">David Desandro's awesome examples</a>.</p>
 </section>

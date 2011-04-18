@@ -1,7 +1,7 @@
 <section id="how2animations">
 <h1>How to use animations</h1>
 <p class="note">As of April 2011, this only works in Webkit browsers, though there is a lot of activity on Bugzilla, implying a Firefox implementation won't be far off.</p>
-<p>CSS animations were introduced into Webkit in 2007, though at the time of writing there was no support in any other browsers. Firefox has a <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=435442">bug filed</a> relating to the implementation, but it isn't assigned to anyone.</p>
+<p>CSS animations were introduced into Webkit in 2007, though at the time of writing there was no support in any other browsers. Firefox has a <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=435442">bug filed</a> relating to the implementation which is down for the mozilla5 milestone.</p>
 <p>In 2009 a <a href="http://www.w3.org/TR/css3-animations/">working draft</a> was written and added to the w3c site.</p>
 <p>To use CSS animation, you first specify some keyframes for the animation - basically what styles will the element have at certain times. The browser does the tweening for you.</p>
 <h2>Demo</h2>

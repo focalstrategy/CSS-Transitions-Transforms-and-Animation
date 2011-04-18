@@ -47,6 +47,7 @@
 		-webkit-transition: opacity 1s ease-in-out;
 		-moz-transition: opacity 1s ease-in-out;
 		-o-transition: opacity 1s ease-in-out;
+		-ms-transition: opacity 1s ease-in-out;		
 		transition: opacity 1s ease-in-out;
 		opacity:0;
 		-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";

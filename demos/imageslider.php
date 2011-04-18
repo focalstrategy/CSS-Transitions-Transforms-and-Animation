@@ -13,14 +13,16 @@
 				-webkit-transition:all 1.0s ease-in-out;
 				-moz-transition:all 1.0s ease-in-out;
 				-o-transition:all 1.0s ease-in-out;
-				-transition:all 1.0s ease-in-out;				
+				-ms-transition:all 1.0s ease-in-out;				
+				transition:all 1.0s ease-in-out;				
 			}
 			
 			p {
 				-webkit-transition:all 0.3s ease-in-out;
 				-moz-transition:all 0.3s ease-in-out;
 				-o-transition:all 0.3s ease-in-out;
-				-transition:all 0.3s ease-in-out;				
+				-ms-transition:all 0.3s ease-in-out;				
+				transition:all 0.3s ease-in-out;				
 			}
 		
 			#controls {
@@ -68,7 +70,9 @@
 			
 			#container:hover #captions p {
 				background-color:rgba(255,255,255,0.9);
-				-webkit-box-shadow:0 0 5px rgba(0,0,0,0.5);			
+				-webkit-box-shadow:0 0 5px rgba(0,0,0,0.5);
+				-moz-box-shadow:0 0 5px rgba(0,0,0,0.5);
+				box-shadow:0 0 5px rgba(0,0,0,0.5);								
 			}
 			
 		</style>
@@ -78,6 +82,7 @@
 					$("#images, #captions").css("-webkit-transform","translate(0px, 0px)");
 					$("#images, #captions").css("-moz-transform","translate(0px, 0px)");
 					$("#images, #captions").css("-o-transform","translate(0px, 0px)");
+					$("#images, #captions").css("-ms-transform","translate(0px, 0px)");					
 					$("#images, #captions").css("transform","translate(0px, 0px)");							
 					$("#controls span").removeClass("selected");
 					$(this).addClass("selected");			
@@ -86,6 +91,7 @@
 					$("#images, #captions").css("-webkit-transform","translate(-450px, 0px)");
 					$("#images, #captions").css("-moz-transform","translate(-450px, 0px)");
 					$("#images, #captions").css("-o-transform","translate(-450px, 0px)");
+					$("#images, #captions").css("-ms-transform","translate(-450px, 0px)");					
 					$("#images, #captions").css("transform","translate(-450px, 0px)");		
 					$("#controls span").removeClass("selected");
 					$(this).addClass("selected");
@@ -94,6 +100,7 @@
 					$("#images, #captions").css("-webkit-transform","translate(-900px, 0px)");
 					$("#images, #captions").css("-moz-transform","translate(-900px, 0px)");
 					$("#images, #captions").css("-o-transform","translate(-900px, 0px)");
+					$("#images, #captions").css("-ms-transform","translate(-900px, 0px)");					
 					$("#images, #captions").css("transform","translate(-900px, 0px)");			
 					$("#controls span").removeClass("selected");
 					$(this).addClass("selected");
@@ -102,6 +109,7 @@
 					$("#images, #captions").css("-webkit-transform","translate(-1350px, 0)");
 					$("#images, #captions").css("-moz-transform","translate(-1350px, 0px)");
 					$("#images, #captions").css("-o-transform","translate(-1350px, 0px)");
+					$("#images, #captions").css("-ms-transform","translate(-1350px, 0px)");					
 					$("#images, #captions").css("transform","translate(-1350px, 0px)");			
 					$("#controls span").removeClass("selected");
 					$(this).addClass("selected");

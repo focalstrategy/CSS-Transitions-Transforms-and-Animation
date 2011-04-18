@@ -1,10 +1,19 @@
-<!DOCTYPE html>
+<?
+include($_SERVER['DOCUMENT_ROOT']."/constants.php");
+
+if (isset($_GET['section']) && preg_match("/^[a-zA-Z]+/", $_GET['section'])) {
+	$section = $_GET['section'];
+} else {
+	$section = "index";
+}
+
+?><!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8" />
 		<meta http-equiv="X-UA-Compatible" content="chrome=1" />
-		<title>Using CSS3 Transitions, Transforms and Animation</title>
-		<meta name="description" content="A practical guide with demos to using CSS transitions, transforms and animations. Examples work in Safari, Chrome, Firefox, Opera and IE10" />
+		<title><?= $titles[$section] ?></title>
+		<meta name="description" content="<?= $descriptions[$section] ?>" />
 		<meta name="google-site-verification" content="zTH7hEgeKVTkOu0F5bO5Guw9iRHWBJdCX0RpMASGZVI" />		
 		<link rel="stylesheet" href="/styles/default.css" media="screen" />		
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
@@ -54,7 +63,7 @@ if ($_GET['section'] == "all") {
 		<p>Of particular note is that animations that don't require a repaint (transforms and opacity) are hardware accelerated on iOS, so if you are building a mobile site you definitely should be using this rather than things like the jQuery animate method.</p>
 		<p>To make it easier to view source and copy, I'm putting style and script tags in each section, just before the demo. This isn't recommended for production use, but in this instance it will hopefully help.</p>
 		<p>Any suggestions/improvements/etc, contact me via my gmail account (rich.bradshaw), or on Twitter (<a href="http://twitter.com/richbradshaw">richbradshaw</a>).</p>
-		<p>For some more demos with less explanation, check out the <a href="/demos/">demos page</a>.</p>
+		<p>Keep reading to see the main explanations, or for some more experimental demos with less explanation, check out the <a href="/demos/">demos page</a>.</p>
 		
 		<h2>Will it work for me?</h2>
 

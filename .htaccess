@@ -1,3 +1,12 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+RewriteRule ^(demos) - [L]
+RewriteRule ^favicon.ico - [L]
+
+RewriteRule ^([A-Za-z0-9-_/\.\?]+)\/$ /?section=$1 [L]
+</IfModule>
+
 <IfModule mod_setenvif.c>
 	<IfModule mod_headers.c>
 	BrowserMatch MSIE ie
