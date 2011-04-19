@@ -16,23 +16,39 @@
 		</script>		
 	</footer>	
 <a href="http://github.com/richbradshaw/CSS-Transitions-Transforms-and-Animation"><img style="position: absolute; top: 0; left: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Fork me on GitHub" /></a> 		
-<? if($_SERVER['SERVER_ADDR']!="127.0.0.1") {?>
-	<script type="text/javascript"> 
-	var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-	document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-	</script> 
-	<script type="text/javascript"> 
-	try {
-	var pageTracker = _gat._getTracker("UA-16444273-1");
-	pageTracker._trackPageview();
-	} catch(err) {}</script>
-		<script type="text/javascript"> 
-		var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-		document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-		</script> 
-		<script type="text/javascript"> 
-		try {
-		var pageTracker = _gat._getTracker("UA-3235632-1");
-		pageTracker._trackPageview();
-		} catch(err) {}</script>
-<? } ?>	
+
+<!-- CSS3 -->	
+	<script type="text/javascript">
+	
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-16444273-1']);
+	
+	_gaq.push(['_setCustomVar', 1, 'Transitions', Modernizr.csstransitions, 1]);
+	_gaq.push(['_setCustomVar', 2, 'Transforms', Modernizr.csstransforms, 1]);
+	_gaq.push(['_setCustomVar', 3, '3D Transforms', Modernizr.csstransforms3d, 1]);
+	_gaq.push(['_setCustomVar', 4, 'Animations', Modernizr.cssanimations, 1]);			
+	
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+	</script>
+
+<!-- BradshawEnterprises -->			
+	<script type="text/javascript">
+
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-3235632-1']);
+	_gaq.push(['_setDomainName', '.bradshawenterprises.com']);	
+	_gaq.push(['_trackPageview']);
+
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+
+	</script>
