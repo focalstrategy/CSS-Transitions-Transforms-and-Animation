@@ -1,12 +1,25 @@
 <section id="how2animations">
 <h1>How to use animations</h1>
-<p class="note">As of April 2011, this only works in Webkit browsers, though there is a lot of activity on Bugzilla, implying a Firefox implementation won't be far off.</p>
-<p>CSS animations were introduced into Webkit in 2007, though at the time of writing there was no support in any other browsers. Firefox has a <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=435442">bug filed</a> relating to the implementation which is down for the mozilla5 milestone.</p>
+<p class="note">As of April 2011, this works in all webkit browsers and Firefox 5 betas.</p>
+<p>CSS animations were introduced into Webkit in 2007, and added to Firefox by David Barron in 2011.</p>
 <p>In 2009 a <a href="http://www.w3.org/TR/css3-animations/">working draft</a> was written and added to the w3c site.</p>
 <p>To use CSS animation, you first specify some keyframes for the animation - basically what styles will the element have at certain times. The browser does the tweening for you.</p>
 <h2>Demo</h2>
 <style>
 @-webkit-keyframes resize {
+	0% {
+		padding: 0;
+	}
+	50% {
+		padding: 0 20px;
+		background-color:rgba(255,0,0,0.2);		
+	}
+	100% {
+		padding: 0 100px;
+		background-color:rgba(255,0,0,0.9);
+	}
+}
+@-moz-keyframes resize {
 	0% {
 		padding: 0;
 	}
@@ -39,6 +52,11 @@
 	-webkit-animation-duration: 1s;
 	-webkit-animation-iteration-count: 4;
 	-webkit-animation-direction: alternate;	
+	
+	-moz-animation-name: resize;
+	-moz-animation-duration: 1s;
+	-moz-animation-iteration-count: 4;
+	-moz-animation-direction: alternate;	
 }
 </style>
 <div id="animationDemo" class="hover">
@@ -46,9 +64,9 @@
 	<p class="center">Hover over me</p>
 </div>
 <h2>Code</h2>
-<p>The interesting bit of this code is this bit of CSS:</p>
+<p>The interesting bit of this code is this bit of CSS (remember to add vendor prefixes):</p>
 <pre class="css">
-@-webkit-keyframes resize {
+@keyframes resize {
 	0% {
 		padding: 0;
 	}
@@ -63,11 +81,11 @@
 }
 	
 #box {
-	-webkit-animation-name: resize;
-	-webkit-animation-duration: 1s;
-	-webkit-animation-iteration-count: 4;
-	-webkit-animation-direction: alternate;
-	-webkit-animation-timing-function: ease-in-out;
+	animation-name: resize;
+	animation-duration: 1s;
+	animation-iteration-count: 4;
+	animation-direction: alternate;
+	animation-timing-function: ease-in-out;
 }	
 </pre>
 <p>Note that the 4 iterations makes the box pulse twice - the animation runs forwards then backwards, then forwards then backwards.</p>
@@ -82,6 +100,16 @@
 	}
 	100% {
 		-webkit-box-shadow: 0 0 16px rgba(66, 140, 240, 1.0), 0 0 36px rgba(0, 140, 255, 1.0);
+		border-color: rgba(0,0,255,1.0); 
+	}
+}
+@-moz-keyframes glow {
+	0% {
+		-moz-box-shadow: 0 0 16px rgba(66, 140, 240, 0.5);
+		border-color: rgba(0,0,255,0.5); 		
+	}
+	100% {
+		-moz-box-shadow: 0 0 16px rgba(66, 140, 240, 1.0), 0 0 36px rgba(0, 140, 255, 1.0);
 		border-color: rgba(0,0,255,1.0); 
 	}
 }
@@ -111,6 +139,12 @@
 	-webkit-animation-iteration-count: infinite;
 	-webkit-animation-direction: alternate;
 	-webkit-animation-timing-function: ease-in-out;	
+	
+	-moz-animation-name: glow;
+	-moz-animation-duration: 1s;
+	-moz-animation-iteration-count: infinite;
+	-moz-animation-direction: alternate;
+	-moz-animation-timing-function: ease-in-out;
 }	
 </style>
 <div id="animationDemo2">

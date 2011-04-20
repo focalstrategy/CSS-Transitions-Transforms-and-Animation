@@ -1,5 +1,4 @@
-<h2 id="cfimg3">Demo 3 - One image to another with a timer (Webkit only, transitions and animations)</h2>
-<p class="note">As of May 2010, this only works in webkit browsers - I have only included the code for them, so if this is implemented anywhere else, it won't work.</p>
+<h2 id="cfimg3">Demo 3 - One image to another with a timer (Webkit/Firefox 5+ only, transitions and animations)</h2>
 <h3>Plan</h3>
 <p>You could implement this by using Javascript to toggle classes with a delay - that would allow older browsers to still have the images change. As we are looking forward though, we'll use CSS keyframes.</p>
 <ol>
@@ -23,6 +22,21 @@
 	   opacity:0;
 	 }
 	}
+	
+	@-moz-keyframes cf3FadeInOut {
+	 0% {
+	   opacity:1;
+	 }
+	25% {
+		opacity:1;
+	}
+	75% {
+		opacity:0;
+	}
+	 100% {
+	   opacity:0;
+	 }
+	}	
 
 	#cf3 {
 		position:relative;
@@ -45,6 +59,12 @@
 		-webkit-animation-iteration-count: infinite;
 		-webkit-animation-duration: 10s;
 		-webkit-animation-direction: alternate;
+		
+		-moz-animation-name: cf3FadeInOut;
+		-moz-animation-timing-function: ease-in-out;
+		-moz-animation-iteration-count: infinite;
+		-moz-animation-duration: 10s;
+		-moz-animation-direction: alternate;		
 	}
 	
 </style>

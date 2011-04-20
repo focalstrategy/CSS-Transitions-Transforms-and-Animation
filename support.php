@@ -27,6 +27,7 @@
 		<ul>
 			<li>Safari 4.0: 11/06/2008</li>
 			<li>Chrome 1.0: 02/09/2008</li>			
+			<li>Firefox 5: 20/04/2011</li>			
 		</ul>				
 		<h2>CSS 3D Transformations</h2>
 		<p>First introduced</p>
