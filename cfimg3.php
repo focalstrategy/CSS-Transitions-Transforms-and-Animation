@@ -76,7 +76,7 @@
 <h3>Code</h3>
 <p>Everything's the same as <a href="#cfimg1">Demo 1</a>, but I've added this to the CSS</p>
 <pre class="css">
-@-webkit-keyframes cf3FadeInOut {
+@keyframes cf3FadeInOut {
 	0% {
 		opacity:1;
 	}
@@ -92,11 +92,11 @@
 }
 
 #cf3 img.top {
-	-webkit-animation-name: cf3FadeInOut;
-	-webkit-animation-timing-function: ease-in-out;
-	-webkit-animation-iteration-count: infinite;
-	-webkit-animation-duration: 10s;
-	-webkit-animation-direction: alternate;
+	animation-name: cf3FadeInOut;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-duration: 10s;
+	animation-direction: alternate;
 }			
 </pre>
 <p>To make sense of that, I've defined 4 keyframes, specified that whatever has this animation attached will be opaque for the first 45%, then transparent for the last 45%. The animation will repeat forever, will last 10 seconds, and will run forward then backwards. In other words, image 1 will be visible for 4.5 seconds, followed by a 1 second fade, followed by 4.5 seconds of image 2 being visible. Then it will reverse, meaning that image 1 and 2 will both be visible for 9 (4.5 x 2) seconds each time.</p>

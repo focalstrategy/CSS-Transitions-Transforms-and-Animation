@@ -22,7 +22,7 @@ $titles = array(
 
 $descriptions = array(
 	"accordions" => "How to use CSS3 transitions to make an animated accordion",
-	"animations" => "How to use CSS3 Webkit Animations with keyframes",
+	"animations" => "How to use CSS3 Animations with keyframes that work in Webkit and firefox 5+",
 	"cfimg" => "How to use CSS3 transitions to cross fade an image",
 	"cfimg1" => "How to use CSS3 transitions to cross fade an image on hover without javascript",
 	"cfimg2" => "How to use CSS3 transitions to cross fade an image by pressing a button",
