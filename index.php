@@ -80,17 +80,7 @@ if ($_GET['section'] == "all") {
 	</section>
 
 		<section>
-			<script type="text/javascript"><!--
-			google_ad_client = "pub-7181696033265659";
-			/* CSS3 Banner */
-			google_ad_slot = "0969051732";
-			google_ad_width = 728;
-			google_ad_height = 90;
-			//-->
-			</script>
-			<script type="text/javascript"
-			src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-			</script>						
+								
 		<h1>Contents</h1>
 		
 		<?

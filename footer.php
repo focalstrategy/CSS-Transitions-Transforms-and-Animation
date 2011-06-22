@@ -1,5 +1,6 @@
 	<footer>
 		<p>&copy; Rich Bradshaw of <a href="http://focalstrategy.com">Focal Strategy</a> 2010 - 2011</p>
+		<g:plusone size="tall"></g:plusone>
 		<a href="http://stackexchange.com/users/2e2b88856f8e4c1ea377453a19fc416e">
 		<img src="http://stackexchange.com/users/flair/2e2b88856f8e4c1ea377453a19fc416e.png" width="208" height="58" alt="profile for Rich Bradshaw on Stack Exchange, a network of free, community-driven Q&A sites" title="profile for Rich Bradshaw on Stack Exchange, a network of free, community-driven Q&A sites">
 		</a>
@@ -22,6 +23,7 @@
 	
 	var _gaq = _gaq || [];
 	_gaq.push(['_setAccount', 'UA-16444273-1']);
+	_gaq.push(['_setDomainName', '.bradshawenterprises.com']);	
 	
 	_gaq.push(['_setCustomVar', 1, 'Transitions', Modernizr.csstransitions, 1]);
 	_gaq.push(['_setCustomVar', 2, 'Transforms', Modernizr.csstransforms, 1]);
@@ -29,6 +31,7 @@
 	_gaq.push(['_setCustomVar', 4, 'Animations', Modernizr.cssanimations, 1]);			
 	
 	_gaq.push(['_trackPageview']);
+    _gaq.push(['_trackPageLoadTime']);
 
 	(function() {
 		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
@@ -44,6 +47,7 @@
 	_gaq.push(['_setAccount', 'UA-3235632-1']);
 	_gaq.push(['_setDomainName', '.bradshawenterprises.com']);	
 	_gaq.push(['_trackPageview']);
+    _gaq.push(['_trackPageLoadTime']);
 
 	(function() {
 		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
@@ -52,3 +56,4 @@
 	})();
 
 	</script>
+	<script type="text/javascript" src="http://apis.google.com/js/plusone.js"></script>	
