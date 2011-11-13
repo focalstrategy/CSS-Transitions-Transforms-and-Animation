@@ -104,7 +104,7 @@
 	<div class="hover">Hover on me and I'll spin and scale!</div>
 </div>
 <h2>3D Examples</h2>
-<p class="note">3D transforms only work in Safari and Chrome. They should show up in IE10pp2 though...</p>
+<p class="note">3D transforms only work in Safari, Chrome and Firefox10.0a1 (Aurora). They should show up in IE10pp2 though...</p>
 
 <p>3D transforms are similar to 2D transforms. The basic properties are translate3d, scale3d, rotateX, rotateY and rotateZ. Translate3d and scale3d take three arguments for x,y and z, whereas the rotates just take an angle. Here are some examples:</p>
 <style>
