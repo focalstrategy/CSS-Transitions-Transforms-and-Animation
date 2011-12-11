@@ -16,6 +16,7 @@
 <p>Whenever any property changes, then it will animate instead of changing directly. This can be due to a different set of properties set on a pseudo class such as hover, or a new class or properties set by javascript. The example below uses :hover to change the properties – no javascript is needed.</p>
 <style>
 	#timings_demo {
+		position:relative;		
 		width:500px;
 		height:400px;
 		margin:0 auto 10px;
@@ -24,6 +25,7 @@
 	}
 
 	.test_box {
+		position:relative;
 		width:50px;
 		height:50px;
 		margin-bottom:10px;
@@ -31,61 +33,63 @@
 	}
 
 	#ease.test_box {
-		-webkit-transition: all 5s ease;
-		-moz-transition: all 5s ease;
-		-o-transition: all 5s ease;
-		-ms-transition: all 5s ease;
-		transition: all 5s ease;
+		-webkit-transition: all 4s ease;
+		-moz-transition: all 4s ease;
+		-o-transition: all 4s ease;
+		-ms-transition: all 4s ease;
+		transition: all 4s ease;
 		border:1px #f00 solid;
 	}
 
 	#ease-in.test_box {
-		-webkit-transition: all 5s ease-in;
-		-moz-transition: all 5s ease-in;
-		-o-transition: all 5s ease-in;
-		-ms-transition: all 5s ease-in;
-		transition: all 5s ease-in;
+		-webkit-transition: all 4s ease-in;
+		-moz-transition: all 4s ease-in;
+		-o-transition: all 4s ease-in;
+		-ms-transition: all 4s ease-in;
+		transition: all 4s ease-in;
 		border:1px #0f0 solid;
 	}
 
 	#ease-out.test_box {
-		-webkit-transition: all 5s ease-out;
-		-moz-transition: all 5s ease-out;
-		-o-transition: all 5s ease-out;
-		-ms-transition: all 5s ease-out;
-		transition: all 5s ease-out;
+		-webkit-transition: all 4s ease-out;
+		-moz-transition: all 4s ease-out;
+		-o-transition: all 4s ease-out;
+		-ms-transition: all 4s ease-out;
+		transition: all 4s ease-out;
 		border:1px #00f solid;
 	}
 
 	#ease-in-out.test_box {
-		-webkit-transition: all 5s ease-in-out;
-		-moz-transition: all 5s ease-in-out;
-		-o-transition: all 5s ease-in-out;
-		-ms-transition: all 5s ease-in-out;
-		transition: all 5s ease-in-out;
+		-webkit-transition: all 4s ease-in-out;
+		-moz-transition: all 4s ease-in-out;
+		-o-transition: all 4s ease-in-out;
+		-ms-transition: all 4s ease-in-out;
+		transition: all 4s ease-in-out;
 		border:1px #ff0 solid;
 	}
 
 	#linear.test_box {
-		-webkit-transition: all 5s linear;
-		-moz-transition: all 5s linear;
-		-o-transition: all 5s linear;
-		-ms-transition: all 5s linear;
-		transition: all 5s linear;
+		-webkit-transition: all 4s linear;
+		-moz-transition: all 4s linear;
+		-o-transition: all 4s linear;
+		-ms-transition: all 4s linear;
+		transition: all 4s linear;
 		border:1px #f0f solid;
 	}
 	
 	#custom.test_box {
-		-webkit-transition: all 5s cubic-bezier(1.000, 0.835, 0.000, 0.945);
-		-moz-transition: all 5s cubic-bezier(1.000, 0.835, 0.000, 0.945);
-		-o-transition: all 5s cubic-bezier(1.000, 0.835, 0.000, 0.945);
-		-ms-transition: all 5s cubic-bezier(1.000, 0.835, 0.000, 0.945);
-		transition: all 5s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+		-webkit-transition: all 4s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+		-moz-transition: all 4s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+		-o-transition: all 4s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+		-ms-transition: all 4s cubic-bezier(1.000, 0.835, 0.000, 0.945);
+		transition: all 4s cubic-bezier(1.000, 0.835, 0.000, 0.945);
 		border:1px #0ff solid;
 	}
 
 	#timings_demo:hover .test_box, #timings_demo.hover_effect .test_box {
-		margin-left:440px;
+
+		left:440px;
+		
 		-webkit-border-radius:25px;
 		-moz-border-radius:25px;
 		-o-border-radius:25px;

@@ -9,7 +9,8 @@
 			<li>Safari 3.2: 13/11/2008</li>
 			<li>Firefox 4.0: Late 2010</li>
 			<li>Chrome 1.0: 02/09/2008</li>
-			<li>Opera 10.5: 02/03/2010</li>			
+			<li>Opera 10.5: 02/03/2010</li>	
+			<li>IE 10: 09/2011</li>
 		</ul>
 		<h2>CSS 2D Transformations</h2>
 		<p>First introduced</p>
@@ -28,12 +29,15 @@
 			<li>Safari 4.0: 11/06/2008</li>
 			<li>Chrome 1.0: 02/09/2008</li>			
 			<li>Firefox 5: 20/04/2011</li>			
+			<li>IE 10: 09/2011</li>			
 		</ul>				
 		<h2>CSS 3D Transformations</h2>
 		<p>First introduced</p>
 		<ul>
 			<li>Safari 4.0: 11/06/2008</li>
 			<li>Chrome: 28/08/2010</li>
+			<li>IE 10: 09/2011</li>						
+			<li>Firefox: 27/10/2011</li>				
 		</ul>
 	</div>
 	<div class="clear"></div>	

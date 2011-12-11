@@ -14,16 +14,21 @@
 				-moz-transition:all 0.6s ease-in-out;
 				-o-transition:all 0.6s ease-in-out;
 				-ms-transition:all 0.6s ease-in-out;				
-				transition:all 0.6s ease-in-out;				
+				transition:all 0.6s ease-in-out;															
 			}
 			
 		
 			#next_prev {
 				text-align:center;
+				width: 450px;
+				margin: 0 auto 10px;				
 			}
 			#next_prev span {
 				padding-right:2em;
 				cursor:pointer;
+			}
+			#next_prev span:hover {
+				text-decoration:underline;
 			}
 			#container {
 				width:450px;
@@ -47,48 +52,42 @@
 			
 		</style>
 		<script>
+			function slide(newX) {
+				if (Modernizr.csstransforms3d) {
+					$("#images").css("-webkit-transform","translate3d("+newX+"px,0,0)");
+					$("#images").css("-moz-transform","translate3d("+newX+"px,0,0)");
+					$("#images").css("-o-transform","translate3d("+newX+"px,0,0)");
+					$("#images").css("-ms-transform","translate3d("+newX+"px,0,0)");
+					$("#images").css("transform","translate3d("+newX+"px,0,0)");			
+				} else {
+					$("#images").css("-webkit-transform","translateX("+newX+"px)");
+					$("#images").css("-moz-transform","translateX("+newX+"px)");
+					$("#images").css("-o-transform","translateX("+newX+"px)");
+					$("#images").css("-ms-transform","translateX("+newX+"px)");				
+					$("#images").css("transform","translateX("+newX+"px)");					
+				}
+			}
+		
+		
 			$(document).ready(function() {
-				
-				currentTranslateX = 0;
-				$("#images").css("-webkit-transform","translateX("+currentTranslateX+"px)");
-				$("#images").css("-moz-transform","translateX("+currentTranslateX+"px)");
-				$("#images").css("-o-transform","translateX("+currentTranslateX+"px)");
-				$("#images").css("-ms-transform","translateX("+currentTranslateX+"px)");				
-				$("#images").css("transform","translateX("+currentTranslateX+"px)");				
-				
+				var width = $("#images img").width();
+				var maxWidth = width * $("#images img").length;
+							
+				var currentTranslateX = 0;
+			
 				$("#next").click(function() {
-					var width = $("#images img").width();
-					var maxWidth = width * $("#images img").length;
 					
-					var transformProperty = $("#images").css("-webkit-transform") || $("#images").css("-moz-transform") || $("#images").css("-o-transform") || $("#images").css("-ms-transform") || $("#images").css("transform");
-					
-					var currentTranslateX =  parseInt(transformProperty.replace(/translateX\(/i, ""));
-				
 					if (currentTranslateX - width > -maxWidth) {
 						currentTranslateX -= width;
-						$("#images").css("-webkit-transform","translateX("+currentTranslateX+"px)");
-						$("#images").css("-moz-transform","translateX("+currentTranslateX+"px)");
-						$("#images").css("-o-transform","translateX("+currentTranslateX+"px)");
-						$("#images").css("-ms-transform","translateX("+currentTranslateX+"px)");						
-						$("#images").css("transform","translateX("+currentTranslateX+"px)");						
+						slide(currentTranslateX);					
 					}
 				});
 				
 				$("#prev").click(function() {
-					var width = $("#images img").width();
-					var maxWidth = width * $("#images img").length;
 					
-					var transformProperty = $("#images").css("-webkit-transform") || $("#images").css("-moz-transform") || $("#images").css("-o-transform") || $("#images").css("-ms-transform") || $("#images").css("transform");
-					
-					var currentTranslateX =  parseInt(transformProperty.replace(/translateX\(/i, ""));
-				
 					if (currentTranslateX + width <= 0) {
 						currentTranslateX += width;
-						$("#images").css("-webkit-transform","translateX("+currentTranslateX+"px)");
-						$("#images").css("-moz-transform","translateX("+currentTranslateX+"px)");
-						$("#images").css("-o-transform","translateX("+currentTranslateX+"px)");
-						$("#images").css("-ms-transform","translateX("+currentTranslateX+"px)");						
-						$("#images").css("transform","translateX("+currentTranslateX+"px)");						
+						slide(currentTranslateX);						
 					}
 				});				
 		
@@ -107,13 +106,9 @@
 	
 	<section>
 		<h1>Demo</h1>
-		<p>Using next and previous buttons. The difficult part is parsing out the actual value of the transform. I used the following:</p>
-<pre class="js">
-parseInt(transformProperty.replace(/translateX\(/i, ""));
-</pre>
-<p>In english, get rid of the translateX( bit, then get an integer out of the remaining info.</p>
+		<p>A slider that uses next and previous buttons. Check the code to see how.</p>
 
-<p>Due to use of transforms, this is hardware accelerated on iOS.</p>
+		<p>Due to use of 3D transforms, this is hardware accelerated on iOS.</p>
 
 			<p id="next_prev">
 				<span id="prev">&laquo; Prev</span>

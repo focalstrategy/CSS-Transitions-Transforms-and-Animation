@@ -20,6 +20,10 @@
 	
 	#cf4 img.top {
 		-webkit-transform:scale(0,0);
+		-moz-transform:scale(0,0);		
+		-o-transform:scale(0,0);
+		-ms-transform:scale(0,0);		
+		transform:scale(0,0);				
 		opacity:0;
 
 	}
@@ -77,6 +81,10 @@
 	
 	#cf5 img.top {
 		-webkit-transform:scale(1,0);
+		-moz-transform:scale(1,0);		
+		-o-transform:scale(1,0);
+		-ms-transform:scale(1,0);
+		transform:scale(1,0);						
 		-ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 		filter: alpha(opacity=0);		
 		opacity:0;

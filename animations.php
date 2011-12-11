@@ -1,6 +1,6 @@
 <section id="how2animations">
 <h1>How to use animations</h1>
-<p class="note">As of April 2011, this works in all webkit browsers and Firefox 5 betas.</p>
+<p class="note">As of Septemer 2011, this works in all Webkit browsers, Firefox 5+ and IE10</p>
 <p>CSS animations were introduced into Webkit in 2007, and added to Firefox by David Barron in 2011.</p>
 <p>In 2009 a <a href="http://www.w3.org/TR/css3-animations/">working draft</a> was written and added to the w3c site.</p>
 <p>To use CSS animation, you first specify some keyframes for the animation - basically what styles will the element have at certain times. The browser does the tweening for you.</p>
@@ -20,6 +20,19 @@
 	}
 }
 @-moz-keyframes resize {
+	0% {
+		padding: 0;
+	}
+	50% {
+		padding: 0 20px;
+		background-color:rgba(255,0,0,0.2);		
+	}
+	100% {
+		padding: 0 100px;
+		background-color:rgba(255,0,0,0.9);
+	}
+}
+@-ms-keyframes resize {
 	0% {
 		padding: 0;
 	}
@@ -57,6 +70,11 @@
 	-moz-animation-duration: 1s;
 	-moz-animation-iteration-count: 4;
 	-moz-animation-direction: alternate;	
+	
+	-ms-animation-name: resize;
+	-ms-animation-duration: 1s;
+	-ms-animation-iteration-count: 4;
+	-ms-animation-direction: alternate;	
 }
 </style>
 <div id="animationDemo" class="hover">
@@ -113,6 +131,16 @@
 		border-color: rgba(0,0,255,1.0); 
 	}
 }
+@-ms-keyframes glow {
+	0% {
+		box-shadow: 0 0 16px rgba(66, 140, 240, 0.5);
+		border-color: rgba(0,0,255,0.5); 		
+	}
+	100% {
+		box-shadow: 0 0 16px rgba(66, 140, 240, 1.0), 0 0 36px rgba(0, 140, 255, 1.0);
+		border-color: rgba(0,0,255,1.0); 
+	}
+}
 #animationDemo2 {
 	width:255px;
 	margin:10px auto;
@@ -131,6 +159,7 @@
 		-moz-border-radius: 16px;				
 		border-radius: 16px;
 		-webkit-box-shadow: 0 0 16px rgba(66, 140, 240, 0.5);
+		box-shadow: 0 0 16px rgba(66, 140, 240, 0.5);		
 	}
 #animationDemo2 button:hover, #animationDemo2 button.hover_effect  {
 	background-color:#cce;
@@ -145,6 +174,12 @@
 	-moz-animation-iteration-count: infinite;
 	-moz-animation-direction: alternate;
 	-moz-animation-timing-function: ease-in-out;
+	
+	-ms-animation-name: glow;
+	-ms-animation-duration: 1s;
+	-ms-animation-iteration-count: infinite;
+	-ms-animation-direction: alternate;
+	-ms-animation-timing-function: ease-in-out;	
 }	
 </style>
 <div id="animationDemo2">

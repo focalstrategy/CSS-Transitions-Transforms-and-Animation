@@ -35,6 +35,14 @@
 	   -moz-transform:rotateY(360deg);
 	 }
 	}
+	@-ms-keyframes spin {
+	 0% {
+	   -ms-transform:rotateY(0deg);
+	 }
+	 100% {
+	   -ms-transform:rotateY(360deg);
+	 }
+	}	
 	
 	#cubes {
 		position:relative;

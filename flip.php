@@ -1,8 +1,7 @@
 <section id="flip">
 	<h1>Flipping content</h1>
-	<p>Proper flipping requires 3D Transform support - currently only in Safari. You still get the effect in other browsers, but it's not as cool!</p>
 	<h2>Demo 1 - Flipping a simple image to a div (transitions and 3d transforms)</h2>
-	<p class="note">As of May 2010, this only works in Webkit and Safari, both desktop and mobile. It doesn't work anywhere else.</p>
+	<p class="note">As of September 2011, this works in Safari (inc. iOS), Chrome and IE10. It doesn't work anywhere else.</p>
 	<h3>Plan</h3>
 	<ol>
 		<li>Put an image on top of a div inside a container.</li>
@@ -232,6 +231,10 @@
 	}
 	#f3_container:hover #f3_card, #f3_container.hover_effect #f3_card {
 		-webkit-transform: rotateZ(180deg);
+		-moz-transform: rotateZ(180deg);		
+		-o-transform: rotateZ(180deg);
+		-ms-transform: rotateZ(180deg);		
+		
 		-webkit-box-shadow: -5px -5px 5px #aaa;				
 		-moz-box-shadow: -5px -5px 5px #aaa;
 		box-shadow: -5px -5px 5px #aaa;		

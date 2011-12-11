@@ -6,13 +6,9 @@
 		<title>Simple Anaglyphs</title>
 		<meta name="description" content="3d anaglyph effect using CSS3" />
 		<link rel="stylesheet" href="/styles/default.css" media="screen" />		
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
 		<script src="/js/modernizr-newest.min.js"></script>
-		<script>
-			$(document).ready(function() {
 
-			});
-		</script>
 		<style>
 		section {
 						background-color:white;
@@ -50,6 +46,7 @@
 	</header>
 	
 	<section>
+		<p>This isn't exactly great, but maybe someone can improve it...</p>
 		<p class="flat">This is at base level.</p>
 		<p class="level1">I'm trying to be 3d</p>			
 	</section>

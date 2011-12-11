@@ -31,7 +31,7 @@
 		-moz-transition:all 1.0s ease-in-out;
 		-o-transition:all 1.0s ease-in-out;
 		-ms-transition:all 1.0s ease-in-out;		
-		-transition:all 1.0s ease-in-out;
+		transition:all 1.0s ease-in-out;
 	}
 	#slide2_images img {
 		padding:0;
@@ -44,6 +44,7 @@
 		$("#slide2-1").click(function() {
 			$("#slide2_images").css("-webkit-transform","translate(0px, 0px)");
 			$("#slide2_images").css("-moz-transform","translate(0px, 0px)");
+			$("#slide2_images").css("-ms-transform","translate(0px, 0px)");
 			$("#slide2_images").css("-o-transform","translate(0px, 0px)");
 			$("#slide2_images").css("transform","translate(0px, 0px)");									
 			$("#slide2_controls span").removeClass("selected");
@@ -52,6 +53,7 @@
 		$("#slide2-2").click(function() {
 			$("#slide2_images").css("-webkit-transform","translate(-450px, 0px)");
 			$("#slide2_images").css("-moz-transform","translate(-450px, 0px)");
+			$("#slide2_images").css("-ms-transform","translate(-450px, 0px)");			
 			$("#slide2_images").css("-o-transform","translate(-450px, 0px)");
 			$("#slide2_images").css("transform","translate(-450px, 0px)");		
 			$("#slide2_controls span").removeClass("selected");
@@ -61,6 +63,7 @@
 			$("#slide2_images").css("-webkit-transform","translate(-900px, 0px)");
 			$("#slide2_images").css("-moz-transform","translate(-900px, 0px)");
 			$("#slide2_images").css("-o-transform","translate(-900px, 0px)");
+			$("#slide2_images").css("-ms-transform","translate(-900px, 0px)");			
 			$("#slide2_images").css("transform","translate(-900px, 0px)");			
 			$("#slide2_controls span").removeClass("selected");
 			$(this).addClass("selected");
@@ -69,6 +72,7 @@
 			$("#slide2_images").css("-webkit-transform","translate(-1350px, 0)");
 			$("#slide2_images").css("-moz-transform","translate(-1350px, 0px)");
 			$("#slide2_images").css("-o-transform","translate(-1350px, 0px)");
+			$("#slide2_images").css("-ms-transform","translate(-1350px, 0px)");			
 			$("#slide2_images").css("transform","translate(-1350px, 0px)");			
 			$("#slide2_controls span").removeClass("selected");
 			$(this).addClass("selected");

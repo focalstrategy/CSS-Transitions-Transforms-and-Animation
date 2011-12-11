@@ -24,9 +24,13 @@
 	<header>
 		<h1><a href="/">Using CSS3 Transitions, Transforms and Animation</a></h1>
 	</header>
+	
+	<section>
+		<p><a href="/demos/">Back to demos</a></p>
+	</section>	
 <section>
 <h2>Fading between multiple images on click</h2>
-
+<p>This uses CSS3 transitions, with a non animated fallback for old IE.</p>
 <style>
 	p#controls {
 		text-align:center;
@@ -66,9 +70,6 @@ $(document).ready(function() {
 		$("#cf img").removeClass("opaque");
 		
 		var imageToShow = $(this).attr("id").replace("for-", "");
-
-		console.log(imageToShow);
-		
 		$("#cf #"+imageToShow).addClass("opaque");
 		
 		$("#controls span").removeClass("selected");
