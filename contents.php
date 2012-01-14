@@ -9,7 +9,8 @@
 			<li><a href="/cfimg1/">On hover</a></li>
 			<li><a href="/cfimg2/">On button press</a></li>
 			<li><a href="/cfimg3/">With timer</a></li>
-			<li><a href="/cfimg4/">More than just fades</a></li>					
+			<li><a href="/cfimg4/">More than just fades</a></li>
+			<li><a href="/cfimg6/">Animating the background-image property</a></li>																
 		</ol>
 	<li><a href="/sliding/">Sliding content</a></li>
 		<ol>

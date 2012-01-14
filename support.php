@@ -1,7 +1,7 @@
 <section id="support">
 	<h1>Notes on browser support</h1>
 	<p>Everything here has been available in at least one browser since 2008. Firefox and Opera have only added support in 2010, hence the reason this technology is becoming more mainstream.</p>
-	<p>Transitions and 3D transforms have been billed to be included in IE10, while 2D transforms are available in IE9.</p>
+	<p>Transitions and 3D transforms were added in IE10, while 2D transforms are available in IE9.</p>
 	<div class="half left">
 		<h2>CSS Transitions</h2>
 		<p>First introduced</p>
@@ -10,7 +10,7 @@
 			<li>Firefox 4.0: Late 2010</li>
 			<li>Chrome 1.0: 02/09/2008</li>
 			<li>Opera 10.5: 02/03/2010</li>	
-			<li>IE 10: 09/2011</li>
+			<li>Internet Explorer 10: 09/2011</li>
 		</ul>
 		<h2>CSS 2D Transformations</h2>
 		<p>First introduced</p>
