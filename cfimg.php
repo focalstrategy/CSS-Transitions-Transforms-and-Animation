@@ -6,6 +6,6 @@
 	include($_SERVER['DOCUMENT_ROOT']."/cfimg2.php");		
 	include($_SERVER['DOCUMENT_ROOT']."/cfimg3.php");				
 	include($_SERVER['DOCUMENT_ROOT']."/cfimg4.php");		
-	include($_SERVER['DOCUMENT_ROOT']."/cfimg6.php");	
+	include($_SERVER['DOCUMENT_ROOT']."/cfimg5.php");	
 	?>		
 </section>
