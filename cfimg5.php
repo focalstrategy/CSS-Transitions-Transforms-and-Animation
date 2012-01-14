@@ -1,4 +1,4 @@
-<h2 id="cfimg6">Demo 6 - Animating the background-image property</h2>
+<h2 id="cfimg6">Demo 5 - Animating the background-image property</h2>
 <h3>Plan</h3>
 <ol>
 	<li>Make a div with a width and height</li>
