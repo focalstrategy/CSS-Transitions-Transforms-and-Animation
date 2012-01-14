@@ -6,7 +6,7 @@
 		<title>CSS3 next/prev button slider</title>
 		<meta name="description" content="CSS3 next/prev button slider" />
 		<link rel="stylesheet" href="/styles/default.css" media="screen" />		
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
 		<script src="/js/modernizr-newest.min.js"></script>		
 		<style>
 			#images {
@@ -22,6 +22,7 @@
 				text-align:center;
 				width: 450px;
 				margin: 0 auto 10px;				
+				-webkit-user-select:none;
 			}
 			#next_prev span {
 				padding-right:2em;
@@ -51,48 +52,7 @@
 
 			
 		</style>
-		<script>
-			function slide(newX) {
-				if (Modernizr.csstransforms3d) {
-					$("#images").css("-webkit-transform","translate3d("+newX+"px,0,0)");
-					$("#images").css("-moz-transform","translate3d("+newX+"px,0,0)");
-					$("#images").css("-o-transform","translate3d("+newX+"px,0,0)");
-					$("#images").css("-ms-transform","translate3d("+newX+"px,0,0)");
-					$("#images").css("transform","translate3d("+newX+"px,0,0)");			
-				} else {
-					$("#images").css("-webkit-transform","translateX("+newX+"px)");
-					$("#images").css("-moz-transform","translateX("+newX+"px)");
-					$("#images").css("-o-transform","translateX("+newX+"px)");
-					$("#images").css("-ms-transform","translateX("+newX+"px)");				
-					$("#images").css("transform","translateX("+newX+"px)");					
-				}
-			}
 		
-		
-			$(document).ready(function() {
-				var width = $("#images img").width();
-				var maxWidth = width * $("#images img").length;
-							
-				var currentTranslateX = 0;
-			
-				$("#next").click(function() {
-					
-					if (currentTranslateX - width > -maxWidth) {
-						currentTranslateX -= width;
-						slide(currentTranslateX);					
-					}
-				});
-				
-				$("#prev").click(function() {
-					
-					if (currentTranslateX + width <= 0) {
-						currentTranslateX += width;
-						slide(currentTranslateX);						
-					}
-				});				
-		
-			});	
-		</script>		
 	</head>		
 	<body>		
 
@@ -124,10 +84,52 @@
 		</div>
 	</section>		
 	
+	<script>
+		function slide(newX) {
+			if (Modernizr.csstransforms3d) {
+				$("#images").css("-webkit-transform","translate3d("+newX+"px,0,0)");
+				$("#images").css("-moz-transform","translate3d("+newX+"px,0,0)");
+				$("#images").css("-o-transform","translate3d("+newX+"px,0,0)");
+				$("#images").css("-ms-transform","translate3d("+newX+"px,0,0)");
+				$("#images").css("transform","translate3d("+newX+"px,0,0)");			
+			} else {
+				$("#images").css("-webkit-transform","translateX("+newX+"px)");
+				$("#images").css("-moz-transform","translateX("+newX+"px)");
+				$("#images").css("-o-transform","translateX("+newX+"px)");
+				$("#images").css("-ms-transform","translateX("+newX+"px)");				
+				$("#images").css("transform","translateX("+newX+"px)");					
+			}
+		}
+	
+	
+		$(document).ready(function() {
+			var width = $("#images img").width();
+			var maxWidth = width * $("#images img").length;
+			
+			var currentTranslateX = 0;
+		
+			$("#next").click(function() {
+				if (currentTranslateX - width > -maxWidth) {
+					currentTranslateX -= width;
+					slide(currentTranslateX);					
+				}
+			});
+			
+			$("#prev").click(function() {
+				
+				if (currentTranslateX + width <= 0) {
+					currentTranslateX += width;
+					slide(currentTranslateX);						
+				}
+			});				
+	
+		});	
+	</script>
 	
 	
 	<?		
 		include($_SERVER['DOCUMENT_ROOT']."/footer.php");		
 	?>
+	
 </body>
 </html>
