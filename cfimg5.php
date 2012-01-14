@@ -46,3 +46,4 @@
 }	
 </pre>
 <p>Pretty cool - this can easily be extended by simply changing the background-image property with JS, and makes things much much simpler. I'm not sure if this behaviour is part of the spec or not, and I haven't seen support anywhere other than in the afore mentioned browsers.</p>
+<p>For a slightly more detailed example, have a look at <a href="/demos/filters-and-fades.php">a simple gallery using filters and fades</a>.</p>

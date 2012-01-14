@@ -1,5 +1,5 @@
 <h2 id="slide2">Demo 2 - Sliding by translating the images (transitions and transforms)</h2>
-<p class="note">Note: Animating by transitioning transforms is hardware accelerated on iPhone OS, making this a good option there.</p>
+<p class="note">Note: Animating by transitioning transforms is hardware accelerated on iOS, making this a good option there.</p>
 <h3>Plan</h3>
 <ol>
 	<li>Create a container with overflow set to hidden.</li>
@@ -41,6 +41,7 @@
 </style>
 <script>
 	$(document).ready(function() {
+		// By the way, I'm doing it like this because people often seem confused if I do it in a nicer way! Check out the prefix parts of Modernizr to see a nice way to do this!
 		$("#slide2-1").click(function() {
 			$("#slide2_images").css("-webkit-transform","translate(0px, 0px)");
 			$("#slide2_images").css("-moz-transform","translate(0px, 0px)");
@@ -89,7 +90,7 @@
 </div>
 <p id="slide2_controls"><span class="selected" id="slide2-1">Image 1</span><span id="slide2-2">Image 2</span><span id="slide2-3">Image 3</span><span id="slide2-4">Image 4</span></p>
 <h3>Code</h3>
-<p>Exactly the same as Demo 1, but the JS looks like this: (times 4 for the vendor specific markup)</p>
+<p>Exactly the same as Demo 1, but the JS looks like this: (times 5 for the vendor specific markup)</p>
 <pre class="js">
 $(document).ready(function() {
 	$("#slide2-1").click(function() {
