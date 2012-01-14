@@ -1,7 +1,7 @@
 <section id="flip">
 	<h1>Flipping content</h1>
 	<h2>Demo 1 - Flipping a simple image to a div (transitions and 3d transforms)</h2>
-	<p class="note">As of September 2011, this works in Safari (inc. iOS), Chrome and IE10. It doesn't work anywhere else.</p>
+	<p class="note">As of January 2012, this works in Safari (inc. iOS), Chrome and IE10. Firefox 10 has added support, but it's not very smooth, and isn't really usable right now.</p>
 	<h3>Plan</h3>
 	<ol>
 		<li>Put an image on top of a div inside a container.</li>

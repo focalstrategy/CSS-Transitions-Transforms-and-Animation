@@ -41,4 +41,23 @@ $descriptions = array(
 	"transforms" => "How to use CSS3 transforms in Safari, Chrome, Firefox, Opera and Internet Explorer 10",
 	"transitions" => "How to use CSS3 transitions to animate content in Safari, Chrome, Firefox, Opera and Internet Explorer 10"
 );
+
+function prefix($prop, $value, $tabs=2) {
+
+$t = "";
+
+for($i=0;$i<$tabs;$i++) {
+	$t .= "\t";
+}
+	
+$string=<<<CSS
+-webkit-$prop: $value;
+$t-moz-$prop: $value;
+$t-o-$prop: $value;
+$t-ms-$prop: $value;
+{$t}$prop: $value;
+CSS;
+
+return $string;
+}
 ?>
