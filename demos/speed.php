@@ -53,12 +53,12 @@ if (isset($_GET['rows']) && !empty($_GET['rows'])) {
 			$("#jquery").hover(function(){
 				$("#jquery div").animate({
 					backgroundColor: "black",
-					outline: "1px red solid"
+					outlineColor: "red"
 				  }, 1000 );
 			}, function(){
 				$("#jquery div").animate({
 					backgroundColor: "white",
-					outline: "1px black solid"
+					outlineColor: "black"
 				  }, 1000 );				
 			});
 		});
