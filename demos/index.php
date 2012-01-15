@@ -34,6 +34,7 @@
 			<li><a href="/demos/cuboids.php">3D cuboids in the style of the Toshiba Tablet site</a></li>				
 			<!--li><a href="/demos/geo/">Card flipping to show more information with multitouch support.</li-->
 			<li><a href="/demos/filters-and-fades.php">A simple image gallery making use of two features only in Webkit's from 2012 and later</a></li>								
+			<li><a href="/demos/speed.php">What's quicker, transitions or jQuery?</a></li>						
 		</ul>
 	</section>
 	<?		

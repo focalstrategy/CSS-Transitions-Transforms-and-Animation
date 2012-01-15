@@ -15,6 +15,7 @@
 <p>Another approach is simply to write the CSS without the prefixes, then use <a href="http://leaverou.github.com/prefixfree/">Lea Verou's -prefix-free</a> to add them in at runtime.</p>
 <p>The syntax is pretty straightforward, you specify the property you want to animate, all or border-radius or color or whatever, the time to run, then the transition timing function. The options for the timing function are shown below.</p>
 <p>Whenever any property changes, then it will animate instead of changing directly. This can be due to a different set of properties set on a pseudo class such as hover, or a new class or properties set by javascript. The example below uses :hover to change the properties – no javascript is needed.</p>
+<p>To see the difference in speed, have a look at the <a href="/demos/speed.php">speed test</a>.</p>
 <style>
 	#timings_demo {
 		position:relative;		
