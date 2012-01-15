@@ -177,28 +177,28 @@ transition:  [ &lt;transition-property&gt; ||
 #delay_demo:hover #dd_main {
 	opacity:0;
 }
-#delay_demo:hover #dd1 {
+#delay_demo:hover #dd1, #delay_demo.hover_effect #dd1 {
 	<?= prefix("transform", "translate(-250px,-200px)") ?>
 }
-#delay_demo:hover #dd2 {
+#delay_demo:hover #dd2, #delay_demo.hover_effect #dd2 {
 	<?= prefix("transform", "translate(0,-200px)") ?>	
 }
-#delay_demo:hover #dd3 {
+#delay_demo:hover #dd3, #delay_demo.hover_effect #dd3 {
 	<?= prefix("transform", "translate(250px,-200px)") ?>
 }
-#delay_demo:hover #dd4 {
+#delay_demo:hover #dd4, #delay_demo.hover_effect #dd4 {
 	<?= prefix("transform", "translate(250px, 0)") ?>	
 }
-#delay_demo:hover #dd5 {
+#delay_demo:hover #dd5, #delay_demo.hover_effect #dd5 {
 	<?= prefix("transform", "translate(250px,200px)") ?>	
 }
-#delay_demo:hover #dd6 {
+#delay_demo:hover #dd6, #delay_demo.hover_effect #dd6 {
 	<?= prefix("transform", "translate(0,200px)") ?>	
 }
-#delay_demo:hover #dd7 {
+#delay_demo:hover #dd7, #delay_demo.hover_effect #dd7 {
 	<?= prefix("transform", "translate(-250px,200px)") ?>	
 }
-#delay_demo:hover #dd8 {
+#delay_demo:hover #dd8, #delay_demo.hover_effect #dd8 {
 	<?= prefix("transform", "translate(-250px,0)") ?>	
 }
 
