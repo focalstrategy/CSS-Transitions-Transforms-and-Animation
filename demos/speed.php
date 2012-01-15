@@ -48,6 +48,7 @@ if (isset($_GET['rows']) && !empty($_GET['rows'])) {
 			border-bottom:none;
 			text-align:center;
 			margin:0 auto;
+			<?= prefix("transition", "none") ?>			
 		}
 		</style>
 		<script>
@@ -113,7 +114,20 @@ if (isset($_GET['rows']) && !empty($_GET['rows'])) {
 			<? } ?>
 
 		</div>
-		<div style="clear:both"></div>		
+		<div style="clear:both"></div>	
+		
+		<h2>Why such a huge difference?</h2>
+		<p>A short answer is that jQuery is written in javascript, where as transitions are written in c++. However, that doesn't really do justice for the differences in the implementation.</p>
+		<p>To examine more closely what happens here, I used the Timeline view in the Webkit Inspector, and recorded the section whilst I clicked the buttons.</p>
+		<h3>CSS Transitions</h3>
+		<img src="/images/transitions_timeline.PNG" alt="CSS3 transitions timeline" />
+		<p>The image above shows the full extent of the animation above. There are a couple of things to notice here. Firstly the frame rate has been capped so unnecessary calculations and repaints aren't done. Secondly, only the area needed is repainted, in this case, the 712px &times; 652px rectangle surrounding the squares. The browser is able to decide on the number of frames, and how much things should change up front, and is able to sensibly decide what to do. The animation is either going to complete, or pause/stop part way through - we aren't going to suddenly be animating different properties part way through.</p>
+		<p>In this animation, only around 40 events happened.</p>
+		<h3>jQuery Animate</h3>
+		<img src="/images/jquery_timeline.PNG" alt="jQuery animate timeline" />
+		<p>A different story is shown here. Recalculate Style is run for every element that needs to be animated. This means that literally thousands (around 9,500) styles are recalculated during the animation, even though they are all identical. Because of this, on my machine, only a small number of repaints are completed. The repaints are the full window size instead of just the little part required. The browser can't predict up front what is going to happen, as the JS could do anything at any time - there is no guarantee that the animation is a simple tweening animation, and any thing could happen at any time.</p>
+		<h3>Conclusion</h3>
+		<p>Javascript animations based on timers can never be as quick as native animations, as they don't have access to enough of the browser to make the same optimisations. These animations should be used as a fallback only in legacy browsers.</p>
 	</section>
 	<?		
 		include($_SERVER['DOCUMENT_ROOT']."/footer.php");		
