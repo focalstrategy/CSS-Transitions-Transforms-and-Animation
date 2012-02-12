@@ -157,3 +157,26 @@ footer, .center {
 .csstransitions #bs_transitions,.csstransforms #bs_2dtrans,.csstransforms3d #bs_3dtrans, .cssanimations #bs_animation {
 	color:green;
 }
+
+.table {
+	border-collapse: collapse;
+}
+.table th {
+	border-bottom: 1px #ccc solid;
+}
+.table td, .table th {
+	padding:1px 10px;
+	width:200px;
+	border-left:1px #ccc solid;
+	border-right:1px #ccc solid;	
+}
+.table tr {
+	-webkit-transition:all 0.3s ease-in-out;
+	-moz-transition:all 0.3s ease-in-out;
+	-o-transition:all 0.3s ease-in-out;
+	-ms-transition:all 0.3s ease-in-out;
+	transition:all 0.3s ease-in-out;
+}
+.table tr:hover {
+	background-color:#ddd;
+}

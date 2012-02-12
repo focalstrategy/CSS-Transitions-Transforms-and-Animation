@@ -11,7 +11,7 @@
 	transition: all 1s ease-in-out;
 }
 </pre>
-<p>There is a lot of duplication due to vendor prefixes - until the specification if finalised, this is likely to persist. If this bothers you, there are various tools such as <a href="http://wiki.github.com/anthonyshort/csscaffold/">CSS Scaffold</a>, <a href="http://lesscss.org/">LESS</a>, or my preference -  <a href="http://sass-lang.com/">SASS</a>, that allow you to define mixins to avoid repetitive code.</p>
+<p>There is a lot of duplication due to vendor prefixes - until the specification if finalised, this will persist. If this bothers you, there are various tools such as <a href="http://wiki.github.com/anthonyshort/csscaffold/">CSS Scaffold</a>, <a href="http://lesscss.org/">LESS</a>, or my preference -  <a href="http://sass-lang.com/">SASS</a>, that allow you to define mixins to avoid repetitive code.</p>
 <p>Another approach is simply to write the CSS without the prefixes, then use <a href="http://leaverou.github.com/prefixfree/">Lea Verou's -prefix-free</a> to add them in at runtime.</p>
 <p>Something you definitely shouldn't do is to only include the webkit prefix. Tempting though it seems, particularly when developing for mobile devices, webkit isn't the only rendering engine!</p>
 <p>The syntax is pretty straightforward, you specify the property you want to animate, all or border-radius or color or whatever, the time to run, then the transition timing function. The options for the timing function are shown below.</p>
@@ -116,7 +116,319 @@
 
 <p>In addition to the built in timing functions, you can also specify your own. The excellent <a href="http://matthewlein.com/ceaser/">Ceaser CSS Easing Tool</a> makes this very easy.</p>
 
-<p>Regarding the properties you can animate, the best way is to experiment. The Mozilla Developer Network maintain a list of properties that can be animated on their <a href="https://developer.mozilla.org/en/CSS/CSS_transitions">CSS Transitions</a> page. These include everything from background-color and box-shadow to column width and box-flex. Many of these properties are not supported by default by jQuery animation, making CSS transitions much more useful out of the box. In addition, iOS hardware accelerates animations that don't require repaints, namely opacity and 3D transforms.</p>
+<h2>Animatable properties</h2>
+<p>Regarding the properties you can animate, the best way is to experiment. The W3C maintain a list of properties that can be animated on the <a href="http://www.w3.org/TR/css3-transitions/#properties-from-css-">CSS Transitions spec</a>. These include everything from background-color and letter-spacing to text-shadow and min-height. Many of these properties are not supported by default by jQuery animation, making CSS transitions much more useful out of the box. In addition, iOS hardware accelerates animations that don't require repaints, namely opacity and 3D transforms.</p>
+<p>In reality, browsers are allowing more properties than these to be animated - box-shadow springs to mind as an obvious example. The table below is taken from the link above, and is can be considered the minimum number of properties you would expect to be animatable.</p>
+<table class="table">
+    <tbody>
+      <tr>
+        <th>Property Name</th>
+
+        <th>Type</th>
+      </tr>
+
+      <tr>
+        <td>background-color</td>
+
+        <td>color</td>
+      </tr>
+
+      <tr>
+        <td>background-image</td>
+
+        <td>only gradients</td>
+      </tr>
+
+      <tr>
+        <td>background-position</td>
+
+        <td>percentage, length</td>
+      </tr>
+
+      <tr>
+        <td>border-bottom-color</td>
+
+        <td>color</td>
+      </tr>
+
+      <tr>
+        <td>border-bottom-width</td>
+
+        <td>length</td>
+      </tr>
+
+      <tr>
+        <td>border-color</td>
+
+        <td>color</td>
+      </tr>
+
+      <tr>
+        <td>border-left-color</td>
+
+        <td>color</td>
+      </tr>
+
+      <tr>
+        <td>border-left-width</td>
+
+        <td>length</td>
+      </tr>
+
+      <tr>
+        <td>border-right-color</td>
+
+        <td>color</td>
+      </tr>
+
+      <tr>
+        <td>border-right-width</td>
+
+        <td>length</td>
+      </tr>
+
+      <tr>
+        <td>border-spacing</td>
+
+        <td>length</td>
+      </tr>
+
+      <tr>
+        <td>border-top-color</td>
+
+        <td>color</td>
+      </tr>
+
+      <tr>
+        <td>border-top-width</td>
+
+        <td>length</td>
+      </tr>
+
+      <tr>
+        <td>border-width</td>
+
+        <td>length</td>
+      </tr>
+
+      <tr>
+        <td>bottom</td>
+
+        <td>length, percentage</td>
+      </tr>
+
+      <tr>
+        <td>color</td>
+
+        <td>color</td>
+      </tr>
+
+      <tr>
+        <td>crop</td>
+
+        <td>rectangle</td>
+      </tr>
+
+      <tr>
+        <td>font-size</td>
+
+        <td>length, percentage</td>
+      </tr>
+
+      <tr>
+        <td>font-weight</td>
+
+        <td>number</td>
+      </tr>
+
+      <tr>
+        <td>grid-*</td>
+
+        <td>various</td>
+      </tr>
+
+      <tr>
+        <td>height</td>
+
+        <td>length, percentage</td>
+      </tr>
+
+      <tr>
+        <td>left</td>
+
+        <td>length, percentage</td>
+      </tr>
+
+      <tr>
+        <td>letter-spacing</td>
+
+        <td>length</td>
+      </tr>
+
+      <tr>
+        <td>line-height</td>
+
+        <td>number, length, percentage</td>
+      </tr>
+
+      <tr>
+        <td>margin-bottom</td>
+
+        <td>length</td>
+      </tr>
+
+      <tr>
+        <td>margin-left</td>
+
+        <td>length</td>
+      </tr>
+
+      <tr>
+        <td>margin-right</td>
+
+        <td>length</td>
+      </tr>
+
+      <tr>
+        <td>margin-top</td>
+
+        <td>length</td>
+      </tr>
+
+      <tr>
+        <td>max-height</td>
+
+        <td>length, percentage</td>
+      </tr>
+
+      <tr>
+        <td>max-width</td>
+
+        <td>length, percentage</td>
+      </tr>
+
+      <tr>
+        <td>min-height</td>
+
+        <td>length, percentage</td>
+      </tr>
+
+      <tr>
+        <td>min-width</td>
+
+        <td>length, percentage</td>
+      </tr>
+
+      <tr>
+        <td>opacity</td>
+
+        <td>number</td>
+      </tr>
+
+      <tr>
+        <td>outline-color</td>
+
+        <td>color</td>
+      </tr>
+
+      <tr>
+        <td>outline-offset</td>
+
+        <td>integer</td>
+      </tr>
+
+      <tr>
+        <td>outline-width</td>
+
+        <td>length</td>
+      </tr>
+
+      <tr>
+        <td>padding-bottom</td>
+
+        <td>length</td>
+      </tr>
+
+      <tr>
+        <td>padding-left</td>
+
+        <td>length</td>
+      </tr>
+
+      <tr>
+        <td>padding-right</td>
+
+        <td>length</td>
+      </tr>
+
+      <tr>
+        <td>padding-top</td>
+
+        <td>length</td>
+      </tr>
+
+      <tr>
+        <td>right</td>
+
+        <td>length, percentage</td>
+      </tr>
+
+      <tr>
+        <td>text-indent</td>
+
+        <td>length, percentage</td>
+      </tr>
+
+      <tr>
+        <td>text-shadow</td>
+
+        <td>shadow</td>
+      </tr>
+
+      <tr>
+        <td>top</td>
+
+        <td>length, percentage</td>
+      </tr>
+
+      <tr>
+        <td>vertical-align</td>
+
+        <td>keywords, length, percentage</td>
+      </tr>
+
+      <tr>
+        <td>visibility</td>
+
+        <td>visibility</td>
+      </tr>
+
+      <tr>
+        <td>width</td>
+
+        <td>length, percentage</td>
+      </tr>
+
+      <tr>
+        <td>word-spacing</td>
+
+        <td>length, percentage</td>
+      </tr>
+
+      <tr>
+        <td>z-index</td>
+
+        <td>integer</td>
+      </tr>
+
+      <tr>
+        <td>zoom</td>
+
+        <td>number</td>
+      </tr>
+    </tbody>
+  </table>
+<p>In addition to this, all browsers with transitions support animating CSS transforms, which prooves to be invaluable.</p>
 
 <h2>Full syntax</h2>
 <p>The syntax for a CSS3 transition is of the form:</p>
