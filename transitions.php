@@ -428,7 +428,7 @@
       </tr>
     </tbody>
   </table>
-<p>In addition to this, all browsers with transitions support animating CSS transforms, which prooves to be invaluable.</p>
+<p>In addition to this, all browsers with transitions support animating CSS transforms, which proves to be invaluable.</p>
 
 <h2>Full syntax</h2>
 <p>The syntax for a CSS3 transition is of the form:</p>
@@ -527,6 +527,77 @@ transition:  [ &lt;transition-property&gt; ||
 	<div id="dd7"></div>
 	<div id="dd8"></div>
 	<p class="center"> Hover on me</p>		
+</div>
+
+<h2>Demo - advanced delays</h2>
+<p>You can set the way different properties animate differently. In this example the normal (blue) circle has this CSS (with the appropriate vendor prefixes):</p>
+<pre class="css">
+#dd_main2 {
+  transition: all 1s ease-in-out;  
+}  
+</pre>
+<p>The delays (green) circle has this CSS instead:</p>
+<pre class="css">
+#dd_main2 {
+  transition-property: top, left;
+  transition-duration: 1s, 1s;
+  transition-delay: 0s, 1s;
+}
+</pre>
+<p>This allows us to animate top and left differently, meaning we can make it move in an L shape, rather than diagonally. This technique can be used to create very complex animations, if needed.</p>
+<style>
+#delay_demo2 {
+  position:relative;    
+  width:500px;
+  height:400px;
+  margin:0 auto 10px;
+  border:1px #aaa solid;
+  padding:10px;
+}
+#dd_main2, #dd_main2a {
+  width:100px;
+  height:100px;
+  position:absolute;
+  top:160px;
+  left:210px;
+  background-color:blue;
+  -webkit-border-radius:50px;
+  -moz-border-radius:50px;
+  border-radius:50px;   
+  text-align:center;
+}
+#dd_main2 p, #dd_main2a p {
+  line-height:70px;
+  color:white;  
+  font-weight:bold;
+}
+#dd_main2 {
+<?= prefix("transition", "all 1s ease-in-out") ?>   
+}
+#dd_main2a {
+  background-color:green;
+  <?= prefix("transition-property", "top, left"); ?>
+  <?= prefix("transition-duration", "1s, 1s"); ?>
+  <?= prefix("transition-delay", "0s, 1s"); ?>
+}
+#delay_demo2 .center {
+  width:500px;
+  position:absolute;
+  bottom:20px;
+}
+#delay_demo2:hover #dd_main2 {
+  top:0px;
+  left:0px;
+}
+#delay_demo2:hover #dd_main2a {
+  top:320px;
+  left:420px;
+}
+</style>
+<div id="delay_demo2" class="shadow hover">
+  <div id="dd_main2"><p>Normal</p></div>
+  <div id="dd_main2a"><p>Delays</p></div>  
+  <p class="center"> Hover on me</p>    
 </div>
 
 <p>To find out more about CSS3 transitions, read through the <a href="http://www.w3.org/TR/css3-transitions/">W3C specification</a>.</p>
