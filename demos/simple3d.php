@@ -10,10 +10,10 @@
 		<script src="/js/modernizr-newest.min.js"></script>
 
 		<style>
-		section {
+		#threeD {
 						background-color:white;
 		}
-		 section p {
+		 #threeD p {
 			text-align:center;
 			font-size:2.5em;
 			-webkit-transition:all 0.5s ease-in-out;
@@ -45,10 +45,14 @@
 		<h1>Simple Anaglyphs</h1>
 	</header>
 	
-	<section>
+	<section id="threeD">
 		<p>This isn't exactly great, but maybe someone can improve it...</p>
 		<p class="flat">This is at base level.</p>
 		<p class="level1">I'm trying to be 3d</p>			
+	</section>
+
+	<section>
+		<? include($_SERVER['DOCUMENT_ROOT']."/disqus.php"); ?>	
 	</section>
 	<?		
 		include($_SERVER['DOCUMENT_ROOT']."/footer.php");		

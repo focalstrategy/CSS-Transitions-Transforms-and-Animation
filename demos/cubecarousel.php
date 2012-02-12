@@ -154,6 +154,8 @@
 		</p>
 		<p id="transparency">Click me to toggle transparency</p>
 		
+
+<? include($_SERVER['DOCUMENT_ROOT']."/disqus.php"); ?>			
 	</section>		
 	
 	

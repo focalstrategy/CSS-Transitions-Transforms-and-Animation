@@ -82,6 +82,8 @@
 				<img src="/images/Summit.jpg" />		
 			</div>
 		</div>
+
+<? include($_SERVER['DOCUMENT_ROOT']."/disqus.php"); ?>			
 	</section>		
 	
 	<script>

@@ -137,6 +137,9 @@ if ($rows > 1000) {
 		<p>For a look at another example in javascript with a much more optimised animate function, have a look at <a href="http://bl.ocks.org/d/1616423/">this example</a> which was written using the <a href="http://mbostock.github.com/d3/">d3.js</a> library. This provides some evidence that the jQuery animate function could be optimised somewhat.</p>
 		<h3>Conclusion</h3>
 		<p>Javascript animations based on timers can never be as quick as native animations, as they don't have access to enough of the browser to make the same optimisations. These animations should be used as a fallback only in legacy browsers. Now that <a href="/support/">browser support</a> is so universal, there is rarely a case where javascript animations are preferable.</p>
+
+	<?	include($_SERVER['DOCUMENT_ROOT']."/disqus.php"); ?>	
+
 	</section>
 	<?		
 		include($_SERVER['DOCUMENT_ROOT']."/footer.php");		

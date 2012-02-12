@@ -245,7 +245,8 @@
 
 			</div>
 		</div>
-		</div>		
+		</div>	
+
 	</section>
 	<?		
 		include($_SERVER['DOCUMENT_ROOT']."/footer.php");		

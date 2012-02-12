@@ -109,6 +109,8 @@
 			<div id="main"></div>
 			<div id="thumbs"></div>
 		</div>
+
+<? include($_SERVER['DOCUMENT_ROOT']."/disqus.php"); ?>			
 	</section>		
 	
 	

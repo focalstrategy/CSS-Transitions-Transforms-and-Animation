@@ -151,6 +151,8 @@
 				<div><p>An unusually purple mountain</p></div>												
 			</div>
 		</div>
+
+		<? include($_SERVER['DOCUMENT_ROOT']."/disqus.php"); ?>	
 	</section>		
 	
 	

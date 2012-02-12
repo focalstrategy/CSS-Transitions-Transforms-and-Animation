@@ -90,6 +90,8 @@ $(document).ready(function() {
 	<span id="for-image-4">Image 4</span>
 </p>
 
+<? include($_SERVER['DOCUMENT_ROOT']."/disqus.php"); ?>	
+
 </section>
 	<?		
 		include($_SERVER['DOCUMENT_ROOT']."/footer.php");		

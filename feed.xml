@@ -17,7 +17,7 @@ function get_dir_contents($web_directory) {
 	}
 }
 
-$systemfiles = array("index.php", "indexcontents.php", "constants.php", "contents.php", "feed.php", "footer.php");
+$systemfiles = array("index.php", "indexcontents.php", "constants.php", "contents.php", "feed.php", "footer.php", "disqus.php");
 
 $files = get_dir_contents("/");
 
