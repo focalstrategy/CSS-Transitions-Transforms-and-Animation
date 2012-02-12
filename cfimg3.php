@@ -216,7 +216,7 @@
 	}			
 	
 </style>
-<div id="cf4" class="shadow">
+<div id="cf4a" class="shadow">
 	<img src="/images/Stones.jpg" />
 	<img src="/images/Summit.jpg" />
 	<img src="/images/Clown Fish.jpg" />
