@@ -116,6 +116,176 @@
 
 <p>In addition to the built in timing functions, you can also specify your own. The excellent <a href="http://matthewlein.com/ceaser/">Ceaser CSS Easing Tool</a> makes this very easy.</p>
 
+<h2>Full syntax</h2>
+<p>The syntax for a CSS3 transition is of the form:</p>
+<pre>
+transition:  [ &lt;transition-property&gt; ||
+               &lt;transition-duration&gt; ||
+               &lt;transition-timing-function&gt; ||
+               &lt;transition-delay&gt; ]
+</pre>
+<p>You will notice the final parameter is a delay - this let's you trigger things after an event has occurred. Below is a small demo showing this functionality.</p>
+<h2>Demo - Transition delays</h2>
+<style>
+#delay_demo {
+	position:relative;		
+	width:500px;
+	height:400px;
+	margin:0 auto 10px;
+	border:1px #aaa solid;
+	padding:10px;
+}
+#dd_main {
+	width:100px;
+	height:100px;
+	position:absolute;
+	top:160px;
+	left:210px;
+	background-color:red;
+	-webkit-border-radius:50px;
+	-moz-border-radius:50px;
+	border-radius:50px;		
+	<?= prefix("transition", "all 2s ease-in-out") ?>	
+}
+#delay_demo .center {
+	width:500px;
+	position:absolute;
+	bottom:20px;
+}
+#dd1, #dd2, #dd3, #dd4, #dd5, #dd6, #dd7, #dd8 {
+	width:20px;
+	height:20px;
+	-webkit-border-radius:10px;
+	-moz-border-radius:10px;
+	border-radius:10px;	
+	position:absolute;
+	top:200px;
+	left:250px;	
+	background-color:blue;
+	<?= prefix("transition", "all 2s ease-in-out") ?>
+	
+	/* Ensures that the element is being transformed in the 3d context so that hw acceleration kicks in on iOS */
+	<?= prefix("transform", "translate3d(0,0,0)") ?>	
+}
+
+<? for($i=1;$i<9;$i++) { ?>
+	#dd<?= $i ?> {
+		-webkit-transition-delay: <?= $i * 0.1 ?>s;
+	}
+<? } ?>
+#delay_demo:hover #dd_main {
+	opacity:0;
+}
+#delay_demo:hover #dd1, #delay_demo.hover_effect #dd1 {
+	<?= prefix("transform", "translate(-250px,-200px)") ?>
+}
+#delay_demo:hover #dd2, #delay_demo.hover_effect #dd2 {
+	<?= prefix("transform", "translate(0,-200px)") ?>	
+}
+#delay_demo:hover #dd3, #delay_demo.hover_effect #dd3 {
+	<?= prefix("transform", "translate(250px,-200px)") ?>
+}
+#delay_demo:hover #dd4, #delay_demo.hover_effect #dd4 {
+	<?= prefix("transform", "translate(250px, 0)") ?>	
+}
+#delay_demo:hover #dd5, #delay_demo.hover_effect #dd5 {
+	<?= prefix("transform", "translate(250px,200px)") ?>	
+}
+#delay_demo:hover #dd6, #delay_demo.hover_effect #dd6 {
+	<?= prefix("transform", "translate(0,200px)") ?>	
+}
+#delay_demo:hover #dd7, #delay_demo.hover_effect #dd7 {
+	<?= prefix("transform", "translate(-250px,200px)") ?>	
+}
+#delay_demo:hover #dd8, #delay_demo.hover_effect #dd8 {
+	<?= prefix("transform", "translate(-250px,0)") ?>	
+}
+
+</style>
+<div id="delay_demo" class="shadow hover">
+	<div id="dd_main"></div>
+	<div id="dd1"></div>
+	<div id="dd2"></div>
+	<div id="dd3"></div>
+	<div id="dd4"></div>			
+	<div id="dd5"></div>
+	<div id="dd6"></div>
+	<div id="dd7"></div>
+	<div id="dd8"></div>
+	<p class="center"> Hover on me</p>		
+</div>
+
+<h2>Demo - advanced delays</h2>
+<p>You can set the way different properties animate differently. In this example the normal (blue) circle has this CSS (with the appropriate vendor prefixes):</p>
+<pre class="css">
+#dd_main2 {
+  transition: all 1s ease-in-out;  
+}  
+</pre>
+<p>The delays (green) circle has this CSS instead:</p>
+<pre class="css">
+#dd_main2 {
+  transition-property: top, left;
+  transition-duration: 1s, 1s;
+  transition-delay: 0s, 1s;
+}
+</pre>
+<p>This allows us to animate top and left differently, meaning we can make it move in an L shape, rather than diagonally. This technique can be used to create very complex animations, if needed.</p>
+<style>
+#delay_demo2 {
+  position:relative;    
+  width:500px;
+  height:400px;
+  margin:0 auto 10px;
+  border:1px #aaa solid;
+  padding:10px;
+}
+#dd_main2, #dd_main2a {
+  width:100px;
+  height:100px;
+  position:absolute;
+  top:160px;
+  left:210px;
+  background-color:blue;
+  -webkit-border-radius:50px;
+  -moz-border-radius:50px;
+  border-radius:50px;   
+  text-align:center;
+}
+#dd_main2 p, #dd_main2a p {
+  line-height:70px;
+  color:white;  
+  font-weight:bold;
+}
+#dd_main2 {
+<?= prefix("transition", "all 1s ease-in-out") ?>   
+}
+#dd_main2a {
+  background-color:green;
+  <?= prefix("transition-property", "top, left"); ?>
+  <?= prefix("transition-duration", "1s, 1s"); ?>
+  <?= prefix("transition-delay", "0s, 1s"); ?>
+}
+#delay_demo2 .center {
+  width:500px;
+  position:absolute;
+  bottom:20px;
+}
+#delay_demo2:hover #dd_main2 {
+  top:0px;
+  left:0px;
+}
+#delay_demo2:hover #dd_main2a {
+  top:320px;
+  left:420px;
+}
+</style>
+<div id="delay_demo2" class="shadow hover">
+  <div id="dd_main2"><p>Normal</p></div>
+  <div id="dd_main2a"><p>Delays</p></div>  
+  <p class="center"> Hover on me</p>    
+</div>
+
 <h2>Animatable properties</h2>
 <p>Regarding the properties you can animate, the best way is to experiment. The W3C maintain a list of properties that can be animated on the <a href="http://www.w3.org/TR/css3-transitions/#properties-from-css-">CSS Transitions spec</a>. These include everything from background-color and letter-spacing to text-shadow and min-height. Many of these properties are not supported by default by jQuery animation, making CSS transitions much more useful out of the box. In addition, iOS hardware accelerates animations that don't require repaints, namely opacity and 3D transforms.</p>
 <p>In reality, browsers are allowing more properties than these to be animated - box-shadow springs to mind as an obvious example. The table below is taken from the link above, and is can be considered the minimum number of properties you would expect to be animatable.</p>
@@ -429,176 +599,6 @@
     </tbody>
   </table>
 <p>In addition to this, all browsers with transitions support animating CSS transforms, which proves to be invaluable.</p>
-
-<h2>Full syntax</h2>
-<p>The syntax for a CSS3 transition is of the form:</p>
-<pre>
-transition:  [ &lt;transition-property&gt; ||
-               &lt;transition-duration&gt; ||
-               &lt;transition-timing-function&gt; ||
-               &lt;transition-delay&gt; ]
-</pre>
-<p>You will notice the final parameter is a delay - this let's you trigger things after an event has occurred. Below is a small demo showing this functionality.</p>
-<h2>Demo - Transition delays</h2>
-<style>
-#delay_demo {
-	position:relative;		
-	width:500px;
-	height:400px;
-	margin:0 auto 10px;
-	border:1px #aaa solid;
-	padding:10px;
-}
-#dd_main {
-	width:100px;
-	height:100px;
-	position:absolute;
-	top:160px;
-	left:210px;
-	background-color:red;
-	-webkit-border-radius:50px;
-	-moz-border-radius:50px;
-	border-radius:50px;		
-	<?= prefix("transition", "all 2s ease-in-out") ?>	
-}
-#delay_demo .center {
-	width:500px;
-	position:absolute;
-	bottom:20px;
-}
-#dd1, #dd2, #dd3, #dd4, #dd5, #dd6, #dd7, #dd8 {
-	width:20px;
-	height:20px;
-	-webkit-border-radius:10px;
-	-moz-border-radius:10px;
-	border-radius:10px;	
-	position:absolute;
-	top:200px;
-	left:250px;	
-	background-color:blue;
-	<?= prefix("transition", "all 2s ease-in-out") ?>
-	
-	/* Ensures that the element is being transformed in the 3d context so that hw acceleration kicks in on iOS */
-	<?= prefix("transform", "translate3d(0,0,0)") ?>	
-}
-
-<? for($i=1;$i<9;$i++) { ?>
-	#dd<?= $i ?> {
-		-webkit-transition-delay: <?= $i * 0.1 ?>s;
-	}
-<? } ?>
-#delay_demo:hover #dd_main {
-	opacity:0;
-}
-#delay_demo:hover #dd1, #delay_demo.hover_effect #dd1 {
-	<?= prefix("transform", "translate(-250px,-200px)") ?>
-}
-#delay_demo:hover #dd2, #delay_demo.hover_effect #dd2 {
-	<?= prefix("transform", "translate(0,-200px)") ?>	
-}
-#delay_demo:hover #dd3, #delay_demo.hover_effect #dd3 {
-	<?= prefix("transform", "translate(250px,-200px)") ?>
-}
-#delay_demo:hover #dd4, #delay_demo.hover_effect #dd4 {
-	<?= prefix("transform", "translate(250px, 0)") ?>	
-}
-#delay_demo:hover #dd5, #delay_demo.hover_effect #dd5 {
-	<?= prefix("transform", "translate(250px,200px)") ?>	
-}
-#delay_demo:hover #dd6, #delay_demo.hover_effect #dd6 {
-	<?= prefix("transform", "translate(0,200px)") ?>	
-}
-#delay_demo:hover #dd7, #delay_demo.hover_effect #dd7 {
-	<?= prefix("transform", "translate(-250px,200px)") ?>	
-}
-#delay_demo:hover #dd8, #delay_demo.hover_effect #dd8 {
-	<?= prefix("transform", "translate(-250px,0)") ?>	
-}
-
-</style>
-<div id="delay_demo" class="shadow hover">
-	<div id="dd_main"></div>
-	<div id="dd1"></div>
-	<div id="dd2"></div>
-	<div id="dd3"></div>
-	<div id="dd4"></div>			
-	<div id="dd5"></div>
-	<div id="dd6"></div>
-	<div id="dd7"></div>
-	<div id="dd8"></div>
-	<p class="center"> Hover on me</p>		
-</div>
-
-<h2>Demo - advanced delays</h2>
-<p>You can set the way different properties animate differently. In this example the normal (blue) circle has this CSS (with the appropriate vendor prefixes):</p>
-<pre class="css">
-#dd_main2 {
-  transition: all 1s ease-in-out;  
-}  
-</pre>
-<p>The delays (green) circle has this CSS instead:</p>
-<pre class="css">
-#dd_main2 {
-  transition-property: top, left;
-  transition-duration: 1s, 1s;
-  transition-delay: 0s, 1s;
-}
-</pre>
-<p>This allows us to animate top and left differently, meaning we can make it move in an L shape, rather than diagonally. This technique can be used to create very complex animations, if needed.</p>
-<style>
-#delay_demo2 {
-  position:relative;    
-  width:500px;
-  height:400px;
-  margin:0 auto 10px;
-  border:1px #aaa solid;
-  padding:10px;
-}
-#dd_main2, #dd_main2a {
-  width:100px;
-  height:100px;
-  position:absolute;
-  top:160px;
-  left:210px;
-  background-color:blue;
-  -webkit-border-radius:50px;
-  -moz-border-radius:50px;
-  border-radius:50px;   
-  text-align:center;
-}
-#dd_main2 p, #dd_main2a p {
-  line-height:70px;
-  color:white;  
-  font-weight:bold;
-}
-#dd_main2 {
-<?= prefix("transition", "all 1s ease-in-out") ?>   
-}
-#dd_main2a {
-  background-color:green;
-  <?= prefix("transition-property", "top, left"); ?>
-  <?= prefix("transition-duration", "1s, 1s"); ?>
-  <?= prefix("transition-delay", "0s, 1s"); ?>
-}
-#delay_demo2 .center {
-  width:500px;
-  position:absolute;
-  bottom:20px;
-}
-#delay_demo2:hover #dd_main2 {
-  top:0px;
-  left:0px;
-}
-#delay_demo2:hover #dd_main2a {
-  top:320px;
-  left:420px;
-}
-</style>
-<div id="delay_demo2" class="shadow hover">
-  <div id="dd_main2"><p>Normal</p></div>
-  <div id="dd_main2a"><p>Delays</p></div>  
-  <p class="center"> Hover on me</p>    
-</div>
 
 <p>To find out more about CSS3 transitions, read through the <a href="http://www.w3.org/TR/css3-transitions/">W3C specification</a>.</p>
 </section>

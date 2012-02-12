@@ -185,5 +185,5 @@
 <div id="animationDemo2">
 	<button class="transition hover">Hover to Pulsate</button>
 </div>
-<p>The key to using these animations is subtlety - nice delicate animations, rather than extreme over the top ones!</p>
+<p>The key to using these animations is subtlety - nice delicate animations, rather than extreme over the top ones! It's also worth noting that the WCAG (Web Content Accessibility Guidelines) 2.0 specifies that a website shouldn't contain things that <a href="http://www.w3.org/TR/WCAG20/#seizure">flash more than 3 times a second</a> to avoid causing seizures in people susceptible to them.</p>
 </section>
