@@ -26,6 +26,8 @@ if (isset($_GET['section']) && preg_match("/^[a-zA-Z]+/", $_GET['section'])) {
 				});
 			});
 		</script>
+		
+		<link rel=alternate type=application/atom+xml href=/feed.xml />		
 		<meta name="viewport" content="width=device-width,maximum-scale=1.0" />
 	</head>		
 	<body>		

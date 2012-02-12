@@ -1,8 +1,8 @@
 <?
 
 $titles = array(
-	"accordions" => "CSS3 Accordions | CSS3 transitions, transforms and animations | CSS3 transitions, transforms and animations",
-	"animations" => "CSS3 Animations | CSS3 transitions, transforms and animations | CSS3 transitions, transforms and animations",
+	"accordions" => "CSS3 Accordions | CSS3 transitions, transforms and animations",
+	"animations" => "CSS3 Animations | CSS3 transitions, transforms and animations",
 	"cfimg" => "Crossfading Images | CSS3 transitions, transforms and animations",
 	"cfimg1" => "Crossfading Images on hover | CSS3 transitions, transforms and animations",
 	"cfimg2" => "Crossfading Images on button press | CSS3 transitions, transforms and animations",

@@ -53,7 +53,7 @@
 			filter:grayscale(1);				
 		}
 
-		#thumbs img:hover, #thumbs a:target img {
+		#thumbs img:hover, #thumbs a:target img, #thumbs img.active {
 			-webkit-filter:grayscale(0);	
 			-moz-filter:grayscale(0);	
 			-ms-filter:grayscale(0);	
@@ -80,9 +80,11 @@
 
 		$(function(){
 			$("#thumbs").on("click", "img", function(e){
-				e.preventDefault();
-				window.location.hash = $(this).parent("a").attr("id");
+				$("#thumbs img").removeClass("active");
+				$(this).addClass("active");
+				
 				$("#main").css("background-image","url("+$(this).attr("src")+")");
+				return false;
 			});			
 		});		
 		</script>		

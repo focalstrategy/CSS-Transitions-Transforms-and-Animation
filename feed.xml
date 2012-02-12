@@ -1,0 +1,80 @@
+<?
+include($_SERVER['DOCUMENT_ROOT']."/constants.php");
+
+function get_dir_contents($web_directory) {
+	$directory = $_SERVER['DOCUMENT_ROOT'].$web_directory;
+	if(file_exists($directory)) {
+		$myDirectory = opendir($directory);
+
+		while($entryName = readdir($myDirectory)) {
+		    if (substr($entryName, 0, 1) != "."){
+				$dirArray[] = $entryName;	
+			}
+		}
+		sort($dirArray, SORT_NUMERIC);
+
+		return $dirArray;
+	}
+}
+
+$systemfiles = array("index.php", "indexcontents.php", "constants.php", "contents.php", "feed.php", "footer.php");
+
+$files = get_dir_contents("/");
+
+$feedarray = array();
+
+foreach ($files as $filename) {
+	$ext = pathinfo($filename, PATHINFO_EXTENSION);
+
+	if ($ext == "php" && !in_array($filename, $systemfiles)) {
+		
+		$feedarray[$filename] = filemtime($filename);
+
+	}
+}
+
+arsort($feedarray);
+
+foreach ($feedarray as $page => $modified) {
+	$mostrecent = $modified;
+	break;
+}
+
+echo "<?xml version=\"1.0\" encoding=\"utf-8\"?>  <?xml-stylesheet type=\"text/xsl\" href=\"/atom2html.xslt\"?> <feed xmlns=\"http://www.w3.org/2005/Atom\">";
+?>
+	<title>CSS3 Transitions, Transforms and Animations</title>
+	<subtitle>Examples and practical uses by Rich Bradshaw</subtitle>
+	<link href="http://css3.bradshawenterprises.com/feed.php" rel="self" />
+	<link href="http://css3.bradshawenterprises.com/" />
+	<id>tag:css3.bradshawenterprises.com,2012-02-12:/20120212161845979</id>
+	
+	<updated><?= date(DATE_ATOM, $mostrecent )?></updated>	
+
+
+<? foreach ($feedarray as $page => $modified) {
+	$realpage =	str_replace(".php","",$page);
+
+	$linktopage = "http://css3.bradshawenterprises.com/".$realpage."/";
+
+	?>
+
+	<entry>
+		<author>
+			<name>Rich Bradshaw</name>
+		</author>
+				
+		<title type="html"><![CDATA[Updated: <?= $titles[$realpage] ?>]]></title>
+
+		<link rel="alternate" type="text/html" href="<?= $linktopage ?>" />		
+
+		<id>tag:css3.bradshawenterprises.com,2012:</id>
+		
+		<updated><?= date(DATE_ATOM, $modified) ?></updated>
+		<published><?= date(DATE_ATOM, $modified) ?></published>		
+		
+		<content type="html"><![CDATA[I've just updated the content on my CSS3 transitions, transforms and animations page. Have a look at the page that's changed/been added <a href="<?= $linktopage ?>">here</a>.]]></content>
+	</entry>
+
+<? } ?>
+
+</feed>
