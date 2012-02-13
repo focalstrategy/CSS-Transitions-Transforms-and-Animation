@@ -399,7 +399,7 @@ $(document).ready(function() {
 </div>
 <div class="clear"></div>
 <p>Have a play with the controls - there's no transition here, just the sliders to control it. Note that I'm only using javascript to update the css values - all the maths needed is done by the browser automatically.</p>
-<p>For more information read both the <a href="http://www.webkit.org/blog/386/3d-transforms/">Webkit blog entry from when 3D transforms were first implemented</a>, and <a href="http://desandro.github.com/3dtransforms/">David Desandro's awesome examples</a>.</p>
+<p>For more information read both the <a href="http://www.webkit.org/blog/386/3d-transforms/">Webkit blog entry from when 3D transforms were first implemented</a>, <a href="http://desandro.github.com/3dtransforms/">David Desandro's awesome examples</a> and <a href="http://ie.microsoft.com/testdrive/Graphics/hands-on-css3/hands-on_3d-transforms.htm">Microsoft's 3D transforms test drive</a>.</p>
 
 <h3>Advanced usage</h3>
 <p>Though it's rare that you'll need it, it's worth noting that the raw matrix implementations are exposed as well. As an example, the skew transform above has a skew of 35 degrees. To find the internal representation, you can use javascript to find the computed style. In this case, <code>skew(35deg)</code> is represented by <code>matrix(1, 0, 0.7002075382097097, 1, 0, 0)</code>. The astute among you will note that this is a 2&times;3 matrix. To use them for normal arithmetic, add a third row of <code>0, 0, 1</code>.</p>
