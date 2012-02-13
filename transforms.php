@@ -399,5 +399,11 @@ $(document).ready(function() {
 </div>
 <div class="clear"></div>
 <p>Have a play with the controls - there's no transition here, just the sliders to control it. Note that I'm only using javascript to update the css values - all the maths needed is done by the browser automatically.</p>
-<p>For more information read both the <a href="http://www.webkit.org/blog/386/3d-transforms/">Webkit blog entry from when this was first implemented</a>, and <a href="http://desandro.github.com/3dtransforms/">David Desandro's awesome examples</a>.</p>
+<p>For more information read both the <a href="http://www.webkit.org/blog/386/3d-transforms/">Webkit blog entry from when 3D transforms were first implemented</a>, and <a href="http://desandro.github.com/3dtransforms/">David Desandro's awesome examples</a>.</p>
+
+<h3>Advanced usage</h3>
+<p>Though it's rare that you'll need it, it's worth noting that the raw matrix implementations are exposed as well. As an example, the skew transform above has a skew of 35 degrees. To find the internal representation, you can use javascript to find the computed style. In this case, <code>skew(35deg)</code> is represented by <code>matrix(1, 0, 0.7002075382097097, 1, 0, 0)</code>. The astute among you will note that this is a 2&times;3 matrix. To use them for normal arithmetic, add a third row of <code>0, 0, 1</code>.</p>
+<p>3D transforms are represented similarly, with a 4&times;4 matrix.</p>
+<p>Understanding how to create these matrices is probably out of the scope of this tutorial, but an undergraduate understanding of matrix algebra should suffice. Read the <a href="http://en.wikipedia.org/wiki/Transformation_matrix#Examples_in_2D_graphics">Wikipedia article on transformation matrices</a> for a quick primer.</p>
+<p>For the exact methods, read the part of the spec about <a href="http://www.w3.org/TR/css3-2d-transforms/#matrix-decomposition">2D matrix decomposition</a> and <a href="http://www.w3.org/TR/css3-3d-transforms/#cssmatrix-interface">3D matrix interface</a>.</p>
 </section>

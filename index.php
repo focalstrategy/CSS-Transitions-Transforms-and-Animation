@@ -95,6 +95,17 @@ if ($_GET['section'] == "all") {
 		<p id="bs_animation">CSS Animations</p>
 		</div>
 		<div class="clear"></div>
+	<script type="text/javascript"><!--
+	google_ad_client = "pub-7181696033265659";
+	/* CSS3 Banner */
+	google_ad_slot = "0969051732";
+	google_ad_width = 728;
+	google_ad_height = 90;
+	//-->
+	</script>
+	<script type="text/javascript"
+	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+	</script>		
 	</section>
 
 		<section>
