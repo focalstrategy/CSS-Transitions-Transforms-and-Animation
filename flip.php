@@ -252,4 +252,14 @@
 			</div>
   		</div>
 	</div>
+
+
+	<h2>Case Study: Flipping cards on the <a href="http://www.southamptontaxis.org/our-partners/">Southampton Hackney Association's Website</a></h2>
+	<p>Part of the design for the Southampton Hackney Association included a grid of sponsors. The design was such that on hover or click, they would flip over revealing a contact number, email address or URL. We wanted this site to work on browsers that didn't support 3D transforms, as at the time, only webkit had support.</p>
+	<h3>Code path for browsers with 3D transforms</h3>
+	<p>The code used is exactly as above. The markup consists of a div, containing two divs for the back and front faces.</p>
+	<h3>Fallback</h3>
+	<p>In older browsers, <a href="http://lab.smashup.it/flip">jQuery Flip</a> is used. <a href="http://www.modernizr.com/">Modernizr</a> is used to detect support for 3D transforms and if not, the markup is altered to fit how jQuery flip requires it to be. The key part is that for normal browsers, normal 3D transforms are used, with none of the fluff required to get this to work.</p>
+	<p>Due to issues with getting jQuery flip to work on hover, the behaviour was changed to work on click.</p>
+	<p>Using this technique, the effect works on all browsers in use, back to IE6. The flip effect is of much higher quality on browsers that support 3D transforms, but still has the distinctive look and feel on older browsers. As we move forward, the percentage of users who hit the fallback will decrease.</p>
 </section>

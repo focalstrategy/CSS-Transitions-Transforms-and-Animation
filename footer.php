@@ -1,4 +1,6 @@
 	<footer>
+
+		
 		<p>&copy; Rich Bradshaw of <a href="http://focalstrategy.com">Focal Strategy</a> 2010 - 2011</p>
 		
 		<script src="http://www.stumbleupon.com/hostedbadge.php?s=5"></script>
@@ -16,7 +18,7 @@
 		<script type="text/javascript"><!--
 		google_ad_client = "pub-7181696033265659";
 		/* CSS3 Banner */
-		google_ad_slot = "0969051732";
+		google_ad_slot = "1990595748";
 		google_ad_width = 728;
 		google_ad_height = 90;
 		//-->
