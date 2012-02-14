@@ -459,17 +459,24 @@ $(document).ready(function() {
 	} else if ($.browser.opera) {
 		vP = "-o-";
 	}
-	var transPlayChanged = $('#transPlayChanged');
-	var transPlayperspective = $("#transPlayperspective");
-	var transPlayStage = $("#transPlayStage");
-	var transPlayX = $('#transPlayX');
-	var transPlayY = $('#transPlayY');
-	var transPlayZ = $('#transPlayZ');
-	var transPlayXRot = $('#transPlayXRot');
-	var transPlayYRot = $('#transPlayYRot');
-	var transPlayZRot = $('#transPlayZRot');	
+	var transPlayChanged = $('#transPlayChanged'),
+		transPlayStage = $("#transPlayStage"),	
+		
+		transPlayPerspective = $("#transPlayPerspective"),
+		
+		transPlayOriginX = $("#transPlayOriginX"),
+		transPlayOriginY = $("#transPlayOriginY"),		
+		
+		transPlayX = $('#transPlayX'),
+		transPlayY = $('#transPlayY'),
+		transPlayZ = $('#transPlayZ'),
+		
+		transPlayXRot = $('#transPlayXRot'),
+		transPlayYRot = $('#transPlayYRot'),
+		transPlayZRot = $('#transPlayZRot');	
 
 	transPlayZ.val(0);
+	transPlayPerspective.val(800);	
 
 	transPlayChanged.css(vP+"transform","translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)");
 
@@ -483,11 +490,12 @@ $(document).ready(function() {
 				transPlayXRot.val()+"deg) rotateY("+
 				transPlayYRot.val()+"deg) rotateZ("+
 				transPlayZRot.val()+"deg)");			
-	});	
 
-	$('#transPlayperspective').change(function() {
-		transPlayStage.css(vP+"perspective", transPlayperspective.val());
-	});
+			transPlayStage.css(vP+"perspective", transPlayPerspective.val());
+
+			transPlayChanged.css(vP+"transform-origin-x", transPlayOriginX.val()+"%");
+			transPlayChanged.css(vP+"transform-origin-y", transPlayOriginY.val()+"%");			
+	});	
 });
 </script>
 <div id="transPlay">
@@ -497,8 +505,14 @@ $(document).ready(function() {
 	</div>
 </div>
 <div id="transPlayControls">
-	<label for="transPlayperspective">Perspective (<span>800</span> px)</label>
-	<input id="transPlayperspective" type="range" min="100" max="1000" default="800" />		
+	<label for="transPlayPerspective">Perspective (<span>800</span> px)</label>
+	<input id="transPlayPerspective" type="range" min="100" max="1000" default="800" />		
+
+	<label for="transPlayOriginX">Transform origin (horizontal) (<span>50</span> %)</label>
+	<input id="transPlayOriginX" type="range" min="0" max="100" default="50" />		
+
+	<label for="transPlayOriginY">Transform origin (vertical) (<span>50</span> %)</label>
+	<input id="transPlayOriginY" type="range" min="0" max="100" default="50" />			
 
 	<label for="transPlayX">∆X (<span>0</span> px)</label>
 	<input id="transPlayX" type="range" min="-170" max="170" default="0" />
