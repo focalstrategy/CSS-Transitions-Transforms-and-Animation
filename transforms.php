@@ -356,7 +356,7 @@ $(document).ready(function() {
 	});	
 	$('#td3controls #td3perspective').change(function () {
 			$('#transDemo3').css(vP+"perspective",$('#td3controls input#td3perspective').val());
-			$('label[for="td3perspective"]').html("Perspective ("+$('#td3controls input#td3perspective').val()+")")			
+			$('label[for="td3perspective"]').html("Perspective ("+$('#td3controls input#td3perspective').val()+" px)")			
 	});		
 });
 </script>
@@ -394,11 +394,128 @@ $(document).ready(function() {
 	<input id="td3yrot" type="range" min="-180" max="180" default="0" />
 	<label for="td3zrot">Z rotation (0 deg)</label>
 	<input id="td3zrot" type="range" min="-180" max="180" default="0" />
-	<label for="td3perspective">Perspective (800)</label>
+	<label for="td3perspective">Perspective (800 px)</label>
 	<input id="td3perspective" type="range" min="200" max="2000" default="800" />	
 </div>
 <div class="clear"></div>
 <p>Have a play with the controls - there's no transition here, just the sliders to control it. Note that I'm only using javascript to update the css values - all the maths needed is done by the browser automatically.</p>
+
+
+<h2>3D transforms playground</h2>
+<style>
+#transPlay {
+	margin:50px auto;
+	width:400px;
+	position:relative;
+
+}
+
+#transPlayStage {
+
+	-webkit-perspective: 200px;
+	-moz-perspective: 200px;
+	-o-perspective: 200px;
+	-ms-perspective: 200px;
+	perspective: 200px;	
+}
+#transPlayControls {
+	width:300px;
+	float:right;
+}
+
+#transPlayControls label {
+	float:left;
+	width:150px;
+}
+
+#transPlayControls input {
+	float:left;	
+	width:150px;	
+}
+#transPlay div {
+	position: absolute;
+	top:0;
+	left:0;
+	width:150px;
+	height:150px;
+	outline:1px black solid;
+}
+#transPlayOriginal {
+	background-color:rgba(255,0,0,0.2);
+}
+#transPlayChanged {
+	background-color: rgba(255,0,0,0.5);
+}
+</style>
+<script>
+$(document).ready(function() {
+	var vP = "";
+	if ($.browser.webkit) {
+		vP = "-webkit-";
+	} else if ($.browser.msie) {
+		vP = "-ms-";
+	} else if ($.browser.mozilla) {
+		vP = "-moz-";
+	} else if ($.browser.opera) {
+		vP = "-o-";
+	}
+	var transPlayChanged = $('#transPlayChanged');
+	var transPlayperspective = $("#transPlayperspective");
+	var transPlayStage = $("#transPlayStage");
+	var transPlayX = $('#transPlayX');
+	var transPlayY = $('#transPlayY');
+	var transPlayZ = $('#transPlayZ');
+	var transPlayXRot = $('#transPlayXRot');
+	var transPlayYRot = $('#transPlayYRot');
+	var transPlayZRot = $('#transPlayZRot');	
+
+	transPlayZ.val(0);
+
+	transPlayChanged.css(vP+"transform","translateX(0px) translateY(0px) translateZ(0px) rotateX(0deg) rotateY(0deg) rotateZ(0deg)");
+
+	$('#transPlayControls input').change(function () {
+			$('label[for="'+$(this).attr("id")+'"] span').html($(this).val());
+
+			transPlayChanged.css(vP+"transform","translateX("+
+				transPlayX.val()+"px) translateY("+
+				transPlayY.val()+"px) translateZ("+
+				transPlayZ.val()+"px) rotateX("+
+				transPlayXRot.val()+"deg) rotateY("+
+				transPlayYRot.val()+"deg) rotateZ("+
+				transPlayZRot.val()+"deg)");			
+	});	
+
+	$('#transPlayperspective').change(function() {
+		transPlayStage.css(vP+"perspective", transPlayperspective.val());
+	});
+});
+</script>
+<div id="transPlay">
+	<div id="transPlayStage">
+	<div id="transPlayOriginal"><p>Original</p></div>
+	<div id="transPlayChanged"><p>Transformed</p></div>	
+	</div>
+</div>
+<div id="transPlayControls">
+	<label for="transPlayperspective">Perspective (<span>200</span> px)</label>
+	<input id="transPlayperspective" type="range" min="100" max="1000" default="200" />		
+	<label for="transPlayX">∆X (<span>0</span> px)</label>
+	<input id="transPlayX" type="range" min="-170" max="170" default="0" />
+	<label for="transPlayY">∆Y (<span>0</span> px)</label>
+	<input id="transPlayY" type="range" min="-170" max="170" default="0" />
+	<label for="transPlayZ">∆Z (<span>0</span> px)</label>
+	<input id="transPlayZ" type="range" min="-400" max="170" default="0" />
+
+	<label for="transPlayXRot">X rotation (<span>0</span> deg)</label>
+	<input id="transPlayXRot" type="range" min="-180" max="180" default="0" />
+	<label for="transPlayYRot">Y rotation (<span>0</span> deg)</label>
+	<input id="transPlayYRot" type="range" min="-180" max="180" default="0" />
+	<label for="transPlayZRot">Z rotation (<span>0</span> deg)</label>
+	<input id="transPlayZRot" type="range" min="-180" max="180" default="0" />	
+
+</div>
+<div class="clear"></div>
+
 <p>For more information read both the <a href="http://www.webkit.org/blog/386/3d-transforms/">Webkit blog entry from when 3D transforms were first implemented</a>, <a href="http://desandro.github.com/3dtransforms/">David Desandro's awesome examples</a> and <a href="http://ie.microsoft.com/testdrive/Graphics/hands-on-css3/hands-on_3d-transforms.htm">Microsoft's 3D transforms test drive</a>.</p>
 
 <h3>Advanced usage</h3>
