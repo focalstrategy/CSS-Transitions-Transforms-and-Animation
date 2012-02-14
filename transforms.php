@@ -412,11 +412,11 @@ $(document).ready(function() {
 
 #transPlayStage {
 
-	-webkit-perspective: 200px;
-	-moz-perspective: 200px;
-	-o-perspective: 200px;
-	-ms-perspective: 200px;
-	perspective: 200px;	
+	-webkit-perspective: 800px;
+	-moz-perspective: 800px;
+	-o-perspective: 800px;
+	-ms-perspective: 800px;
+	perspective: 800px;	
 }
 #transPlayControls {
 	width:300px;
@@ -497,8 +497,9 @@ $(document).ready(function() {
 	</div>
 </div>
 <div id="transPlayControls">
-	<label for="transPlayperspective">Perspective (<span>200</span> px)</label>
-	<input id="transPlayperspective" type="range" min="100" max="1000" default="200" />		
+	<label for="transPlayperspective">Perspective (<span>800</span> px)</label>
+	<input id="transPlayperspective" type="range" min="100" max="1000" default="800" />		
+
 	<label for="transPlayX">∆X (<span>0</span> px)</label>
 	<input id="transPlayX" type="range" min="-170" max="170" default="0" />
 	<label for="transPlayY">∆Y (<span>0</span> px)</label>
