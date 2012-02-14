@@ -1,4 +1,5 @@
 <h2 id="cfimg6">Demo 5 - Animating the background-image property</h2>
+<p class="note">Right now this only works on webkits built from 2012 onwards. It's not part of the spec (yet?).</p>
 <h3>Plan</h3>
 <ol>
 	<li>Make a div with a width and height</li>

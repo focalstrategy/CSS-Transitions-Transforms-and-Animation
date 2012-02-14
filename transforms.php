@@ -148,21 +148,21 @@
 	float:left;
 }
 
-#transDemo4:hover #rotateX {
+#transDemo4:hover #rotateX, #transDemo4.hover_effect #rotateX {
 	-webkit-transform:rotateX(180deg);
 	-moz-transform:rotateX(180deg);
 	-o-transform:rotateX(180deg);
 	-ms-transform:rotateX(180deg);
 	transform:rotateX(180deg);				
 }
-#transDemo4:hover #rotateY {
+#transDemo4:hover #rotateY, #transDemo4.hover_effect #rotateY {
 	-webkit-transform:rotateY(180deg);
 	-moz-transform:rotateY(180deg);
 	-o-transform:rotateY(180deg);
 	-ms-transform:rotateY(180deg);
 	transform:rotateY(180deg);	
 }
-#transDemo4:hover #rotateZ {
+#transDemo4:hover #rotateZ, #transDemo4.hover_effect #rotateZ {
 	-webkit-transform:rotateZ(180deg);
 	-moz-transform:rotateZ(180deg);
 	-o-transform:rotateZ(180deg);

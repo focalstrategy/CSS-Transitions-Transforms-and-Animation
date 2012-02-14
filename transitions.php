@@ -271,11 +271,11 @@ transition:  [ &lt;transition-property&gt; ||
   position:absolute;
   bottom:20px;
 }
-#delay_demo2:hover #dd_main2 {
+#delay_demo2:hover #dd_main2, #delay_demo2.hover_effect #dd_main2 {
   top:0px;
   left:0px;
 }
-#delay_demo2:hover #dd_main2a {
+#delay_demo2:hover #dd_main2a, #delay_demo2.hover_effect #dd_main2a {
   top:320px;
   left:420px;
 }
