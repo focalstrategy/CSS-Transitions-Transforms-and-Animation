@@ -2,7 +2,7 @@
 <h1>How to use transitions</h1>
 <p>If you haven't used transitions before, here's a brief introduction.</p>
 <p>On the element you want to have animate, add the following CSS:</p>
-<pre class="prettyprint css">
+<pre class="prettyprint lang-css">
 #id_of_element {
 	-webkit-transition: all 1s ease-in-out;
 	-moz-transition: all 1s ease-in-out;
@@ -217,13 +217,13 @@ transition:  [ &lt;transition-property&gt; ||
 
 <h2>Demo - advanced delays</h2>
 <p>You can set the way different properties animate differently. In this example the normal (blue) circle has this CSS (with the appropriate vendor prefixes):</p>
-<pre class="prettyprint css">
+<pre class="prettyprint lang-css">
 #dd_main2 {
   transition: all 1s ease-in-out;  
 }  
 </pre>
 <p>The delays (green) circle has this CSS instead:</p>
-<pre class="prettyprint css">
+<pre class="prettyprint lang-css">
 #dd_main2 {
   transition-property: top, left;
   transition-duration: 1s, 1s;

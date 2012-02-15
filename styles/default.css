@@ -83,27 +83,27 @@ pre:hover, .note:hover {
 	box-shadow: 10px 10px 5px #aaa;
 }
 
-pre.html {
+pre.lang-html {
 	background-color:rgba(255,0,0,0.1);
 }
 
-pre.html:hover {
+pre.lang-html:hover {
 	background-color:rgba(255,0,0,0.2);
 }
 
-pre.css {
+pre.lang-css {
 	background-color:rgba(0,255,0,0.1);
 }
 
-pre.css:hover {
+pre.lang-css:hover {
 	background-color:rgba(0,255,0,0.2);
 }
 
-pre.js {
+pre.lang-js {
 	background-color:rgba(0,0,255,0.1);
 }
 
-pre.js:hover {
+pre.lang-js:hover {
 	background-color:rgba(0,0,255,0.2);
 }
 

@@ -94,7 +94,7 @@ $(document).ready(function() {
 <p>I'm using classes again here to define different states, then using jQuery to turn them on and off. As always, I could use the :target pseudo selector, but I'd want to use preventDefault() onClick anyway to prevent the page skipping up and down, so I might as well just do it all in jQuery.</p>
 <h3>The Code</h3>
 <p>HTML:</p>
-<pre class="prettyprint html">
+<pre class="prettyprint lang-html">
 &lt;div id=&quot;accordion&quot;&gt;
 	&lt;section id=&quot;item1&quot;&gt;
 		&lt;p class=&quot;pointer&quot;&gt;&amp;#9654;&lt;/p&gt;&lt;h1&gt;&lt;a href=&quot;#&quot;&gt;A long paragraph&lt;/a&gt;&lt;/h1&gt;
@@ -112,7 +112,7 @@ $(document).ready(function() {
 &lt;/div&gt;	
 </pre>
 <p>CSS:</p>
-<pre class="prettyprint css">
+<pre class="prettyprint lang-css">
 #accordion section,	#accordion .pointer, #accordion h1, #accordion p {
 	-webkit-transition: all 0.5s ease-in-out;
 	-moz-transition: all 0.5s ease-in-out;
@@ -171,7 +171,7 @@ $(document).ready(function() {
 }
 </pre>
 <p>Plus a bit of javascript to turn the classes on and off.</p>
-<pre class="prettyprint js">
+<pre class="prettyprint lang-js">
 $(document).ready(function() {
 	$("#accordion section h1").click(function(e) {
 		$(this).parents().siblings("section").addClass("ac_hidden");

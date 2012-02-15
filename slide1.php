@@ -74,7 +74,7 @@
 <p id="slide1_controls"><span class="selected" id="slide1-1">Image 1</span><span id="slide1-2">Image 2</span><span id="slide1-3">Image 3</span><span id="slide1-4">Image 4</span></p>
 <h3>Code</h3>
 <p>Firstly, the mark up:</p>
-<pre class="prettyprint html">
+<pre class="prettyprint lang-html">
 &lt;div id=&quot;slide1_container&quot;&gt;
 	&lt;div id=&quot;slide1_images&quot;&gt;
 		&lt;img src=&quot;/images/Cirques.jpg&quot; /&gt;
@@ -91,7 +91,7 @@
 &lt;/p&gt;	
 </pre>
 <p>The CSS:</p>
-<pre class="prettyprint css">
+<pre class="prettyprint lang-css">
 #slide1_controls span {
 	padding-right:2em;
 	cursor:pointer;
@@ -119,7 +119,7 @@
 }
 </pre>
 <p>Again, I'm using javascript to bind events to the clickable controls. This time I'm adding the number of pixels to slide into the js, though I could have defined classes for this.</p>
-<pre class="prettyprint js">
+<pre class="prettyprint lang-js">
 $(document).ready(function() {
 	$("#slide1-1").click(function() {
 		$("#slide1_images").css("left","0");

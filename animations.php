@@ -83,7 +83,7 @@
 </div>
 <h2>Code</h2>
 <p>The interesting bit of this code is this bit of CSS (remember to add vendor prefixes):</p>
-<pre class="prettyprint css">
+<pre class="prettyprint lang-css">
 @keyframes resize {
 	0% {
 		padding: 0;

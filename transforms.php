@@ -59,7 +59,7 @@
 	<div class="clear"></div>
 </div>
 <p>The code for these looks like this, but with the appropriate vendor prefixes added:</p>
-<pre class="prettyprint css">
+<pre class="prettyprint lang-css">
 #skew {
 	transform:skew(35deg);	
 }
@@ -178,7 +178,7 @@
 	<div class="clear"></div>
 </div>
 <p>The simplified code for those looks like this:</p>
-<pre class="prettyprint css">
+<pre class="prettyprint lang-css">
 #transDemo4 div {
 	transition:all 2s ease-in-out;		
 	perspective: 800;

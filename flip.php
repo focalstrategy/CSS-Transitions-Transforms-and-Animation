@@ -92,7 +92,7 @@
 	</div>
 	<h3>Code</h3>
 	<p>First, the markup.</p>
-	<pre class="prettyprint html">
+	<pre class="prettyprint lang-html">
 &lt;div id=&quot;f1_container&quot;&gt;
 	&lt;div id=&quot;f1_card&quot; class=&quot;shadow&quot;&gt;
 		&lt;div class=&quot;front face&quot;&gt;
@@ -106,7 +106,7 @@
 &lt;/div&gt;
 	</pre>
 	<p>Then the CSS, stripped of the vendor prefixes to keep it clean.</p>
-	<pre class="prettyprint css">
+	<pre class="prettyprint lang-css">
 #f1_container {
 	position: relative;
 	margin: 10px auto;
