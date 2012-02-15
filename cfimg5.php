@@ -28,11 +28,11 @@
 <div id="cf6_image"></div>
 <h3>Code</h3>
 <p>This only works on Chrome 18+ and on Webkit Nightlies built in 2012 onwards. It seems to be a side effect of the CSS4 crossfading work, though this is a lot more useful.</p>
-<pre class="html">
+<pre class="prettyprint html">
 &lt;div id=&quot;cf6_image&quot; class=&quot;shadow&quot;&gt;&lt;/div&gt;
 </pre>
 <p>Then the CSS:</p>
-<pre class="css">
+<pre class="prettyprint css">
 #cf6_image {
 	margin:0 auto;		
 	width:450px;

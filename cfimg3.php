@@ -92,7 +92,7 @@
 	<p class="center">Each image is visible for 9 seconds before fading to the other one.</p>
 <h3>Code</h3>
 <p>Everything's the same as <a href="#cfimg1">Demo 1</a>, but I've added this to the CSS and removed the hover selector</p>
-<pre class="css">
+<pre class="prettyprint css">
 @keyframes cf3FadeInOut {
 	0% {
 		opacity:1;
@@ -224,7 +224,7 @@
 </div>
 	<p class="center">Staggering the animations can result in a multiple image fader.</p>
 <p>This time I've created an animation that goes from 0 to 1 opacity, then staggered the animations so only one is visible at once. It's not great, but it is maybe a start. Any suggestions on how to make this better would be gladly received!</p>	
-<pre class="css">
+<pre class="prettyprint css">
 	#cf4a img:nth-of-type(1) {
  		animation-delay: 0;		
 	}

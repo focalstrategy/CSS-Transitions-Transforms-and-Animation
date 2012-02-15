@@ -91,7 +91,7 @@
 <p id="slide2_controls"><span class="selected" id="slide2-1">Image 1</span><span id="slide2-2">Image 2</span><span id="slide2-3">Image 3</span><span id="slide2-4">Image 4</span></p>
 <h3>Code</h3>
 <p>Exactly the same as Demo 1, but the JS looks like this: (times 5 for the vendor specific markup)</p>
-<pre class="js">
+<pre class="prettyprint js">
 $(document).ready(function() {
 	$("#slide2-1").click(function() {
 		$("#slide2_images").css("-webkit-transform","translate(0px, 0px)");

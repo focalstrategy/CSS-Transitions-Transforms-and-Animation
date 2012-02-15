@@ -43,7 +43,7 @@ $(document).ready(function() {
 <p class="center" id="cf_onclick">Click me to toggle</p>
 <h3>Code</h3>
 <p>First up, the HTML markup. Again, with no CSS enabled, you just get two images.</p>
-<pre class="html">
+<pre class="prettyprint html">
 &lt;div id=&quot;cf2&quot; class=&quot;shadow&quot;&gt;
 	&lt;img class=&quot;bottom&quot; src=&quot;/tests/images/Stones.jpg&quot; /&gt;
 	&lt;img class=&quot;top&quot; src=&quot;/tests/images/Summit.jpg&quot; /&gt;
@@ -51,7 +51,7 @@ $(document).ready(function() {
 &lt;p id=&quot;cf_onclick&quot;&gt;Click me to toggle&lt;/p&gt;
 </pre>
 <p>Then the CSS. I've added a class with the opacity value.</p>
-<pre class="css">
+<pre class="prettyprint css">
 #cf2 {
 	position:relative;
 	height:281px;
@@ -76,7 +76,7 @@ $(document).ready(function() {
 }			
 </pre>
 <p>Then the extremely short JS. Note that the browser is smart enough to realise that it can animate to the new properties, I didn't have to set them in javascript (thought that works too).</p>
-<pre class="js">
+<pre class="prettyprint js">
 $(document).ready(function() {
 	$("#cf_onclick").click(function() {
 		$("#cf2 img.top").toggleClass("transparent");

@@ -35,14 +35,14 @@
 </div>
 <h3>Code</h3>
 <p>First up, the HTML markup. Without CSS enabled, you just get two images. Remember to add alt text for production use.</p>
-<pre class="html">
+<pre class="prettyprint html">
 &lt;div id=&quot;cf&quot;&gt;
 	&lt;img class=&quot;bottom&quot; src=&quot;/tests/images/Stones.jpg&quot; /&gt;
 	&lt;img class=&quot;top&quot; src=&quot;/tests/images/Summit.jpg&quot; /&gt;
 &lt;/div&gt;
 </pre>
 <p>Then the CSS:</p>
-<pre class="css">
+<pre class="prettyprint css">
 #cf {
 	position:relative;
 	height:281px;

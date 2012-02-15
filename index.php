@@ -18,6 +18,8 @@ if (isset($_GET['section']) && preg_match("/^[a-zA-Z]+/", $_GET['section'])) {
 		<link rel="stylesheet" href="/styles/default.css" media="screen" />		
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
 		<script src="/js/modernizr-newest.min.js"></script>
+		<script type="text/javascript" src="/js/prettify.js"></script>
+
 		<script>
 			$(document).ready(function() {
 				$('.hover').bind('touchstart touchend', function(e) {
@@ -30,7 +32,7 @@ if (isset($_GET['section']) && preg_match("/^[a-zA-Z]+/", $_GET['section'])) {
 		<link rel=alternate type=application/atom+xml href=/feed.xml />		
 		<meta name="viewport" content="width=device-width,maximum-scale=1.0" />
 	</head>		
-	<body>		
+	<body onload="prettyPrint()">		
 
 	<header>
 		<h1><a href="/">Using CSS3 Transitions, Transforms and Animation</a></h1>
