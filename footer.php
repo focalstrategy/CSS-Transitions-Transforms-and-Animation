@@ -25,7 +25,8 @@
 		</script>
 		<script type="text/javascript"
 		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-		</script>		
+		</script>
+
 	</footer>	
 <a href="http://github.com/richbradshaw/CSS-Transitions-Transforms-and-Animation"><img style="position: absolute; top: 0; left: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Fork me on GitHub" /></a> 		
 

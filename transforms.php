@@ -125,19 +125,19 @@
 	-ms-transition:all 2s ease-in-out;
 	transition:all 2s ease-in-out;				
 	
-	-webkit-perspective: 800;
+	-webkit-perspective: 800px;
 	-webkit-perspective-origin: 50% 100px;
 	
-	-moz-perspective: 800;
+	-moz-perspective: 800px;
 	-moz-perspective-origin: 50% 100px;
 	
-	-o-perspective: 800;
+	-o-perspective: 800px;
 	-o-perspective-origin: 50% 100px;
 	
-	-ms-perspective: 800;
+	-ms-perspective: 800px;
 	-ms-perspective-origin: 50% 100px;	
 	
-	perspective: 800;
+	perspective: 800px;
 	perspective-origin: 50% 100px;	
 	
 	width:70px;
@@ -181,7 +181,7 @@
 <pre class="prettyprint lang-css">
 #transDemo4 div {
 	transition:all 2s ease-in-out;		
-	perspective: 800;
+	perspective: 800px;
 	perspective-origin: 50% 100px;	
 }
 #transDemo4:hover #rotateX {
@@ -196,19 +196,19 @@
 </pre>
 <style>
 #transDemo3 {
-	-webkit-perspective: 800;
+	-webkit-perspective: 800px;
 	-webkit-perspective-origin: 50% 100px;
 	
-	-moz-perspective: 800;
+	-moz-perspective: 800px;
 	-moz-perspective-origin: 50% 100px;
 	
-	-o-perspective: 800;
+	-o-perspective: 800px;
 	-o-perspective-origin: 50% 100px;
 	
-	-ms-perspective: 800;
+	-ms-perspective: 800px;
 	-ms-perspective-origin: 50% 100px;	
 	
-	perspective: 800;
+	perspective: 800px;
 	perspective-origin: 50% 100px;	
 	margin:50px auto;
 	width:400px;
@@ -355,7 +355,7 @@ $(document).ready(function() {
 			$('label[for="td3zrot"]').html("Z rotation ("+$('#td3controls input#td3zrot').val()+" deg)")			
 	});	
 	$('#td3controls #td3perspective').change(function () {
-			$('#transDemo3').css(vP+"perspective",$('#td3controls input#td3perspective').val());
+			$('#transDemo3').css(vP+"perspective"+"px",$('#td3controls input#td3perspective').val());
 			$('label[for="td3perspective"]').html("Perspective ("+$('#td3controls input#td3perspective').val()+" px)")			
 	});		
 });

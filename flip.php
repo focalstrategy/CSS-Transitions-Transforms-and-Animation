@@ -23,7 +23,11 @@
 	}
 
 	#f1_container {
-		-webkit-perspective: 1000;
+		-webkit-perspective: 1000px;
+		-moz-perspective: 1000px;
+		-o-perspective: 1000px;
+		-ms-perspective: 1000px;
+		perspective: 1000px;
 	}
 	#f1_card {
 		width: 100%;
@@ -157,11 +161,11 @@
 		z-index: 1;
 	}
 	#f2_container {
-		-webkit-perspective: 1000;
-		-moz-perspective: 1000;
-		-o-perspective: 1000;
-		-ms-perspective: 1000;
-		perspective: 1000;
+		-webkit-perspective: 1000px;
+		-moz-perspective: 1000px;
+		-o-perspective: 1000px;
+		-ms-perspective: 1000px;
+		perspective: 1000px;
 	}
 	#f2_card {
 		width: 100%;
@@ -178,15 +182,15 @@
 		transition: all 1.0s linear;
 	}
 	#f2_container:hover #f2_card, #f2_container.hover_effect #f2_card {
-		-webkit-transform: rotateY(180deg);
-		-moz-transform: rotateY(180deg);
-		-o-transform: rotateY(180deg);
-		-ms-transform: rotateY(180deg);
-		transform: rotateY(180deg);
+		-webkit-transform: rotateX(180deg);
+		-moz-transform: rotateX(180deg);
+		-o-transform: rotateX(180deg);
+		-ms-transform: rotateX(180deg);
+		transform: rotateX(180deg);
 		
-		-webkit-box-shadow: -5px 5px 5px #aaa;				
-		-moz-box-shadow: -5px 5px 5px #aaa;
-		box-shadow: -5px 5px 5px #aaa;		
+		-webkit-box-shadow: 5px -5px 5px #aaa;				
+		-moz-box-shadow: 5px -5px 5px #aaa;
+		box-shadow: 5px -5px 5px #aaa;		
 	}
 	</style>
 	
@@ -209,11 +213,11 @@
 		z-index: 1;
 	}
 	#f3_container {
-		-webkit-perspective: 1000;
-		-moz-perspective: 1000;
-		-o-perspective: 1000;
-		-ms-perspective: 1000;
-		perspective: 1000;
+		-webkit-perspective: 1000px;
+		-moz-perspective: 1000px;
+		-o-perspective: 1000px;
+		-ms-perspective: 1000px;
+		perspective: 1000px;
 	}
 	#f3_card {
 		width: 100%;

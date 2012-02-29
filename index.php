@@ -135,7 +135,7 @@ if ($_GET['section'] == "all") {
 		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 		</script>
 		 */?>
-		
+		<? include($_SERVER['DOCUMENT_ROOT']."/disqus.php"); ?>	
 	</section>
 		<? if ($section == "all") {
 		include($_SERVER['DOCUMENT_ROOT']."/transitions.php");
