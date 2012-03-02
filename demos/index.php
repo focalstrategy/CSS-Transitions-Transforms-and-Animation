@@ -35,6 +35,7 @@
 			<!--li><a href="/demos/geo/">Card flipping to show more information with multitouch support.</li-->
 			<li><a href="/demos/filters-and-fades.php">A simple image gallery making use of two features only in Webkit's from 2012 and later</a></li>								
 			<li><a href="/demos/speed.php">What's quicker, transitions or jQuery?</a></li>						
+			<li><a href="/demos/metro/">Metro made in CSS3 - 100% a work in progress!</a></li>									
 		</ul>
 	</section>
 	<?		

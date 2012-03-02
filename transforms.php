@@ -269,7 +269,7 @@
 	-o-transform: rotateX(90deg) translateZ(100px);
 	-ms-transform: rotateX(90deg) translateZ(100px);			
 	transform: rotateX(90deg) translateZ(100px);				
-     background-color: rgba(255, 0, 0, 0.5);
+    background-color: rgba(255, 0, 0, 0.5);
 }
 
 #cube .two {
