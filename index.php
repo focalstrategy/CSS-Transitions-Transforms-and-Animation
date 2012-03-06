@@ -16,6 +16,9 @@ if (isset($_GET['section']) && preg_match("/^[a-zA-Z]+/", $_GET['section'])) {
 		<meta name="description" content="<?= $descriptions[$section] ?>" />
 		<meta name="google-site-verification" content="zTH7hEgeKVTkOu0F5bO5Guw9iRHWBJdCX0RpMASGZVI" />		
 		<link rel="stylesheet" href="/styles/default.css" media="screen" />		
+<script>
+window.google_analytics_uacct = "UA-16444273-1";
+</script>		
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
 		<script src="/js/modernizr-newest.min.js"></script>
 		<script type="text/javascript" src="/js/prettify.js"></script>
@@ -30,7 +33,7 @@ if (isset($_GET['section']) && preg_match("/^[a-zA-Z]+/", $_GET['section'])) {
 		</script>
 		
 		<link rel=alternate type=application/atom+xml href=/feed.xml />		
-		<meta name="viewport" content="width=device-width,maximum-scale=1.0" />
+		
 	</head>		
 	<body onload="prettyPrint()">		
 

@@ -24,11 +24,11 @@ section {
 }
 
 a {
-	-webkit-transition:all 0.5s ease-in-out;
-	-moz-transition:all 0.5s ease-in-out;
-	-o-transition:all 0.5s ease-in-out;
-	-ms-transition:all 0.5s ease-in-out;	
-	transition:all 0.5s ease-in-out;
+	-webkit-transition:color 0.5s ease-in-out;
+	-moz-transition:color 0.5s ease-in-out;
+	-o-transition:color 0.5s ease-in-out;
+	-ms-transition:color 0.5s ease-in-out;	
+	transition:color 0.5s ease-in-out;
 }
 
 header {
