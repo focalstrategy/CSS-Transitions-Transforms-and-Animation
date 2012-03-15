@@ -355,7 +355,7 @@ $(document).ready(function() {
 			$('label[for="td3zrot"]').html("Z rotation ("+$('#td3controls input#td3zrot').val()+" deg)")			
 	});	
 	$('#td3controls #td3perspective').change(function () {
-			$('#transDemo3').css(vP+"perspective"+"px",$('#td3controls input#td3perspective').val());
+			$('#transDemo3').css(vP+"perspective",$('#td3controls input#td3perspective').val()+"px");
 			$('label[for="td3perspective"]').html("Perspective ("+$('#td3controls input#td3perspective').val()+" px)")			
 	});		
 });
@@ -505,15 +505,6 @@ $(document).ready(function() {
 	</div>
 </div>
 <div id="transPlayControls">
-	<label for="transPlayPerspective">Perspective (<span>800</span> px)</label>
-	<input id="transPlayPerspective" type="range" min="100" max="1000" default="800" />		
-
-	<label for="transPlayOriginX">Transform origin (horizontal) (<span>50</span> %)</label>
-	<input id="transPlayOriginX" type="range" min="0" max="100" default="50" />		
-
-	<label for="transPlayOriginY">Transform origin (vertical) (<span>50</span> %)</label>
-	<input id="transPlayOriginY" type="range" min="0" max="100" default="50" />			
-
 	<label for="transPlayX">∆X (<span>0</span> px)</label>
 	<input id="transPlayX" type="range" min="-170" max="170" default="0" />
 	<label for="transPlayY">∆Y (<span>0</span> px)</label>
@@ -527,6 +518,15 @@ $(document).ready(function() {
 	<input id="transPlayYRot" type="range" min="-180" max="180" default="0" />
 	<label for="transPlayZRot">Z rotation (<span>0</span> deg)</label>
 	<input id="transPlayZRot" type="range" min="-180" max="180" default="0" />	
+
+	<label for="transPlayPerspective">Perspective (<span>800</span> px)</label>
+	<input id="transPlayPerspective" type="range" min="100" max="1000" default="800" />		
+
+	<label for="transPlayOriginX">Transform origin (horizontal) (<span>50</span> %)</label>
+	<input id="transPlayOriginX" type="range" min="0" max="100" default="50" />		
+
+	<label for="transPlayOriginY">Transform origin (vertical) (<span>50</span> %)</label>
+	<input id="transPlayOriginY" type="range" min="0" max="100" default="50" />			
 
 </div>
 <div class="clear"></div>

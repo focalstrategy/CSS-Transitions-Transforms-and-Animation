@@ -40,7 +40,11 @@
 		</style>
 	</head>		
 	<body>		
-
+	<div id="top_ads">
+<!-- BuySellAds.com Zone Code -->
+<div id="bsap_1273358" class="bsarocks bsap_6db88c5a69495071ea29eb766bc6ddf6"></div>
+<!-- End BuySellAds.com Zone Code -->
+	</div>
 	<header>
 		<h1>Simple Anaglyphs</h1>
 	</header>

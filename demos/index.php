@@ -15,7 +15,11 @@
 		</script>
 	</head>		
 	<body>		
-
+	<div id="top_ads">
+<!-- BuySellAds.com Zone Code -->
+<div id="bsap_1273358" class="bsarocks bsap_6db88c5a69495071ea29eb766bc6ddf6"></div>
+<!-- End BuySellAds.com Zone Code -->
+	</div>
 	<header>
 		<h1>Some CSS3/HTML5 demos</h1>
 	</header>

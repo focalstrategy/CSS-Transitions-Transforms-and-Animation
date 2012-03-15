@@ -37,6 +37,24 @@ window.google_analytics_uacct = "UA-16444273-1";
 	</head>		
 	<body onload="prettyPrint()">		
 
+<!-- BuySellAds.com Ad Code -->
+<script type="text/javascript">
+(function(){
+  var bsa = document.createElement('script');
+     bsa.type = 'text/javascript';
+     bsa.async = true;
+     bsa.src = 'http://s3.buysellads.com/ac/bsa.js';
+  (document.getElementsByTagName('head')[0]||document.getElementsByTagName('body')[0]).appendChild(bsa);
+})();
+</script>
+<!-- End BuySellAds.com Ad Code -->
+
+	<div id="top_ads">
+<!-- BuySellAds.com Zone Code -->
+<div id="bsap_1273358" class="bsarocks bsap_6db88c5a69495071ea29eb766bc6ddf6"></div>
+<!-- End BuySellAds.com Zone Code -->
+	</div>
+
 	<header>
 		<h1><a href="/">Using CSS3 Transitions, Transforms and Animation</a></h1>
 	</header>

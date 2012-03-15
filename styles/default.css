@@ -8,10 +8,20 @@ body {
 .right { float:right; }
 .clear { clear:both; }
 
-header, section, footer {
+header, section, footer, #top_ads {
 	display:block;
 	width:728px;
 	margin:0 auto;
+}
+
+#top_ads {
+	width:645px;
+	height:135px;
+	overflow: hidden;
+}
+
+.bsap_1273358 {
+
 }
 
 section {
