@@ -19,7 +19,7 @@
 <p>To see the difference in speed, have a look at the <a href="/demos/speed.php">speed test</a>.</p>
 <style>
 	#timings_demo {
-		position:relative;		
+		position:relative;
 		width:500px;
 		height:400px;
 		margin:0 auto 10px;
@@ -79,7 +79,7 @@
 		transition: all 4s linear;
 		border:1px #f0f solid;
 	}
-	
+
 	#custom.test_box {
 		-webkit-transition: all 4s cubic-bezier(1.000, 0.835, 0.000, 0.945);
 		-moz-transition: all 4s cubic-bezier(1.000, 0.835, 0.000, 0.945);
@@ -91,15 +91,15 @@
 
 	#timings_demo:hover .test_box, #timings_demo.hover_effect .test_box {
 
-		left:440px;
-		
+
+
 		-webkit-border-radius:25px;
 		-moz-border-radius:25px;
 		-o-border-radius:25px;
 		border-radius:25px;
 
 		<?= prefix("transform", "rotate(360deg)") ?>
-		
+		margin-left:440px;
 		background-color:#fff;
 	}
 </style>
@@ -110,7 +110,7 @@
 	<div id="ease-out" class="test_box"><p class="center">Ease Out</p></div>
 	<div id="ease-in-out" class="test_box"><p class="center">Ease In Out</p></div>
 	<div id="linear" class="test_box"><p class="center">Linear</p></div>
-	<div id="custom" class="test_box"><p class="center">Custom</p></div>	
+	<div id="custom" class="test_box"><p class="center">Custom</p></div>
 	<p class="center"> Hover on me</p>
 </div>
 
@@ -128,7 +128,7 @@ transition:  [ &lt;transition-property&gt; ||
 <h2>Demo - Transition delays</h2>
 <style>
 #delay_demo {
-	position:relative;		
+	position:relative;
 	width:500px;
 	height:400px;
 	margin:0 auto 10px;
@@ -144,8 +144,8 @@ transition:  [ &lt;transition-property&gt; ||
 	background-color:red;
 	-webkit-border-radius:50px;
 	-moz-border-radius:50px;
-	border-radius:50px;		
-	<?= prefix("transition", "all 2s ease-in-out") ?>	
+	border-radius:50px;
+	<?= prefix("transition", "all 2s ease-in-out") ?>
 }
 #delay_demo .center {
 	width:500px;
@@ -157,15 +157,15 @@ transition:  [ &lt;transition-property&gt; ||
 	height:20px;
 	-webkit-border-radius:10px;
 	-moz-border-radius:10px;
-	border-radius:10px;	
+	border-radius:10px;
 	position:absolute;
 	top:200px;
-	left:250px;	
+	left:250px;
 	background-color:blue;
 	<?= prefix("transition", "all 2s ease-in-out") ?>
-	
+
 	/* Ensures that the element is being transformed in the 3d context so that hw acceleration kicks in on iOS */
-	<?= prefix("transform", "translate3d(0,0,0)") ?>	
+	<?= prefix("transform", "translate3d(0,0,0)") ?>
 }
 
 <? for($i=1;$i<9;$i++) { ?>
@@ -180,25 +180,25 @@ transition:  [ &lt;transition-property&gt; ||
 	<?= prefix("transform", "translate(-250px,-200px)") ?>
 }
 #delay_demo:hover #dd2, #delay_demo.hover_effect #dd2 {
-	<?= prefix("transform", "translate(0,-200px)") ?>	
+	<?= prefix("transform", "translate(0,-200px)") ?>
 }
 #delay_demo:hover #dd3, #delay_demo.hover_effect #dd3 {
 	<?= prefix("transform", "translate(250px,-200px)") ?>
 }
 #delay_demo:hover #dd4, #delay_demo.hover_effect #dd4 {
-	<?= prefix("transform", "translate(250px, 0)") ?>	
+	<?= prefix("transform", "translate(250px, 0)") ?>
 }
 #delay_demo:hover #dd5, #delay_demo.hover_effect #dd5 {
-	<?= prefix("transform", "translate(250px,200px)") ?>	
+	<?= prefix("transform", "translate(250px,200px)") ?>
 }
 #delay_demo:hover #dd6, #delay_demo.hover_effect #dd6 {
-	<?= prefix("transform", "translate(0,200px)") ?>	
+	<?= prefix("transform", "translate(0,200px)") ?>
 }
 #delay_demo:hover #dd7, #delay_demo.hover_effect #dd7 {
-	<?= prefix("transform", "translate(-250px,200px)") ?>	
+	<?= prefix("transform", "translate(-250px,200px)") ?>
 }
 #delay_demo:hover #dd8, #delay_demo.hover_effect #dd8 {
-	<?= prefix("transform", "translate(-250px,0)") ?>	
+	<?= prefix("transform", "translate(-250px,0)") ?>
 }
 
 </style>
@@ -207,20 +207,20 @@ transition:  [ &lt;transition-property&gt; ||
 	<div id="dd1"></div>
 	<div id="dd2"></div>
 	<div id="dd3"></div>
-	<div id="dd4"></div>			
+	<div id="dd4"></div>
 	<div id="dd5"></div>
 	<div id="dd6"></div>
 	<div id="dd7"></div>
 	<div id="dd8"></div>
-	<p class="center"> Hover on me</p>		
+	<p class="center"> Hover on me</p>
 </div>
 
 <h2>Demo - advanced delays</h2>
 <p>You can set the way different properties animate differently. In this example the normal (blue) circle has this CSS (with the appropriate vendor prefixes):</p>
 <pre class="prettyprint lang-css">
 #dd_main2 {
-  transition: all 1s ease-in-out;  
-}  
+  transition: all 1s ease-in-out;
+}
 </pre>
 <p>The delays (green) circle has this CSS instead:</p>
 <pre class="prettyprint lang-css">
@@ -233,7 +233,7 @@ transition:  [ &lt;transition-property&gt; ||
 <p>This allows us to animate top and left differently, meaning we can make it move in an L shape, rather than diagonally. This technique can be used to create very complex animations, if needed.</p>
 <style>
 #delay_demo2 {
-  position:relative;    
+  position:relative;
   width:500px;
   height:400px;
   margin:0 auto 10px;
@@ -249,16 +249,16 @@ transition:  [ &lt;transition-property&gt; ||
   background-color:blue;
   -webkit-border-radius:50px;
   -moz-border-radius:50px;
-  border-radius:50px;   
+  border-radius:50px;
   text-align:center;
 }
 #dd_main2 p, #dd_main2a p {
   line-height:70px;
-  color:white;  
+  color:white;
   font-weight:bold;
 }
 #dd_main2 {
-<?= prefix("transition", "all 1s ease-in-out") ?>   
+<?= prefix("transition", "all 1s ease-in-out") ?>
 }
 #dd_main2a {
   background-color:green;
@@ -282,8 +282,8 @@ transition:  [ &lt;transition-property&gt; ||
 </style>
 <div id="delay_demo2" class="shadow hover">
   <div id="dd_main2"><p>Normal</p></div>
-  <div id="dd_main2a"><p>Delays</p></div>  
-  <p class="center"> Hover on me</p>    
+  <div id="dd_main2a"><p>Delays</p></div>
+  <p class="center"> Hover on me</p>
 </div>
 
 <h2>Animatable properties</h2>
