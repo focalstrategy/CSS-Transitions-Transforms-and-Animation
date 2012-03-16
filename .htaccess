@@ -8,6 +8,7 @@ Options +FollowSymlinks
 RewriteEngine on
 
 RewriteRule ^(demos) - [L]
+RewriteRule ^(blog) - [l]
 RewriteRule ^favicon.ico - [L]
 
 RewriteRule ^([A-Za-z0-9-_/\.\?]+)\/$ /?section=$1 [L]

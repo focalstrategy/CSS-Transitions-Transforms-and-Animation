@@ -117,6 +117,14 @@ pre.lang-js:hover {
 	background-color:rgba(0,0,255,0.2);
 }
 
+pre.lang-php {
+	background-color:rgba(255,0,255,0.1);
+}
+
+pre.lang-php:hover {
+	background-color:rgba(255,0,255,0.2);
+}
+
 .note {
 	-webkit-transition:all 0.5s ease-in-out;
 	-moz-transition:all 0.5s ease-in-out;

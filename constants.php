@@ -1,5 +1,14 @@
 <?
 
+$test_server = $_SERVER['SERVER_NAME'] == "127.0.0.1" || $_SERVER['SERVER_NAME'] == "localhost" || substr($_SERVER['SERVER_NAME'],0,3) == "192"; //Update in caching/combined as well.
+
+ini_set('register_globals',"Off");
+
+ini_set('display_errors',$test_server);
+ini_set('display_startup_errors',$test_server);
+
+error_reporting(E_ALL|E_STRICT);
+
 $titles = array(
 	"accordions" => "CSS3 Accordions | CSS3 transitions, transforms and animations",
 	"animations" => "CSS3 Animations | CSS3 transitions, transforms and animations",

@@ -64,6 +64,7 @@ $section = 	$_GET['section'];
 
 ?>
 <section>
+		<p>New! Find the new blog at <a href="/blog/">CSS/HTML news, techniques and information</a>!</p>			
 	<script type="text/javascript"><!--
 	google_ad_client = "pub-7181696033265659";
 	/* CSS3 Banner */
@@ -88,13 +89,14 @@ $section = 	$_GET['section'];
 </section>
 
 <?} else { // No page requested.
-if ($_GET['section'] == "all") {
+if (isset($_GET['section']) && $_GET['section'] == "all") {
 	$section = "all";
 } else {
 	$section = "";
 }
 ?>		
 	<section>
+		<p>New! Find the new blog at <a href="/blog/">CSS/HTML news, techniques and information</a>!</p>		
 		<h1>Intro</h1>
 		<p>First things first - these demos are showing of CSS transitions, transforms (2D and 3D) and animations. Currently (January 2012), 2D transforms are available in all current browsers including IE9, transitions are available in all browsers except Internet Explorer 9 and less, while 3D transforms are in Safari, Chrome, Firefox and IE10 and up. Animations are available in Safari, Chrome, Firefox 5+ and IE10. Most examples degrade nicely, so if you are using a legacy browser you can still use a site using these, you just won't get animation. 3D transforms generally don't degrade nicely, so be careful when using them.</p>
 		<p>For a quick table summarising this, check out <a href="/support/">the supported browsers page</a>.</p>
