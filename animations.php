@@ -12,7 +12,7 @@
 	}
 	50% {
 		padding: 0 20px;
-		background-color:rgba(255,0,0,0.2);		
+		background-color:rgba(255,0,0,0.2);
 	}
 	100% {
 		padding: 0 100px;
@@ -25,7 +25,7 @@
 	}
 	50% {
 		padding: 0 20px;
-		background-color:rgba(255,0,0,0.2);		
+		background-color:rgba(255,0,0,0.2);
 	}
 	100% {
 		padding: 0 100px;
@@ -38,7 +38,33 @@
 	}
 	50% {
 		padding: 0 20px;
-		background-color:rgba(255,0,0,0.2);		
+		background-color:rgba(255,0,0,0.2);
+	}
+	100% {
+		padding: 0 100px;
+		background-color:rgba(255,0,0,0.9);
+	}
+}
+@-o-keyframes resize {
+	0% {
+		padding: 0;
+	}
+	50% {
+		padding: 0 20px;
+		background-color:rgba(255,0,0,0.2);
+	}
+	100% {
+		padding: 0 100px;
+		background-color:rgba(255,0,0,0.9);
+	}
+}
+@keyframes resize {
+	0% {
+		padding: 0;
+	}
+	50% {
+		padding: 0 20px;
+		background-color:rgba(255,0,0,0.2);
 	}
 	100% {
 		padding: 0 100px;
@@ -64,17 +90,27 @@
 	-webkit-animation-name: resize;
 	-webkit-animation-duration: 1s;
 	-webkit-animation-iteration-count: 4;
-	-webkit-animation-direction: alternate;	
-	
+	-webkit-animation-direction: alternate;
+
 	-moz-animation-name: resize;
 	-moz-animation-duration: 1s;
 	-moz-animation-iteration-count: 4;
-	-moz-animation-direction: alternate;	
-	
+	-moz-animation-direction: alternate;
+
 	-ms-animation-name: resize;
 	-ms-animation-duration: 1s;
 	-ms-animation-iteration-count: 4;
-	-ms-animation-direction: alternate;	
+	-ms-animation-direction: alternate;
+
+	-o-animation-name: resize;
+	-o-animation-duration: 1s;
+	-o-animation-iteration-count: 4;
+	-o-animation-direction: alternate;
+
+	animation-name: resize;
+	animation-duration: 1s;
+	animation-iteration-count: 4;
+	animation-direction: alternate;
 }
 </style>
 <div id="animationDemo" class="hover">
@@ -90,21 +126,21 @@
 	}
 	50% {
 		padding: 0 20px;
-		background-color:rgba(255,0,0,0.2);		
+		background-color:rgba(255,0,0,0.2);
 	}
 	100% {
 		padding: 0 100px;
 		background-color:rgba(255,0,0,0.9);
 	}
 }
-	
+
 #box {
 	animation-name: resize;
 	animation-duration: 1s;
 	animation-iteration-count: 4;
 	animation-direction: alternate;
 	animation-timing-function: ease-in-out;
-}	
+}
 </pre>
 <p>Note that the 4 iterations makes the box pulse twice - the animation runs forwards then backwards, then forwards then backwards.</p>
 <p>You can have as many keyframes as you like, at whatever intervals you like.</p>
@@ -114,31 +150,51 @@
 @-webkit-keyframes glow {
 	0% {
 		-webkit-box-shadow: 0 0 16px rgba(66, 140, 240, 0.5);
-		border-color: rgba(0,0,255,0.5); 		
+		border-color: rgba(0,0,255,0.5);
 	}
 	100% {
 		-webkit-box-shadow: 0 0 16px rgba(66, 140, 240, 1.0), 0 0 36px rgba(0, 140, 255, 1.0);
-		border-color: rgba(0,0,255,1.0); 
+		border-color: rgba(0,0,255,1.0);
 	}
 }
 @-moz-keyframes glow {
 	0% {
 		-moz-box-shadow: 0 0 16px rgba(66, 140, 240, 0.5);
-		border-color: rgba(0,0,255,0.5); 		
+		border-color: rgba(0,0,255,0.5);
 	}
 	100% {
 		-moz-box-shadow: 0 0 16px rgba(66, 140, 240, 1.0), 0 0 36px rgba(0, 140, 255, 1.0);
-		border-color: rgba(0,0,255,1.0); 
+		border-color: rgba(0,0,255,1.0);
 	}
 }
 @-ms-keyframes glow {
 	0% {
 		box-shadow: 0 0 16px rgba(66, 140, 240, 0.5);
-		border-color: rgba(0,0,255,0.5); 		
+		border-color: rgba(0,0,255,0.5);
 	}
 	100% {
 		box-shadow: 0 0 16px rgba(66, 140, 240, 1.0), 0 0 36px rgba(0, 140, 255, 1.0);
-		border-color: rgba(0,0,255,1.0); 
+		border-color: rgba(0,0,255,1.0);
+	}
+}
+@-o-keyframes glow {
+	0% {
+		box-shadow: 0 0 16px rgba(66, 140, 240, 0.5);
+		border-color: rgba(0,0,255,0.5);
+	}
+	100% {
+		box-shadow: 0 0 16px rgba(66, 140, 240, 1.0), 0 0 36px rgba(0, 140, 255, 1.0);
+		border-color: rgba(0,0,255,1.0);
+	}
+}
+@keyframes glow {
+	0% {
+		box-shadow: 0 0 16px rgba(66, 140, 240, 0.5);
+		border-color: rgba(0,0,255,0.5);
+	}
+	100% {
+		box-shadow: 0 0 16px rgba(66, 140, 240, 1.0), 0 0 36px rgba(0, 140, 255, 1.0);
+		border-color: rgba(0,0,255,1.0);
 	}
 }
 #animationDemo2 {
@@ -148,18 +204,18 @@
 #animationDemo2 button {
 		width: 255px;
 		height: 35px;
-		background: #cde; 
-		border: 2px solid #ccc; 
-		border-color: rgba(0,0,255,0.5); 
+		background: #cde;
+		border: 2px solid #ccc;
+		border-color: rgba(0,0,255,0.5);
 		font-size:18px;
-		color: #000; 
+		color: #000;
 		text-shadow: rgba(20, 20, 20, 0.5) 1px 1px 5px;
-		text-align: center; 
+		text-align: center;
 		-webkit-border-radius: 16px;
-		-moz-border-radius: 16px;				
+		-moz-border-radius: 16px;
 		border-radius: 16px;
 		-webkit-box-shadow: 0 0 16px rgba(66, 140, 240, 0.5);
-		box-shadow: 0 0 16px rgba(66, 140, 240, 0.5);		
+		box-shadow: 0 0 16px rgba(66, 140, 240, 0.5);
 	}
 #animationDemo2 button:hover, #animationDemo2 button.hover_effect  {
 	background-color:#cce;
@@ -167,20 +223,32 @@
 	-webkit-animation-duration: 1s;
 	-webkit-animation-iteration-count: infinite;
 	-webkit-animation-direction: alternate;
-	-webkit-animation-timing-function: ease-in-out;	
-	
+	-webkit-animation-timing-function: ease-in-out;
+
 	-moz-animation-name: glow;
 	-moz-animation-duration: 1s;
 	-moz-animation-iteration-count: infinite;
 	-moz-animation-direction: alternate;
 	-moz-animation-timing-function: ease-in-out;
-	
+
 	-ms-animation-name: glow;
 	-ms-animation-duration: 1s;
 	-ms-animation-iteration-count: infinite;
 	-ms-animation-direction: alternate;
-	-ms-animation-timing-function: ease-in-out;	
-}	
+	-ms-animation-timing-function: ease-in-out;
+
+	-o-animation-name: glow;
+	-o-animation-duration: 1s;
+	-o-animation-iteration-count: infinite;
+	-o-animation-direction: alternate;
+	-o-animation-timing-function: ease-in-out;
+
+	animation-name: glow;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-timing-function: ease-in-out;
+}
 </style>
 <div id="animationDemo2">
 	<button class="transition hover">Hover to Pulsate</button>

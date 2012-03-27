@@ -68,7 +68,7 @@ $(function() {
         $('img').each(function() {
 
             // Very naive replacement that assumes no dots in file names.
-            $(this).attr('src', $(this).attr('src').str_replace(".","_2x."));
+            $(this).attr('src', $(this).attr('src').replace(".","_2x."));
         });     
     }
 });
@@ -86,7 +86,6 @@ $(function() {
 <b>Cons</b>
 <ul>
 <li>Images load twice</li>
-<li>Whilst they wait for the new image to load, the image is gone</li>
 <li>In its current form will replace images for iPhone 4/4S and iPod Touch, which may not really be required.</li>
 </ul>
 
@@ -135,7 +134,7 @@ $post_content .= <<<HTML
 ["image1_2x.jpg","image2_2x.png","image3_2x.jpeg"]
 </pre>
 
-<p>So, if we update our JS to be this, including a little preloader:</p>
+<p>So, if we update our JS to be this:</p>
 
 <pre class="prettyprint lang-js">
 // Set pixelRatio to 1 if the browser doesn't offer it up.
@@ -146,21 +145,16 @@ $(function() {
     $.getJSON("/path/to/that/php/above.php", function(data){
         if (pixelRatio &gt; 1) {
 
-            $("body").append($("&lt;div id='retina_preloader' /&gt;"));
-
-
             $('img').each(function() {
 
                 // Very naive replacement that assumes no dots in file names.
-                var newsrc = $(this).attr('src').str_replace(".","_2x.");
+                var newsrc = $(this).attr('src').replace(".","_2x.");
 
                 if ($.inArray(newsrc, data)) {
-                    $("#retina_preloader").load(newsrc, function(){
-                        $(this).attr('src', newsrc);                    
-                    });                    
+                    $(this).attr('src', newsrc);
                 }
 
-            });     
+            });
         }
     });
 });
@@ -170,7 +164,6 @@ $(function() {
 <ul>
 <li>Only replaces images that exist</li>
 <li>Only one additional HTTP request, that can be cached</li>
-<li>Images are only shown once they are fully loaded</li>
 </ul>
 
 <b>Cons</b>
