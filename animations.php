@@ -1,5 +1,7 @@
 <section id="how2animations">
-<h1>How to use animations</h1>
+<h1>CSS Animations</h1>
+<?= compat_table("CSS Animations", "4.0", "4.0", "5.0", "10.0", "12.0"); ?>
+<h2>How to use animations</h2>
 <p class="note">As of March 2012, this is implemented in all browsers (at least as a dev version)</p>
 <p>CSS animations were introduced into Webkit in 2007. In 2009 a <a href="http://www.w3.org/TR/css3-animations/">working draft</a> was written and added to the w3c site. Over the next three years support was gained by Firefox, Internet Explorer and finally Opera.</p>
 <p>To use CSS animation, you first specify some keyframes for the animation - basically what styles will the element have at certain times. The browser does the tweening for you.</p>

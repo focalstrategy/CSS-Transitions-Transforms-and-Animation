@@ -1,5 +1,7 @@
 <section id="how2transforms">
-<h1>How to use transforms</h1>
+<h1>CSS Transforms</h1>
+<?= compat_table("CSS 2D Transforms", "1.0", "3.2", "3.5", "9", "10.5"); ?>
+<h2>How to use transforms</h2>
 <p>There are two categories of transform - 2D transforms and 3D transforms. As of May 2010, 3D transforms only work in Safari (both desktop and mobile). 2D transforms are more widely supported.</p>
 <h2>2D examples</h2>
 <style>
@@ -103,8 +105,8 @@
 <div id="transDemo2">
 	<div class="hover">Hover on me and I'll spin and scale!</div>
 </div>
-<h2>3D Examples</h2>
-<p class="note">3D transforms work in Safari, Chrome, Firefox 10+ and IE10</p>
+<h1>CSS 3D Transforms</h1>
+<?= compat_table("CSS 3D Transforms", "12.0", "4.0", "10.0", "10.0", "12.0"); ?>
 
 <p>3D transforms are similar to 2D transforms. The basic properties are translate3d, scale3d, rotateX, rotateY and rotateZ. Translate3d and scale3d take three arguments for x,y and z, whereas the rotates just take an angle. Here are some examples:</p>
 <style>

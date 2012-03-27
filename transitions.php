@@ -1,5 +1,9 @@
 <section id="how2transitions">
-<h1>How to use transitions</h1>
+<h1>CSS Transitions</h1>
+
+<?= compat_table("CSS transitions", "1.0", "3.2", "4.0", "10", "10.5"); ?>
+
+<h2>How to use transitions</h2>
 <p>If you haven't used transitions before, here's a brief introduction.</p>
 <p>On the element you want to have animate, add the following CSS:</p>
 <pre class="prettyprint lang-css">

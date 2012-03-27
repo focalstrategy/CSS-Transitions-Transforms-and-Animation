@@ -9,7 +9,23 @@ ini_set('display_startup_errors',$test_server);
 
 error_reporting(E_ALL|E_STRICT);
 
+function compat_table ($prop, $c, $s, $f, $ie, $o) {
+
+$string = "
+	<h2>Browser Support for $prop</h2>
+<div class=\"browser_support\">
+<div><img src=\"/images/browser_icons/128-chrome.png\" alt=\"Google Chrome\"><p>$c</p></div>
+<div><img src=\"/images/browser_icons/128-safari.png\" alt=\"Apple Safari\"><p>$s</p></div>
+<div><img src=\"/images/browser_icons/128-firefox.png\" alt=\"Mozilla Firefox\"><p>$f</p></div>
+<div><img src=\"/images/browser_icons/128-ie.png\" alt=\"Microsoft Internet Explorer\"><p>$ie</p></div>
+<div><img src=\"/images/browser_icons/128-opera.png\" alt=\"Opera\"><p>$o</p></div>
+</div>";
+
+return $string;
+}
+
 $titles = array(
+	"all" => "CSS Transitions, Transforms and Animation - all one one page",
 	"accordions" => "CSS3 Accordions | CSS3 transitions, transforms and animations",
 	"animations" => "CSS3 Animations | CSS3 transitions, transforms and animations",
 	"cfimg" => "Crossfading Images | CSS3 transitions, transforms and animations",
@@ -31,6 +47,7 @@ $titles = array(
 );
 
 $descriptions = array(
+	"all" => "A tutorial for using CSS3 transitions, transforms and animations.",
 	"accordions" => "How to use CSS3 transitions to make an animated accordion",
 	"animations" => "How to use CSS3 Animations with keyframes that work in Webkit and Firefox 5+",
 	"cfimg" => "How to use CSS3 transitions to cross fade an image",

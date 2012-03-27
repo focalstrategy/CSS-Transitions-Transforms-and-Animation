@@ -199,4 +199,24 @@ footer, .center {
 	background-color:#ddd;
 }
 
+h1 {
+	font-size:2em;
+}
+
+.browser_support {
+	overflow: hidden;
+	margin:0 auto;
+	width:710px;
+}
+.browser_support div {
+	float: left;
+}
+.browser_support p {
+	font-size:1.5em;
+	text-align:center;
+	font-weight: bold;
+	line-height: 1;
+	margin: 0;
+}
+
 .pln{color:#000}@media screen{.str{color:#080}.kwd{color:#008}.com{color:#800}.typ{color:#606}.lit{color:#066}.pun,.opn,.clo{color:#660}.tag{color:#008}.atn{color:#606}.atv{color:#080}.dec,.var{color:#606}.fun{color:red}}@media print,projection{.str{color:#060}.kwd{color:#006;font-weight:bold}.com{color:#600;font-style:italic}.typ{color:#404;font-weight:bold}.lit{color:#044}.pun,.opn,.clo{color:#440}.tag{color:#006;font-weight:bold}.atn{color:#404}.atv{color:#060}}pre.prettyprint{}ol.linenums{margin-top:0;margin-bottom:0}li.L0,li.L1,li.L2,li.L3,li.L5,li.L6,li.L7,li.L8{list-style-type:none}li.L1,li.L3,li.L5,li.L7,li.L9{background:#eee}
