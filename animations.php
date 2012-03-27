@@ -1,8 +1,7 @@
 <section id="how2animations">
 <h1>How to use animations</h1>
-<p class="note">As of September 2011, this works in all Webkit browsers, Firefox 5+ and IE10</p>
-<p>CSS animations were introduced into Webkit in 2007, and added to Firefox by David Barron in 2011.</p>
-<p>In 2009 a <a href="http://www.w3.org/TR/css3-animations/">working draft</a> was written and added to the w3c site.</p>
+<p class="note">As of March 2012, this is implemented in all browsers (at least as a dev version)</p>
+<p>CSS animations were introduced into Webkit in 2007. In 2009 a <a href="http://www.w3.org/TR/css3-animations/">working draft</a> was written and added to the w3c site. Over the next three years support was gained by Firefox, Internet Explorer and finally Opera.</p>
 <p>To use CSS animation, you first specify some keyframes for the animation - basically what styles will the element have at certain times. The browser does the tweening for you.</p>
 <h2>Demo</h2>
 <style>
@@ -118,7 +117,7 @@
 	<p class="center">Hover over me</p>
 </div>
 <h2>Code</h2>
-<p>The interesting bit of this code is this bit of CSS (remember to add vendor prefixes):</p>
+<p>The interesting bit of this code is this bit of CSS (remember to add vendor prefixes both for the keyframes code and the animation-* properties):</p>
 <pre class="prettyprint lang-css">
 @keyframes resize {
 	0% {
