@@ -1,6 +1,6 @@
 <section id="how2transforms">
 <h1>CSS Transforms</h1>
-<?= compat_table("CSS 2D Transforms", "1.0", "3.2", "3.5", "9", "10.5"); ?>
+<?= compat_table("2D CSS Transforms", "1.0", "3.2", "3.5", "9", "10.5"); ?>
 <h2>How to use transforms</h2>
 <p>There are two categories of transform - 2D transforms and 3D transforms. As of May 2010, 3D transforms only work in Safari (both desktop and mobile). 2D transforms are more widely supported.</p>
 <h2>2D examples</h2>
@@ -78,7 +78,7 @@
 	transform:skew(30deg) scale(1.1,1.1) rotate(40deg) translate(10px, 20px);
 }
 </pre>
-<p>These can also be animated using transitions - try hovering on the div below.</p>
+<p>CSS transforms also be animated using transitions - try hovering on the div below.</p>
 <style>
 #transDemo2 div {
 	height:100px;
@@ -106,9 +106,9 @@
 	<div class="hover">Hover on me and I'll spin and scale!</div>
 </div>
 <h1>CSS 3D Transforms</h1>
-<?= compat_table("CSS 3D Transforms", "12.0", "4.0", "10.0", "10.0", "12.0"); ?>
+<?= compat_table("3D CSS Transforms", "12.0", "4.0", "10.0", "10.0", "12.0"); ?>
 
-<p>3D transforms are similar to 2D transforms. The basic properties are translate3d, scale3d, rotateX, rotateY and rotateZ. Translate3d and scale3d take three arguments for x,y and z, whereas the rotates just take an angle. Here are some examples:</p>
+<p>3D CSS transforms are similar to 2D CSS transforms. The basic properties are translate3d, scale3d, rotateX, rotateY and rotateZ. Translate3d and scale3d take three arguments for x,y and z, whereas the rotates just take an angle. Here are some examples:</p>
 <style>
 #transDemo4 {
 	width:400px;
@@ -362,7 +362,7 @@ $(document).ready(function() {
 	});		
 });
 </script>
-<h2>A cube made with 3d transforms</h2>
+<h2>A cube made with 3D CSS transforms</h2>
 <div id="transDemo3">
 	<div id="Zcube">
 	<div id="Ycube">
@@ -537,7 +537,7 @@ $(document).ready(function() {
 
 <h3>Advanced usage</h3>
 <p>Though it's rare that you'll need it, it's worth noting that the raw matrix implementations are exposed as well. As an example, the skew transform above has a skew of 35 degrees. To find the internal representation, you can use javascript to find the computed style. In this case, <code>skew(35deg)</code> is represented by <code>matrix(1, 0, 0.7002075382097097, 1, 0, 0)</code>. The astute among you will note that this is a 2&times;3 matrix. To use them for normal arithmetic, add a third row of <code>0, 0, 1</code>.</p>
-<p>3D transforms are represented similarly, with a 4&times;4 matrix.</p>
+<p>CSS 3D transforms are represented similarly, with a 4&times;4 matrix.</p>
 <p>Understanding how to create these matrices is probably out of the scope of this tutorial, but an undergraduate understanding of matrix algebra should suffice. Read the <a href="http://en.wikipedia.org/wiki/Transformation_matrix#Examples_in_2D_graphics">Wikipedia article on transformation matrices</a> for a quick primer.</p>
 <p>For the exact methods, read the part of the spec about <a href="http://www.w3.org/TR/css3-2d-transforms/#matrix-decomposition">2D matrix decomposition</a> and <a href="http://www.w3.org/TR/css3-3d-transforms/#cssmatrix-interface">3D matrix interface</a>.</p>
 </section>

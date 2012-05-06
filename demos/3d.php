@@ -42,7 +42,23 @@
 	 100% {
 	   -ms-transform:rotateY(360deg);
 	 }
-	}	
+	}
+	@-o-keyframes spin {
+	 0% {
+	   -o-transform:rotateY(0deg);
+	 }
+	 100% {
+	   -o-transform:rotateY(360deg);
+	 }
+	}
+	@keyframes spin {
+	 0% {
+	   transform:rotateY(0deg);
+	 }
+	 100% {
+	   transform:rotateY(360deg);
+	 }
+	}		
 	
 	#cubes {
 		position:relative;

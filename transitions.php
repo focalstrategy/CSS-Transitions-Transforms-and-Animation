@@ -158,7 +158,11 @@ transition:  [ &lt;transition-property&gt; ||
 }
 <? for($i=1;$i<9;$i++) { ?>
 	#dd<?= $i ?> {
-		-webkit-transition-delay: <?= $i * 0.1 ?>s;
+    -webkit-transition-delay: <?= $i * 0.1 ?>s;
+    -moz-transition-delay: <?= $i * 0.1 ?>s;
+    -ms-transition-delay: <?= $i * 0.1 ?>s;
+    -o-transition-delay: <?= $i * 0.1 ?>s;
+		transition-delay: <?= $i * 0.1 ?>s;
 	}
 <? } ?>
 #delay_demo:hover #dd_main {

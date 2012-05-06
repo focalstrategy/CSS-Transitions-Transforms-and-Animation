@@ -25,7 +25,7 @@ return $string;
 }
 
 $titles = array(
-	"all" => "CSS Transitions, Transforms and Animation - all one one page",
+	"all" => "CSS Transitions, CSS Transforms and CSS Animation - all one one page",
 	"accordions" => "CSS3 Accordions | CSS3 transitions, transforms and animations",
 	"animations" => "CSS3 Animations | CSS3 transitions, transforms and animations",
 	"cfimg" => "Crossfading Images | CSS3 transitions, transforms and animations",
@@ -38,11 +38,11 @@ $titles = array(
 	"index" => "Using CSS3 Transitions, Transforms and Animation",
 	"legacy" => "How do transitions, transforms and animation look in older browsers | CSS3 transitions, transforms and animations",
 	"references" => "Further Reading | CSS3 transitions, transforms and animations",
-	"slide1" => "Sliding by changing position | CSS3 transitions, transforms and animations",
-	"slide2" => "Sliding with transfoms | CSS3 transitions, transforms and animations",
+	"slide1" => "Sliding by changing absolute position | CSS transforms, transitions and animations",
+	"slide2" => "Sliding with CSS transforms | CSS3 transitions, transforms and animations",
 	"sliding" => "Sliding content | CSS3 transitions, transforms and animations",
 	"support" => "Which browsers support transitions, transforms and animations | CSS3 transitions, transforms and animations",
-	"transforms" => "CSS3 transforms | CSS3 transitions, transforms and animations",
+	"transforms" => "CSS transforms | CSS3 transitions, transforms and animations",
 	"transitions" => "CSS3 transitions | CSS3 transitions, transforms and animations"
 );
 
@@ -64,7 +64,7 @@ $descriptions = array(
 	"slide2" => "How to use CSS3 transitions to make a hardware accelerated animated slider using transforms",
 	"sliding" => "How to use CSS3 transitions and transforms to animate content in Safari, Chrome, Firefox, Opera and Internet Explorer 10",
 	"support" => "Where do CSS3 transitions, transforms, 3d transforms and animation work?",
-	"transforms" => "How to use CSS3 transforms in Safari, Chrome, Firefox, Opera and Internet Explorer 10",
+	"transforms" => "How to use CSS transforms in Safari, Chrome, Firefox, Opera and Internet Explorer 10",
 	"transitions" => "How to use CSS3 transitions to animate content in Safari, Chrome, Firefox, Opera and Internet Explorer 10"
 );
 

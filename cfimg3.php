@@ -22,7 +22,7 @@
 	   opacity:0;
 	 }
 	}
-	
+
 	@-moz-keyframes cf3FadeInOut {
 	 0% {
 	   opacity:1;
@@ -36,8 +36,8 @@
 	 100% {
 	   opacity:0;
 	 }
-	}	
-	
+	}
+
 	@-ms-keyframes cf3FadeInOut {
 	 0% {
 	   opacity:1;
@@ -51,7 +51,7 @@
 	 100% {
 	   opacity:0;
 	 }
-	}	
+	}
 
 	#cf3 {
 		position:relative;
@@ -63,27 +63,27 @@
 		position:absolute;
 		left:0;
 	}
-	
+
 	#cf3 img.top {
 		-webkit-animation-name: cf3FadeInOut;
 		-webkit-animation-timing-function: ease-in-out;
 		-webkit-animation-iteration-count: infinite;
 		-webkit-animation-duration: 10s;
 		-webkit-animation-direction: alternate;
-		
+
 		-moz-animation-name: cf3FadeInOut;
 		-moz-animation-timing-function: ease-in-out;
 		-moz-animation-iteration-count: infinite;
 		-moz-animation-duration: 10s;
-		-moz-animation-direction: alternate;		
-		
+		-moz-animation-direction: alternate;
+
 		-ms-animation-name: cf3FadeInOut;
 		-ms-animation-timing-function: ease-in-out;
 		-ms-animation-iteration-count: infinite;
 		-ms-animation-duration: 10s;
-		-ms-animation-direction: alternate;		
+		-ms-animation-direction: alternate;
 	}
-	
+
 </style>
 <div id="cf3" class="shadow">
 	<img class="bottom" src="/images/Stones.jpg" />
@@ -114,7 +114,7 @@
 	animation-iteration-count: infinite;
 	animation-duration: 10s;
 	animation-direction: alternate;
-}			
+}
 </pre>
 <p>To make sense of that, I've defined 4 keyframes, specified that whatever has this animation attached will be opaque for the first 45%, then transparent for the last 45%. The animation will repeat forever, will last 10 seconds, and will run forward then backwards. In other words, image 1 will be visible for 4.5 seconds, followed by a 1 second fade, followed by 4.5 seconds of image 2 being visible. Then it will reverse, meaning that image 1 and 2 will both be visible for 9 (4.5 x 2) seconds each time.</p>
 
@@ -123,50 +123,95 @@
 <h3>Demo with multiple images</h3>
 <style>
 	@-webkit-keyframes cf4FadeInOut {
-	 0% {
-	   opacity:0;
-	 }
-	 25% {
-	   opacity:1;
-	 }	
-	 50% {
-	   opacity:1;
-	 }
-	 100% {
-	   opacity:0;
-	 }
+     0% {
+       opacity:1;
+     }
+     17% {
+       opacity:1;
+     }
+     25% {
+       opacity:0;
+     }
+     92% {
+       opacity:0;
+     }
+     100% {
+       opacity:1;
+     }
 	}
-	
+
 	@-moz-keyframes cf4FadeInOut {
 	 0% {
-	   opacity:0;
-	 }
-	 25% {
-	   opacity:1;
-	 }	
-	 50% {
-	   opacity:1;
-	 }
-	 100% {
-	   opacity:0;
-	 }
+       opacity:1;
+     }
+     17% {
+       opacity:1;
+     }
+     25% {
+       opacity:0;
+     }
+     92% {
+       opacity:0;
+     }
+     100% {
+       opacity:1;
+     }
 	}
-	
+
 	@-ms-keyframes cf4FadeInOut {
 	 0% {
-	   opacity:0;
-	 }
-	 25% {
-	   opacity:1;
-	 }	
-	 50% {
-	   opacity:1;
-	 }
-	 100% {
-	   opacity:0;
-	 }
-	}		
-	
+       opacity:1;
+     }
+     17% {
+       opacity:1;
+     }
+     25% {
+       opacity:0;
+     }
+     92% {
+       opacity:0;
+     }
+     100% {
+       opacity:1;
+     }
+	}
+
+	@-o-keyframes cf4FadeInOut {
+	 0% {
+       opacity:1;
+     }
+     17% {
+       opacity:1;
+     }
+     25% {
+       opacity:0;
+     }
+     92% {
+       opacity:0;
+     }
+     100% {
+       opacity:1;
+     }
+	}
+
+	@keyframes cf4FadeInOut {
+	 0% {
+       opacity:1;
+     }
+     17% {
+       opacity:1;
+     }
+     25% {
+       opacity:0;
+     }
+     92% {
+       opacity:0;
+     }
+     100% {
+       opacity:1;
+     }
+	}
+
 	#cf4a {
 		position:relative;
 		height:281px;
@@ -177,7 +222,7 @@
 		position:absolute;
 		left:0;
 	}
-	
+
 	#cf4a img {
 		-webkit-animation-name: cf4FadeInOut;
 		-webkit-animation-timing-function: ease-in-out;
@@ -188,53 +233,103 @@
 		-moz-animation-timing-function: ease-in-out;
 		-moz-animation-iteration-count: infinite;
 		-moz-animation-duration: 8s;
-		
+
 		-ms-animation-name: cf4FadeInOut;
 		-ms-animation-timing-function: ease-in-out;
 		-ms-animation-iteration-count: infinite;
-		-ms-animation-duration: 8s;				
+		-ms-animation-duration: 8s;
+
+		-o-animation-name: cf4FadeInOut;
+		-o-animation-timing-function: ease-in-out;
+		-o-animation-iteration-count: infinite;
+		-o-animation-duration: 8s;
+
+		animation-name: cf4FadeInOut;
+		animation-timing-function: ease-in-out;
+		animation-iteration-count: infinite;
+		animation-duration: 8s;
 	}
-	#cf4a img:nth-of-type(1) {
- 		-webkit-animation-delay: 0;		
- 		-moz-animation-delay: 0;	
- 		-ms-animation-delay: 0;	
-	}
-	#cf4a img:nth-of-type(2) {
- 		-webkit-animation-delay: 2s;		
- 		-moz-animation-delay: 2s;	
- 		-ms-animation-delay: 2s;
-	}
-	#cf4a img:nth-of-type(3) {
- 		-webkit-animation-delay: 4s;		
- 		-moz-animation-delay: 4s;		
- 		-ms-animation-delay: 4s;		
-	}
-	#cf4a img:nth-of-type(4) {
- 		-webkit-animation-delay: 6s;		
- 		-moz-animation-delay: 6s;		
- 		-ms-animation-delay: 6s;		
-	}			
-	
+    #cf4a img:nth-of-type(1) {
+		-webkit-animation-delay: 6s;
+		-moz-animation-delay: 6s;
+		-ms-animation-delay: 6s;
+		-o-animation-delay: 6s;
+		animation-delay: 6s;
+    }
+    #cf4a img:nth-of-type(2) {
+		-webkit-animation-delay: 4s;
+		-moz-animation-delay: 4s;
+		-ms-animation-delay: 4s;
+		-o-animation-delay: 4s;
+		animation-delay: 4s;
+    }
+    #cf4a img:nth-of-type(3) {
+		-webkit-animation-delay: 2s;
+		-moz-animation-delay: 2s;
+		-ms-animation-delay: 2s;
+		-o-animation-delay: 2s;
+		animation-delay: 2s;
+    }
+    #cf4a img:nth-of-type(4) {
+		-webkit-animation-delay: 0;
+		-moz-animation-delay: 0;
+		-ms-animation-delay: 0;
+		-o-animation-delay: 0;
+		animation-delay: 0;
+    }
 </style>
 <div id="cf4a" class="shadow">
 	<img src="/images/Stones.jpg" />
 	<img src="/images/Summit.jpg" />
 	<img src="/images/Clown Fish.jpg" />
-	<img src="/images/Cirques.jpg" />	
+	<img src="/images/Cirques.jpg" />
 </div>
 	<p class="center">Staggering the animations can result in a multiple image fader.</p>
-<p>This time I've created an animation that goes from 0 to 1 opacity, then staggered the animations so only one is visible at once. It's not great, but it is maybe a start. Any suggestions on how to make this better would be gladly received!</p>	
+<p>This time I've created an animation that goes from 0 to 1 opacity, then staggered the animations so only one is visible at once.</p>
+<p>Thanks to Pafson's comment, this is finally working as expected! He proposes the following algorithm to determine the percentages and timings:</p>
+<p>For "n" images You must define:<br />
+a=presentation time for one image<br />
+b=duration for cross fading<br />
+
+Total animation-duration is of course t=(a+b)*n<br /><br />
+animation-delay = t/n or = a+b<br /><br />
+Percentage for keyframes:</p>
+<ol>
+<li>0%</li>
+<li>a/t*100%</li>
+<li>(a+b)/t*100% = 1/n*100%</li>
+<li>100%-(b/t*100%)</li>
+<li>100%</li>
+</ol>
 <pre class="prettyprint lang-css">
-	#cf4a img:nth-of-type(1) {
- 		animation-delay: 0;		
+@keyframes cf4FadeInOut {
+	0% {
+		opacity:1;
 	}
-	#cf4a img:nth-of-type(2) {
- 		animation-delay: 2s;		
+	17% {
+		opacity:1;
 	}
-	#cf4a img:nth-of-type(3) {
- 		animation-delay: 4s;		
+	25% {
+		opacity:0;
 	}
-	#cf4a img:nth-of-type(4) {
- 		animation-delay: 6s;		
+	92% {
+		opacity:0;
 	}
-</pre>	
+	100% {
+		opacity:1;
+	}
+}
+
+#cf4a img:nth-of-type(1) {
+	animation-delay: 6s;
+}
+#cf4a img:nth-of-type(2) {
+	animation-delay: 4s;
+}
+#cf4a img:nth-of-type(3) {
+	animation-delay: 2s;
+}
+#cf4a img:nth-of-type(4) {
+	animation-delay: 0;
+}
+</pre>

@@ -23,6 +23,8 @@
 				width: 450px;
 				margin: 0 auto 10px;				
 				-webkit-user-select:none;
+				-moz-user-select:none;
+				user-select:none;
 			}
 			#next_prev span {
 				padding-right:2em;

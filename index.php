@@ -14,11 +14,27 @@ if (isset($_GET['section']) && preg_match("/^[a-zA-Z]+/", $_GET['section'])) {
 		<meta http-equiv="X-UA-Compatible" content="chrome=1" />
 		<title><?= $titles[$section] ?></title>
 		<meta name="description" content="<?= $descriptions[$section] ?>" />
-		<meta name="google-site-verification" content="zTH7hEgeKVTkOu0F5bO5Guw9iRHWBJdCX0RpMASGZVI" />		
-		<link rel="stylesheet" href="/styles/default.css" media="screen" />		
+		<meta name="google-site-verification" content="zTH7hEgeKVTkOu0F5bO5Guw9iRHWBJdCX0RpMASGZVI" />
+		<link rel="stylesheet" href="/styles/default.css" media="screen" />
+<script>
+function block(node) {
+    if (   (node.nodeName == 'LINK' && node.href == 'data:text/css,')
+        || (node.nodeName == 'STYLE' && node.innerText.match(/^\/\*This block of style rules is inserted by AdBlock/))
+        ) {
+        node.parentElement.removeChild(node);
+    }
+
+}
+document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener('DOMNodeInserted', function(e) {
+    block(e.target);
+    }, false);
+
+}, false);
+</script>
 <script>
 window.google_analytics_uacct = "UA-16444273-1";
-</script>		
+</script>
 		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
 		<script src="/js/modernizr-newest.min.js"></script>
 		<script type="text/javascript" src="/js/prettify.js"></script>
@@ -31,11 +47,11 @@ window.google_analytics_uacct = "UA-16444273-1";
 				});
 			});
 		</script>
-		
-		<link rel=alternate type=application/atom+xml href=/feed.xml />		
-		
-	</head>		
-	<body onload="prettyPrint()">		
+
+		<link rel=alternate type=application/atom+xml href=/feed.xml />
+		<!-- TradeDoubler site verification 2099245 -->
+	</head>
+	<body onload="prettyPrint()">
 
 <!-- BuySellAds.com Ad Code -->
 <script type="text/javascript">
@@ -64,7 +80,7 @@ $section = 	$_GET['section'];
 
 ?>
 <section>
-		<p>New! Find the new blog at <a href="/blog/">CSS/HTML news, techniques and information</a>!</p>			
+		<p>New! Find the new blog at <a href="/blog/">CSS/HTML news, techniques and information</a>!</p>
 	<script type="text/javascript"><!--
 	google_ad_client = "pub-7181696033265659";
 	/* CSS3 Banner */
@@ -75,17 +91,17 @@ $section = 	$_GET['section'];
 	</script>
 	<script type="text/javascript"
 	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-	</script>	
+	</script>
 	<?include($_SERVER['DOCUMENT_ROOT']."/".$section.".php");?>
 
-	<? include($_SERVER['DOCUMENT_ROOT']."/disqus.php"); ?>	
+	<? include($_SERVER['DOCUMENT_ROOT']."/disqus.php"); ?>
 
 
 </section>
 
 <section id="inpage-contents">
 	<h1>Contents</h1>
-	<?include($_SERVER['DOCUMENT_ROOT']."/contents.php");?>	
+	<?include($_SERVER['DOCUMENT_ROOT']."/contents.php");?>
 </section>
 
 <?} else { // No page requested.
@@ -94,9 +110,9 @@ if (isset($_GET['section']) && $_GET['section'] == "all") {
 } else {
 	$section = "";
 }
-?>		
+?>
 	<section>
-		<p>New! Find the new blog at <a href="/blog/">CSS/HTML news, techniques and information</a>!</p>		
+		<p>New! Find the new blog at <a href="/blog/">CSS/HTML news, techniques and information</a>!</p>
 		<h1>Intro</h1>
 		<p>First things first - these demos are showing of CSS transitions, transforms (2D and 3D) and animations. Currently (January 2012), 2D transforms are available in all current browsers including IE9, transitions are available in all browsers except Internet Explorer 9 and less, while 3D transforms are in Safari, Chrome, Firefox and IE10 and up. Animations are available in Safari, Chrome, Firefox 5+ and IE10. Most examples degrade nicely, so if you are using a legacy browser you can still use a site using these, you just won't get animation. 3D transforms generally don't degrade nicely, so be careful when using them.</p>
 		<p>For a quick table summarising this, check out <a href="/support/">the supported browsers page</a>.</p>
@@ -107,7 +123,7 @@ if (isset($_GET['section']) && $_GET['section'] == "all") {
 		<p>To make it easier to view source and copy, I'm putting style and script tags in each section, just before the demo. This isn't recommended for production use, but in this instance it will hopefully help.</p>
 		<p>Any suggestions/improvements/etc, contact me via my gmail account (rich.bradshaw), or on Twitter (<a href="http://twitter.com/richbradshaw">richbradshaw</a>).</p>
 		<p>Keep reading to see the main explanations, or for some more experimental demos with less explanation, check out the <a href="/demos/">demos page</a>.</p>
-		
+
 		<h2>Will it work for me?</h2>
 
 		<p>Green means yes, red means no.</p>
@@ -115,8 +131,8 @@ if (isset($_GET['section']) && $_GET['section'] == "all") {
 		<p id="bs_transitions">CSS Transitions</p>
 		<p id="bs_2dtrans">CSS 2D Transforms</p>
 		</div>
-		<div class="half right center">		
-		<p id="bs_3dtrans">CSS 3D Transforms</p>		
+		<div class="half right center">
+		<p id="bs_3dtrans">CSS 3D Transforms</p>
 		<p id="bs_animation">CSS Animations</p>
 		</div>
 		<div class="clear"></div>
@@ -130,21 +146,21 @@ if (isset($_GET['section']) && $_GET['section'] == "all") {
 	</script>
 	<script type="text/javascript"
 	src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-	</script>		
+	</script>
 	</section>
 
 		<section>
-								
+
 		<h1>Contents</h1>
-		
+
 		<?
 		if ($section == "all") {
-			include($_SERVER['DOCUMENT_ROOT']."/indexcontents.php");			
+			include($_SERVER['DOCUMENT_ROOT']."/indexcontents.php");
 		} else {
-			include($_SERVER['DOCUMENT_ROOT']."/contents.php");						
+			include($_SERVER['DOCUMENT_ROOT']."/contents.php");
 		}
-		
-		
+
+
 		?>
 		<? /*
 		<script type="text/javascript"><!--
@@ -158,32 +174,32 @@ if (isset($_GET['section']) && $_GET['section'] == "all") {
 		src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
 		</script>
 		 */?>
-		<? include($_SERVER['DOCUMENT_ROOT']."/disqus.php"); ?>	
+		<? include($_SERVER['DOCUMENT_ROOT']."/disqus.php"); ?>
 	</section>
 		<? if ($section == "all") {
 		include($_SERVER['DOCUMENT_ROOT']."/transitions.php");
 		include($_SERVER['DOCUMENT_ROOT']."/transforms.php");
 		include($_SERVER['DOCUMENT_ROOT']."/animations.php");
-				
+
 		include($_SERVER['DOCUMENT_ROOT']."/cfimg.php");
 
 		include($_SERVER['DOCUMENT_ROOT']."/sliding.php");
-		
+
 		include($_SERVER['DOCUMENT_ROOT']."/flip.php");
-		
-		include($_SERVER['DOCUMENT_ROOT']."/accordions.php");		
+
+		include($_SERVER['DOCUMENT_ROOT']."/accordions.php");
 
 		include($_SERVER['DOCUMENT_ROOT']."/support.php");
-		
+
 		include($_SERVER['DOCUMENT_ROOT']."/legacy.php");
-		
-		include($_SERVER['DOCUMENT_ROOT']."/references.php");		
-		}	
+
+		include($_SERVER['DOCUMENT_ROOT']."/references.php");
+		}
 		?>
 
-<? } ?>		
-<?		
-	include($_SERVER['DOCUMENT_ROOT']."/footer.php");		
+<? } ?>
+<?
+	include($_SERVER['DOCUMENT_ROOT']."/footer.php");
 ?>
 	</body>
 </html>
